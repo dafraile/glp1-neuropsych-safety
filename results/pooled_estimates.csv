@@ -1,0 +1,11 @@
+"stratum","k","estimate","ci_low","ci_high","I2","p"
+"RCT (M-H counts)",23,0.844,0.541,1.316,0,0.454
+"Observational (IV, all outcomes)",15,0.878,0.626,1.23,99.028,0.449
+"Obs: suicidal ideation",3,0.74,0.37,1.477,90.396,0.393
+"Obs: suicidality (composite)",2,0.944,0.817,1.091,22.676,0.439
+"Obs: suicide attempt/self-harm",4,0.708,0.576,0.871,9.843,0.001
+"Obs: completed suicide",1,1.25,0.83,1.88,NA,NA
+"Obs: depression",3,1.53,0.741,3.162,99.82,0.251
+"Obs: depression (excl. outlier)",2,1.099,0.945,1.278,91.802,0.219
+"Obs: anxiety",2,0.537,0.333,0.867,74.381,0.011
+"Obs sensitivity (excl. Serious RoB)",10,0.986,0.89,1.091,71.422,0.779

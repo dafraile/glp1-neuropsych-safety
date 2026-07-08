@@ -1,0 +1,16 @@
+D1_confounding,D2_selection,D3_classification,D4_deviations,D5_missing,D6_outcome,D7_reporting,overall,active_comparator,ps_adjusted,pmid,study,journal,framework
+Serious,Moderate,Low,Moderate,Moderate,Moderate,Low,Serious,False,True,38182782,Association of semaglutide with risk of suicidal ideation in a real-wo,Nat Med,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,True,39008852,Glucagon-Like Peptide-1 Receptor Agonists and Risk for Suicidal Ideati,Ann Intern Med,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,True,40010803,Glucagon-like peptide-1 receptor agonists and risk of suicidality amon,BMJ,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,True,42209408,Risk of Psychiatric Worsening With GLP-1 Receptor Agonist Use in Patie,Diabetes Obes Metab,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,True,41592697,Association of glucagon-like peptide-1 receptor agonist use with anxie,Diabetes Res Clin Pract,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,False,38852027,Glucagon-like peptide receptor agonists and risk for depression.,Prim Care Diabetes,ROBINS-I
+Serious,Moderate,Low,Moderate,Moderate,Moderate,Low,Serious,False,True,39424950,"The risk of depression, anxiety, and suicidal behavior in patients wit",Sci Rep,ROBINS-I
+Serious,Moderate,Low,Moderate,Moderate,Moderate,Low,Serious,False,True,35281896,Decreased Risk of Anxiety in Diabetic Patients Receiving Glucagon-like,Front Pharmacol,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,True,42373755,Neuropsychiatric association of tirzepatide and semaglutide in obesity,Commun Med (Lond),ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,True,30297350,Examining the risk of depression or self-harm associated with incretin,BMJ Open,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,False,42000905,GLP-1 receptor agonists and risk of suicide or suicide attempts - A na,Mol Psychiatry,ROBINS-I
+Serious,Moderate,Low,Moderate,Moderate,Moderate,Low,Serious,False,True,41334076,Association of tirzepatide and the risk of suicide in a real-world coh,Front Psychiatry,ROBINS-I
+Serious,Moderate,Low,Moderate,Moderate,Moderate,Low,Serious,False,False,41050856,Glucagon-like peptide-1 receptor agonists and suicide risk in individu,Prev Med Rep,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,True,39103719,Association of glucagon-like peptide-1 receptor agonists with suicidal,Diabetologia,ROBINS-I
+Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,True,True,39226030,GLP-1 Receptor Agonist Use and Risk of Suicide Death.,JAMA Intern Med,ROBINS-I

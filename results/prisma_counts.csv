@@ -1,0 +1,12 @@
+stage,n
+Identified (PubMed),374
+Identified (OpenAlex),593
+Total retrieved,967
+After dedup,794
+Duplicates removed,173
+T/A included,98
+T/A excluded,696
+RCT stratum,25
+Observational confirmed,36
+Obs poolable,15
+Obs non-poolable,21

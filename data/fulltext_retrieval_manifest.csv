@@ -1,0 +1,16 @@
+pmid,in_pmc,pmcid,journal,doi,retrieval_route,needs_your_access
+42209408,False,,Diabetes Obes Metab,10.1111/dom.70927,institutional access needed,YES
+41592697,False,,Diabetes Res Clin Pract,10.1016/j.diabres.2026.113104,institutional access needed,YES
+42000905,False,,Mol Psychiatry,10.1038/s41380-026-03619-y,institutional access needed,YES
+38182782,True,PMC11034947,,,auto (PMC open-access),
+39008852,True,PMC12132802,,,auto (PMC open-access),
+40010803,True,PMC11863255,,,auto (PMC open-access),
+38852027,True,PMC13170771,,,auto (PMC open-access),
+39424950,True,PMC11489776,,,auto (PMC open-access),
+35281896,True,PMC8904427,,,auto (PMC open-access),
+30297350,True,PMC6194463,,,auto (PMC open-access),
+41334076,True,PMC12667738,,,auto (PMC open-access),
+41050856,True,PMC12491714,,,auto (PMC open-access),
+39103719,True,PMC11519213,,,auto (PMC open-access),
+39226030,True,PMC11372654,,,auto (PMC open-access),
+42373755,False,,Commun Med (Lond),10.1038/s43856-026-01750-z,auto-retry (gold OA),

@@ -1,0 +1,10 @@
+# copyrighted publisher full texts — never commit
+fulltext/
+articles/
+*.pdf
+rob_corpus.tar.gz
+# workspace scratch
+handoff/
+__pycache__/
+*.pyc
+.DS_Store
