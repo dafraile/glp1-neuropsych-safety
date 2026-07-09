@@ -1,7 +1,7 @@
 # Indication stratification — obesity vs T2D (FAERS)
 
-The PICO instructed tracking **obesity vs T2D indication separately**. This note
-records where that stratification was and was not achievable, and the FAERS result.
+The project PICO tracks **obesity vs T2D as distinct indications**. This note records
+where that stratification was and was not achievable, and the FAERS result.
 
 ## Stream A (designed studies): NOT cleanly estimable
 The Stream A corpus is predominantly mixed-population: of 40 poolable studies,
