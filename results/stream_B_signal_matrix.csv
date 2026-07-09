@@ -1,0 +1,25 @@
+drug,drug_class,outcome,a_reports,ROR_fullDB,ROR_fullDB_lo,ROR_fullDB_hi,ROR_vsComparator,ROR_vsComp_lo,ROR_vsComp_hi,IC025_fullDB,signal_fullDB,signal_vsComparator,estimable
+semaglutide,GLP-1 RA,suicide_selfinjury,912,0.774,0.725,0.826,2.075,1.906,2.258,-0.458,False,True,True
+semaglutide,GLP-1 RA,depression,1826,1.63,1.556,1.708,2.127,2.003,2.259,0.623,True,True,True
+semaglutide,GLP-1 RA,anxiety,1923,1.379,1.318,1.443,1.78,1.681,1.884,0.388,True,True,True
+liraglutide,GLP-1 RA,suicide_selfinjury,302,0.421,0.376,0.471,1.121,0.989,1.27,-1.398,False,False,True
+liraglutide,GLP-1 RA,depression,645,0.939,0.869,1.015,1.187,1.089,1.294,-0.2,False,True,True
+liraglutide,GLP-1 RA,anxiety,855,1.004,0.939,1.075,1.265,1.173,1.364,-0.09,False,True,True
+tirzepatide,GIP/GLP-1 RA,suicide_selfinjury,491,0.243,0.222,0.266,0.652,0.588,0.723,-2.145,False,False,True
+tirzepatide,GIP/GLP-1 RA,depression,1717,0.893,0.851,0.937,1.125,1.059,1.195,-0.228,False,True,True
+tirzepatide,GIP/GLP-1 RA,anxiety,1503,0.626,0.595,0.658,0.789,0.742,0.839,-0.736,False,False,True
+dulaglutide,GLP-1 RA,suicide_selfinjury,209,0.168,0.146,0.192,0.442,0.382,0.511,-2.751,False,False,True
+dulaglutide,GLP-1 RA,depression,688,0.576,0.534,0.621,0.729,0.67,0.793,-0.893,False,False,True
+dulaglutide,GLP-1 RA,anxiety,909,0.613,0.574,0.654,0.774,0.719,0.833,-0.788,False,False,True
+exenatide,GLP-1 RA,suicide_selfinjury,130,0.173,0.146,0.206,0.463,0.386,0.554,-2.758,False,False,True
+exenatide,GLP-1 RA,depression,454,0.632,0.576,0.693,0.793,0.718,0.876,-0.787,False,False,True
+exenatide,GLP-1 RA,anxiety,1001,1.132,1.063,1.205,1.424,1.327,1.529,0.086,True,True,True
+lixisenatide,GLP-1 RA,suicide_selfinjury,3,0.061,0.02,0.189,0.163,0.053,0.507,-5.648,False,False,True
+lixisenatide,GLP-1 RA,depression,15,0.317,0.191,0.527,0.392,0.236,0.652,-2.373,False,False,True
+lixisenatide,GLP-1 RA,anxiety,18,0.306,0.193,0.486,0.381,0.239,0.606,-2.357,False,False,True
+albiglutide,GLP-1 RA,suicide_selfinjury,0,,,,,,,,False,False,False
+albiglutide,GLP-1 RA,depression,0,,,,,,,,False,False,False
+albiglutide,GLP-1 RA,anxiety,0,,,,,,,,False,False,False
+efpeglenatide,GLP-1 RA,suicide_selfinjury,0,,,,,,,,False,False,False
+efpeglenatide,GLP-1 RA,depression,0,,,,,,,,False,False,False
+efpeglenatide,GLP-1 RA,anxiety,0,,,,,,,,False,False,False
