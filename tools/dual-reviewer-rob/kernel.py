@@ -89,10 +89,17 @@ def review_claude(framework, study_text, study_id, model=None):
     """Reviewer backend: a Claude call via host.llm. model=None -> reasoning default."""
     prompt = build_reviewer_prompt(framework, study_text, study_id)
     mdl = model or host.reasoning_model()
-    r = host.llm(prompt, model=mdl, max_tokens=4000)
-    out = parse_json_block(r["text"])
-    out["_backend"] = f"claude:{mdl}"
-    return out
+    last = None
+    for mt in (8000, 14000):  # 7-domain ROBINS-I output overruns a small ceiling
+        r = host.llm(prompt, model=mdl, max_tokens=mt)
+        txt = r.get("text", "") or ""
+        try:
+            out = parse_json_block(txt)
+            out["_backend"] = f"claude:{mdl}"
+            return out
+        except Exception as e:
+            last = (repr(e), r.get("stop_reason"), len(txt))
+    raise RuntimeError(f"review_claude failed after retries: {last}")
 
 
 def openai_key(cred_name=None):
@@ -115,19 +122,38 @@ def openai_key(cred_name=None):
                        "or pass cred_name=")
 
 
-def review_openai(framework, study_text, study_id, model="gpt-4o", cred_name=None):
-    """Reviewer backend: an OpenAI call. Requires the openai package + a stored key."""
+def review_openai(framework, study_text, study_id, model="gpt-5.5", cred_name=None,
+                  reasoning_effort="high"):
+    """Reviewer backend: an OpenAI call. Requires the openai package + a stored key.
+
+    Handles both classic chat models (gpt-4o: temperature + max_tokens) and
+    reasoning models (gpt-5.x / o-series: no temperature, max_completion_tokens,
+    reasoning_effort). Default is a current reasoning model at high effort so the
+    cross-model second opinion is as strong as reviewer #1."""
     from openai import OpenAI
     client = OpenAI(api_key=openai_key(cred_name))
     prompt = build_reviewer_prompt(framework, study_text, study_id)
-    resp = client.chat.completions.create(
-        model=model, temperature=0,
-        response_format={"type": "json_object"},
-        messages=[{"role": "user", "content": prompt}],
-    )
-    out = parse_json_block(resp.choices[0].message.content)
-    out["_backend"] = f"openai:{model}"
-    return out
+    is_reasoning = model.startswith(("gpt-5", "o1", "o3", "o4"))
+    last = None
+    for budget in ((16000, 24000) if is_reasoning else (8000, 16000)):
+        kw = dict(model=model, response_format={"type": "json_object"},
+                  messages=[{"role": "user", "content": prompt}])
+        if is_reasoning:
+            kw["max_completion_tokens"] = budget
+            if reasoning_effort:
+                kw["reasoning_effort"] = reasoning_effort
+        else:
+            kw["temperature"] = 0
+            kw["max_tokens"] = budget
+        resp = client.chat.completions.create(**kw)
+        txt = resp.choices[0].message.content or ""
+        try:
+            out = parse_json_block(txt)
+            out["_backend"] = f"openai:{model}"
+            return out
+        except Exception as e:
+            last = (repr(e), resp.choices[0].finish_reason, len(txt))
+    raise RuntimeError(f"review_openai failed after retries: {last}")
 
 
 def review(backend, framework, study_text, study_id, **kw):
@@ -136,7 +162,8 @@ def review(backend, framework, study_text, study_id, **kw):
         return review_claude(framework, study_text, study_id, model=kw.get("model"))
     if backend == "openai":
         return review_openai(framework, study_text, study_id,
-                             model=kw.get("model", "gpt-4o"), cred_name=kw.get("cred_name"))
+                             model=kw.get("model", "gpt-5.5"), cred_name=kw.get("cred_name"),
+                             reasoning_effort=kw.get("reasoning_effort", "high"))
     raise ValueError("backend must be 'claude' or 'openai'")
 
 
@@ -194,19 +221,28 @@ def judge(framework, study_id, flags, backend="claude", **kw):
             continue
         prompt = build_judge_prompt(framework, study_id, f)
         if backend == "claude":
-            r = host.llm(prompt, model=kw.get("model") or host.reasoning_model(), max_tokens=800)
+            r = host.llm(prompt, model=kw.get("model") or host.reasoning_model(), max_tokens=4000)
             txt = r["text"]
         elif backend == "openai":
             from openai import OpenAI
             client = OpenAI(api_key=openai_key(kw.get("cred_name")))
-            resp = client.chat.completions.create(
-                model=kw.get("model", "gpt-4o"), temperature=0,
-                response_format={"type": "json_object"},
-                messages=[{"role": "user", "content": prompt}])
+            jmodel = kw.get("model", "gpt-5.5")
+            jkw = dict(model=jmodel, response_format={"type": "json_object"},
+                       messages=[{"role": "user", "content": prompt}])
+            if jmodel.startswith(("gpt-5", "o1", "o3", "o4")):
+                jkw["max_completion_tokens"] = 8000
+                jkw["reasoning_effort"] = kw.get("reasoning_effort", "high")
+            else:
+                jkw["temperature"] = 0
+            resp = client.chat.completions.create(**jkw)
             txt = resp.choices[0].message.content
         else:
             raise ValueError("judge backend must be 'claude' or 'openai'")
-        out[f["domain"]] = parse_json_block(txt)
+        try:
+            out[f["domain"]] = parse_json_block(txt)
+        except Exception as e:
+            out[f["domain"]] = {"resolution": "ESCALATE_TO_HUMAN",
+                                 "reason": f"judge output unparseable ({e!r})"}
     return out
 
 

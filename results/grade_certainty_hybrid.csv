@@ -1,0 +1,8 @@
+stratum,outcome,k,pooled,start,rob,inconsistency,imprecision,judgment,final,rob_reason,imp_reason,reviewer_config
+RCT,suicidal behaviour (composite),23,0.84 (0.54-1.32),High,-1,0,-1,0,Low,moderate-to-serious RoB present,CI crosses the null; 71 events < OIS (300),Claude + GPT-5.5 (cross-model)
+Observational,suicidal ideation,3,0.74 (0.37-1.48),Low,-1,-1,-1,-1,Very low,moderate-to-serious RoB present,CI crosses the null; wide CI (ratio > 3x),Claude + GPT-5.5 (cross-model)
+Observational,suicidality (composite),2,0.94 (0.82-1.09),Low,-1,0,-1,0,Very low,moderate-to-serious RoB present,few studies (k=2); CI crosses the null,Claude + GPT-5.5 (cross-model)
+Observational,suicide attempt/self-harm,4,0.71 (0.58-0.87),Low,-2,0,0,0,Very low,serious/high RoB dominates (2/4),adequate precision,Claude + GPT-5.5 (cross-model)
+Observational,completed suicide,1,1.25 (0.83-1.88),Low,-1,0,-1,0,Very low,moderate-to-serious RoB present,few studies (k=1); CI crosses the null,Claude + GPT-5.5 (cross-model)
+Observational,depression,3,1.53 (0.74-3.16),Low,-2,-1,-1,0,Very low,serious/high RoB dominates (2/3),CI crosses the null; wide CI (ratio > 3x),Claude + GPT-5.5 (cross-model)
+Observational,anxiety,2,0.54 (0.33-0.87),Low,-2,-1,-1,0,Very low,serious/high RoB dominates (1/2),few studies (k=2),Claude + GPT-5.5 (cross-model)

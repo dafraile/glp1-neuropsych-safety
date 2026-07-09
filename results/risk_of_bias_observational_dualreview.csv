@@ -1,0 +1,16 @@
+pmid,study,journal,active_comparator,ps_adjusted,D1_confounding,D2_selection,D3_classification,D4_deviations,D5_missing,D6_outcome,D7_reporting,overall_dualreview,n_escalated_domains,escalated_domains
+42209408,Risk of Psychiatric Worsening With GLP-1 Receptor Agonist Use in Patie,Diabetes Obes Metab,True,True,Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,2,D4;D6
+41592697,Association of glucagon-like peptide-1 receptor agonist use with anxie,Diabetes Res Clin Pract,True,True,Moderate,Low,Low,Moderate,No information,Moderate,Low,Moderate,2,D4;D7
+42000905,GLP-1 receptor agonists and risk of suicide or suicide attempts - A na,Mol Psychiatry,True,False,Moderate,Low,Low,Moderate,Low,Low,Moderate,Moderate,2,D4;D7
+38852027,Glucagon-like peptide receptor agonists and risk for depression.,Prim Care Diabetes,True,False,Serious,Low,Low,Moderate,Moderate,Moderate,Low,Serious,0,
+38182782,Association of semaglutide with risk of suicidal ideation in a real-wo,Nat Med,False,True,Moderate,Moderate,Moderate,Serious,Moderate,Moderate,Moderate,Serious,3,D2;D5;D7
+40010803,Glucagon-like peptide-1 receptor agonists and risk of suicidality amon,BMJ,True,True,Low,Low,Low,Low,Moderate,Low,Moderate,Moderate,2,D5;D7
+39424950,"The risk of depression, anxiety, and suicidal behavior in patients wit",Sci Rep,False,True,Serious,Serious,Moderate,Serious,Moderate,Moderate,Serious,Serious,1,D7
+35281896,Decreased Risk of Anxiety in Diabetic Patients Receiving Glucagon-like,Front Pharmacol,False,True,Serious,Serious,Moderate,No information,Low,Low,Serious,Serious,3,D2;D3;D7
+39008852,Glucagon-Like Peptide-1 Receptor Agonists and Risk for Suicidal Ideati,Ann Intern Med,True,True,Moderate,Low,Low,Moderate,Low,Moderate,Low,Moderate,2,D4;D7
+30297350,Examining the risk of depression or self-harm associated with incretin,BMJ Open,True,True,Moderate,Low,Moderate,Moderate,No information,Moderate,Low,Moderate,1,D4
+41334076,Association of tirzepatide and the risk of suicide in a real-world coh,Front Psychiatry,False,True,Moderate,Moderate,Low,Serious,Moderate,Moderate,Moderate,Serious,0,
+39226030,GLP-1 Receptor Agonist Use and Risk of Suicide Death.,JAMA Intern Med,True,True,Low,Low,Low,Moderate,Low,Moderate,Low,Moderate,2,D4;D6
+39103719,Association of glucagon-like peptide-1 receptor agonists with suicidal,Diabetologia,True,True,Moderate,Low,Low,Moderate,Moderate,Moderate,Low,Moderate,1,D7
+41050856,Glucagon-like peptide-1 receptor agonists and suicide risk in individu,Prev Med Rep,False,False,Serious,Serious,Moderate,Serious,Moderate,Serious,No information,Serious,3,D2;D5;D6
+42373755,Neuropsychiatric association of tirzepatide and semaglutide in obesity,Commun Med (Lond),True,True,Moderate,Low,Moderate,No information,No information,Moderate,No information,Moderate,0,

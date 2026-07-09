@@ -20,12 +20,25 @@ a human.
 
 ## Backends
 - **Reviewer 1** default `claude` (via `host.llm`, no key needed).
-- **Reviewer 2** default `openai` (needs an OpenAI credential added via
-  Customize -> Credentials, and `pip install openai`). If no OpenAI key is
-  available, set `backend2="claude"` for two independent same-family passes
-  (catches transcription/judgment slips but not architectural blind spots).
-- **Judge** default `claude`; adjudicates only the domains where the two
-  reviewers disagree.
+- **Reviewer 2** default `openai`, model **`gpt-5.5`** at `reasoning_effort="high"`
+  (needs an OpenAI credential via Customize -> Credentials, `pip install openai`,
+  and `api.openai.com` on the network allowlist). Override the model with
+  `b2_kw={"model": "..."}`; `review_openai` auto-detects reasoning models
+  (`gpt-5.x` / `o`-series) and switches to `max_completion_tokens` + `reasoning_effort`
+  (no `temperature`), falling back to `temperature=0` + `max_tokens` for classic
+  chat models like `gpt-4o`. If no OpenAI key is available, set `backend2="claude"`
+  for two independent same-family passes (catches transcription/judgment slips but
+  not architectural blind spots).
+- **Judge** default `claude`; adjudicates only the domains where the two reviewers
+  disagree. When run on `openai`, defaults to `gpt-5.5` at high effort with the same
+  reasoning-model handling.
+- **Token budgets** auto-retry from a normal to a large ceiling: a 7-domain ROBINS-I
+  assessment overruns a small `max_tokens`, so reviewers try 8k->14k/16k->24k and the
+  judge uses 4k (Claude) / 8k (OpenAI). If the **judge** still returns unparseable
+  output for a domain, that domain degrades to `ESCALATE_TO_HUMAN`. A **reviewer**
+  parse failure that survives both retries raises `RuntimeError` and stops that
+  study (by design — a reviewer with no valid ratings can't be scored); wrap the
+  per-study call in try/except if you want the batch to skip and continue.
 
 ## Kernel helpers (auto-loaded)
 `get_rubric(framework)`, `build_reviewer_prompt(...)`, `review(backend, ...)`,
