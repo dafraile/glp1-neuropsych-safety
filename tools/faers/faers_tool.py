@@ -95,10 +95,30 @@ ANXIETY_PTS = [
     "Anxiety", "Anxiety disorder", "Generalised anxiety disorder",
     "Panic attack", "Panic disorder", "Nervousness",
 ]
+# Benefit-side (Stream D) composites. In a spontaneous adverse-event system a
+# therapeutic benefit cannot be reported directly, but a reduction in addictive
+# behaviour shows up as INVERSE disproportionality (ROR < 1) on addiction terms.
+# ADDICTION_PTS: substance + behavioural addiction terms (protective direction).
+# REWARD_APPETITE_PTS: on-target mesolimbic-reward / appetite pharmacology
+# (over-reported, ROR > 1) — use as a positive control that the pathway is engaged.
+ADDICTION_PTS = [
+    "Alcohol use disorder", "Alcohol abuse", "Alcoholism", "Alcohol dependence",
+    "Nicotine dependence", "Tobacco use disorder", "Substance abuse",
+    "Substance use disorder", "Drug abuse", "Drug dependence", "Opioid use disorder",
+    "Cannabis use disorder", "Gambling disorder", "Gambling",
+    "Impulse-control disorder", "Compulsive shopping", "Polysubstance dependence",
+]
+REWARD_APPETITE_PTS = [
+    "Decreased appetite", "Food craving", "Binge eating", "Hyperphagia",
+    "Increased appetite",
+]
+
 OUTCOMES = {
     "suicide_selfinjury": SMQ_SUICIDE,   # primary SMQ-aligned composite
     "depression": DEPRESSION_PTS,
     "anxiety": ANXIETY_PTS,
+    "addiction_behaviour": ADDICTION_PTS,   # Stream D benefit — expect ROR < 1
+    "reward_appetite": REWARD_APPETITE_PTS, # on-target control — expect ROR > 1
 }
 
 QUALIFICATION = {"1": "physician", "2": "pharmacist", "3": "other_HP",

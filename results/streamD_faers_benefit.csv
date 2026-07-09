@@ -1,0 +1,8 @@
+substance,n_reports,ROR_vs_comp,lo,hi,direction
+alcohol,35,0.512,0.324,0.808,protective
+nicotine/tobacco,14,0.307,0.16,0.588,protective
+substance/drug,158,0.357,0.293,0.436,protective
+behavioural,25,0.356,0.216,0.587,protective
+any_addiction_composite,222,0.368,0.311,0.435,protective
+CONTROL_headache,13407,1.15,1.116,1.185,neutral
+reward_appetite_axis,22044,3.408,3.292,3.528,on-target (over-reported)
