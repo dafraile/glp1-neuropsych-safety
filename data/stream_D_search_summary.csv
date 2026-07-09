@@ -1,0 +1,5 @@
+substance,total_in_pubmed,retrieved,source,drug_block,retrieval_cap
+alcohol,383,100,PubMed only,7-term (brand names dropped; operator cap),100
+nicotine,161,100,PubMed only,7-term (brand names dropped; operator cap),100
+gambling,28,28,PubMed only,7-term (brand names dropped; operator cap),100
+other,217,100,PubMed only,7-term (brand names dropped; operator cap),100

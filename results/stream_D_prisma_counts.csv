@@ -1,0 +1,9 @@
+stage,n,note
+"Records identified (PubMed, 4 substance blocks, pre-dedup totals)",789,alcohol 383 + nicotine 161 + gambling 28 + other 217
+"Records retrieved for screening (relevance-capped, deduplicated union)",246,100/block cap; 3/4 blocks truncated
+Records excluded at title/abstract screening,193,no addiction/reward outcome; narrative review; not GLP-1 RA; preclinical
+Records included after screening,53,
+Excluded at extraction (narrative review),1,PMID 40364515
+Studies in tagged study table,52,28 benefit / 13 mixed / 5 no-effect / 0 harm
+Studies dual-reviewed for RoB,13,9 observational (ROBINS-I) + 4 RCT (RoB2)
+Benefit outcomes GRADEd,6,all Very low

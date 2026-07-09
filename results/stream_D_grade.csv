@@ -1,0 +1,7 @@
+outcome,stratum,start,rob_delta,rob_reason,inconsistency_delta,inconsistency_reason,imprecision_delta,imprecision_reason,judgment_delta,deterministic_subtotal,final_certainty,reviewer_config
+Alcohol — reduced adverse alcohol outcome,Observational,Low,-2,serious/high RoB dominates (3/4),-1,substantial heterogeneity (I2=85%),0,adequate precision,-1,-3,Very low,Claude + GPT-5.5 (judgment domains)
+Alcohol — AUDIT score reduction (anchor),Mixed (RCT+case-series),Low,-2,serious/high RoB dominates (1/1),-1,substantial heterogeneity (I2=88%),0,adequate precision,-2,-3,Very low,Claude + GPT-5.5 (judgment domains)
+Nicotine — reduced smoking/TUD,Mixed (RCT+TTE),Low,-2,serious/high RoB dominates (1/2),0,low heterogeneity (I2=0%),-1,few studies (k=2),-1,-3,Very low,Claude + GPT-5.5 (judgment domains)
+Cannabis — reduced CUD incidence,Observational,Low,-1,moderate-to-serious RoB present,0,single study / not estimable,-1,few studies (k=1),0,-2,Very low,Claude + GPT-5.5 (judgment domains)
+Opioid — reduced OUD persistence,Observational,Low,-2,serious/high RoB dominates (1/1),0,single study / not estimable,-1,few studies (k=1),-1,-3,Very low,Claude + GPT-5.5 (judgment domains)
+Multiple SUD — reduced incidence,Observational,Low,-2,serious/high RoB dominates (1/2),-1,substantial heterogeneity (I2=90%),-1,few studies (k=2); wide CI (ratio > 3x),-1,-4,Very low,Claude + GPT-5.5 (judgment domains)

@@ -5,11 +5,15 @@ Triangulating the GLP-1 receptor agonist neuropsychiatric safety signal.
 evidence support, refute, or fail to explain the neuropsychiatric safety signal
 (suicidality, self-harm, depression) seen in spontaneous adverse-event reports?
 
-This repository holds two evidence streams, kept **strictly separate and never pooled
+This repository holds several evidence streams, kept **strictly separate and never pooled
 together**:
-- **Stream A** — designed-study synthesis (RCTs + observational pharmacoepidemiology).
+- **Stream A** — designed-study synthesis of the neuropsychiatric **harm** question
+  (RCTs + observational pharmacoepidemiology).
 - **Stream B** — FAERS spontaneous-report disproportionality (openFDA), for **comparison
   only**. See `docs/stream_B_README.md`.
+- **Stream D** — designed-study synthesis of the addiction/reward **benefit** question
+  (alcohol, nicotine, gambling, other), the benefit counterpart to Stream A. See
+  `briefs/stream_D_synthesis_brief.md`.
 
 Stream C (mechanistic plausibility) is tracked separately. The point of the project is
 to compare these streams — not to merge them into one number.
@@ -58,6 +62,38 @@ further **22% are confounded** by indication or psychiatric co-medication. The
 `triangulation_forest.png` figure co-displays Stream A and Stream B on one axis in
 **separate, unpooled bands** — the divergence is the result. Full detail, caveats, and the
 reusable extraction tool: `docs/stream_B_README.md`.
+
+## Stream D headline — the benefit side is symmetric in certainty
+
+Designed studies consistently associate GLP-1 RA exposure with **reduced** addictive
+behaviour across substances, but at **Very low** certainty on every outcome — held down by
+the same methodological limits (serious observational risk of bias, imprecision,
+heterogeneity) that cap the harm-side evidence. Of 52 extracted studies: **28 benefit, 13
+mixed, 5 no-effect, 0 harm**.
+
+| Substance | Stratum | k | Pooled | 95% CI | I² | GRADE |
+|---|---|---|---|---|---|---|
+| Alcohol | Observational (risk of adverse alcohol outcome) | 4 | RR 0.69 | 0.50–0.96 | 85% | Very low |
+| Nicotine | RCT + TTE (smoking abstinence / TUD) | 2 | RR 0.68 | 0.63–0.74 | 0% | Very low |
+| Alcohol | Mixed (AUDIT MD, anchor-reproduced) | 4 | MD −7.81 | −9.02 to −6.60 | 88% | Very low |
+
+Anchored to **Eshraghi et al., eClinicalMedicine 2025 (PMID 41324012)** — reproduced its
+pooled AUDIT MD −7.81 [−9.02, −6.60] and I²=87.5% within CI. **Gambling: 28 records
+retrieved, none qualified as a designed study — synthesis-empty.** The
+`figures/benefit_harm_symmetry.png` figure juxtaposes Stream A harm certainty against
+Stream D benefit certainty: both converge on Very low for observational evidence. Same
+mesolimbic mechanism, same evidentiary bar, symmetric certainty — the reward-pathway
+hypothesis points toward benefit and away from harm, but the designed evidence is too
+low-certainty to confirm either with confidence.
+
+### Stream D files (benefit/reward)
+- `briefs/stream_D_protocol.md`, `briefs/stream_D_synthesis_brief.md` — protocol + synthesis.
+- `data/stream_D_search_raw.csv`, `stream_D_screening_ledger.csv`, `stream_D_study_table.csv`.
+- `results/stream_D_pooled_estimates.csv`, `stream_D_reproduction_check.csv`,
+  `stream_D_risk_of_bias.csv`, `stream_D_rob_audit_trail.csv`, `stream_D_grade.csv`,
+  `stream_D_grade_judgment_audit.csv`, `stream_D_prisma_counts.csv`.
+- `figures/stream_D_prisma.png`, `stream_D_forest_by_substance.png`,
+  `stream_D_reproduction_check.png`, `stream_D_grade_summary.png`, `benefit_harm_symmetry.png`.
 
 ## Repository layout
 

@@ -1,0 +1,4 @@
+substance,design_stratum,metric,k,pooled,ci_low,ci_high,I2,pmids
+alcohol,observational,ratio (risk of adverse alcohol outcome),4,0.69,0.498,0.955,85.2,41646707;40897378;39535805;37991022
+nicotine,mixed (RCT+TTE),"ratio (smoking abstinence/TUD, harmonized)",2,0.678,0.626,0.735,0.0,39074369;33831213
+alcohol,mixed (RCT+case-series),AUDIT score MD (anchor-reproduced),4,-7.81,-9.02,-6.6,87.5,anchor: Eshraghi 2025 (PMID 41324012)
