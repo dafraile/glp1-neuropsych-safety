@@ -1,0 +1,5 @@
+indication,background,a,b,c,d,ROR,lo,hi,comparator_n
+Obesity,full,298,13746,659,59896,1.97,1.716,2.262,
+Obesity,comparator,298,13746,7,511,1.583,0.744,3.366,14860.0
+T2D,full,251,28675,3384,707406,1.83,1.609,2.081,
+T2D,comparator,251,28675,427,109012,2.235,1.911,2.613,138616.0
