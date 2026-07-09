@@ -1,14 +1,18 @@
-# GLP-1 RA neuropsychiatric safety — Stream A (designed-study synthesis)
+# GLP-1 RA neuropsychiatric safety — evidence triangulation
 
 Triangulating the GLP-1 receptor agonist neuropsychiatric safety signal.
 **Primary question:** In adults on GLP-1 RAs, does designed-study and mechanistic
 evidence support, refute, or fail to explain the neuropsychiatric safety signal
 (suicidality, self-harm, depression) seen in spontaneous adverse-event reports?
 
-This repository holds **Stream A** — the designed-study evidence synthesis (RCTs +
-observational pharmacoepidemiology). Two other streams are kept strictly separate and
-are **not** pooled with Stream A: Stream B (FAERS spontaneous reports, comparison only)
-and Stream C (mechanistic plausibility).
+This repository holds two evidence streams, kept **strictly separate and never pooled
+together**:
+- **Stream A** — designed-study synthesis (RCTs + observational pharmacoepidemiology).
+- **Stream B** — FAERS spontaneous-report disproportionality (openFDA), for **comparison
+  only**. See `docs/stream_B_README.md`.
+
+Stream C (mechanistic plausibility) is tracked separately. The point of the project is
+to compare these streams — not to merge them into one number.
 
 ## Headline result
 
@@ -35,6 +39,26 @@ outcomes (suicidality composite, suicide attempt/self-harm — both now Very low
 The pipeline is anchored to a published meta-analysis (Chen et al., *J Diabetes* 2025)
 and reproduces its pooled RR of 0.84 (0.54–1.32), I²=0%, to reported precision.
 
+## Stream B headline — the spontaneous signal is comparator-dependent
+
+FAERS disproportionality for **semaglutide × MedDRA SMQ suicide/self-injury** (a = 912
+reports) gives opposite conclusions depending on the comparison group:
+
+| Background | Reporting OR (95% CI) | Signal? |
+|---|---|---|
+| Full FAERS database | 0.77 (0.73–0.83) | No (null-to-protective) |
+| SGLT2i + DPP-4i comparators | 2.08 (1.91–2.26) | Yes |
+
+Same numerator, opposite sign. Among all GLP-1 RAs only semaglutide crosses into signal
+territory under the comparator background. **87% of these reports arrived after July 2023**
+(a 6.8× surge coinciding with the EMA/FDA reviews). LLM adjudication over the structured
+case fields (no free-text narrative exists in public data) classifies all 912 reports:
+only **11% are plausibly drug-attributed**, while **25% are notoriety/legal-sourced** and a
+further **22% are confounded** by indication or psychiatric co-medication. The
+`triangulation_forest.png` figure co-displays Stream A and Stream B on one axis in
+**separate, unpooled bands** — the divergence is the result. Full detail, caveats, and the
+reusable extraction tool: `docs/stream_B_README.md`.
+
 ## Repository layout
 
 ```
@@ -42,8 +66,21 @@ data/      search, de-duplication, screening ledger, master study table, anchor 
 results/   pooled estimates, reproduction check, GRADE, PRISMA counts, risk-of-bias tables
 figures/   forest plots, PRISMA evidence map, RoB summary, GRADE table, reproduction check
 briefs/    Stream A synthesis brief + anchor reproduction brief + dual-review RoB brief
-tools/     dual-reviewer-rob + grade-hybrid harness source (cross-model RoB & GRADE)
+tools/     dual-reviewer-rob + grade-hybrid harness source (cross-model RoB & GRADE);
+           faers/ — the openFDA/FAERS extraction + disproportionality client (Stream B)
+docs/      stream_B_README.md (FAERS methods, results, caveats) + stream_B_PENDING.md
 ```
+
+### Stream B files (FAERS)
+- `tools/faers/faers_tool.py` — stdlib openFDA client: disproportionality (PRR/ROR/IC,
+  full-DB or active-comparator background), time trends, source split, co-medication,
+  case retrieval, and LLM case adjudication. Published as the `faers-pharmacovigilance` skill.
+- `results/faers_case_adjudication_full912.csv` — all 912 semaglutide-suicide reports tagged
+  (category + confidence + rationale) over structured fields.
+- `results/confounder_ranking.csv` — ranked confounders and how each biases the signal (deliverable #6).
+- `results/stream_B_signal_matrix.csv` — 8 GLP-1 RAs × 3 outcomes × 2 backgrounds.
+- `figures/triangulation_forest.png` — Stream A vs Stream B, shared axis, unpooled bands.
+- `figures/faers_demo.png`, `figures/faers_adjudication.png` — signal flip + adjudication breakdown.
 
 ### Hardened risk-of-bias & GRADE layer
 The observational risk-of-bias and GRADE-judgment assessments were re-run with a
