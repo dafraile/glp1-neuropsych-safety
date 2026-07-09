@@ -321,6 +321,165 @@ def source_qualification(drug, outcome=None, date_range=None):
     return {QUALIFICATION.get(str(r["term"]), str(r["term"])): r["count"]
             for r in j["results"]}
 
+# ---------------------------------------------------------------------------
+# Case-level retrieval + LLM-adjudication substrate
+# ---------------------------------------------------------------------------
+
+def fetch_cases(drug, outcome=None, date_range=None, max_cases=1000,
+                page=100, suspect_only=False):
+    """
+    Page through full case objects for drug (x outcome x date). openFDA caps
+    skip at 25000 and limit at 1000/page (we use <=100). Returns list of raw
+    report dicts.
+    """
+    search = build_search(drug=drug, outcome=outcome, date_range=date_range,
+                          suspect_only=suspect_only)
+    out, skip = [], 0
+    while len(out) < max_cases:
+        j = _get({"search": search, "limit": min(page, max_cases - len(out)),
+                  "skip": skip})
+        if j.get("_zero"):
+            break
+        res = j.get("results", [])
+        if not res:
+            break
+        out.extend(res)
+        skip += len(res)
+        if skip >= j["meta"]["results"]["total"] or skip >= 25000:
+            break
+    return out[:max_cases]
+
+def _first(x):
+    return x[0] if isinstance(x, list) and x else (x if isinstance(x, str) else None)
+
+def case_substrate(report, drug):
+    """
+    Distill one raw FAERS report into the structured fields that inform causal
+    adjudication — the signal the flat PT-count discards. Returns a compact
+    dict suitable for LLM review.
+
+    Fields:
+      indication     why the GLP-1 drug was given (drugindication) -> confounding-by-indication
+      action_taken   actiondrug (1 withdrawn,2 dose-reduced,... ) -> dechallenge
+      dose_text      free dosage string
+      reactions      list of MedDRA PTs on the case
+      outcome_codes  reaction outcomes (1 recovered..5 fatal)
+      comeds         co-reported generic names (psych meds flagged)
+      age / sex      demographics
+      source         reporter qualification (consumer vs clinician)
+      country        primary source country
+      serious        seriousness flag + death flag
+      received       receipt date (notoriety window)
+      report_id      safetyreportid (duplicate tracing)
+    """
+    generics = set(g.lower() for g in DRUGS.get(drug, {}).get("generic", [drug]))
+    p = report.get("patient", {})
+    drugs = p.get("drug", [])
+    # locate the GLP-1 drug entry (for indication / action / dose)
+    idx = None
+    for i, d in enumerate(drugs):
+        gn = d.get("openfda", {}).get("generic_name", [])
+        gn = [g.lower() for g in (gn if isinstance(gn, list) else [gn])]
+        if generics & set(gn) or any(g in (d.get("medicinalproduct","").lower()) for g in generics):
+            idx = i; break
+    dd = drugs[idx] if idx is not None else (drugs[0] if drugs else {})
+    action_map = {"1":"drug withdrawn","2":"dose reduced","3":"dose increased",
+                  "4":"dose not changed","5":"unknown","6":"not applicable"}
+    psych = set(sum(COMED_CLASSES.values(), []))
+    comeds = []
+    for i, d in enumerate(drugs):
+        if i == idx:
+            continue
+        gn = d.get("openfda", {}).get("generic_name") or [d.get("medicinalproduct","")]
+        gn = gn if isinstance(gn, list) else [gn]
+        for g in gn:
+            gl = (g or "").lower().strip()
+            if gl:
+                flag = next((cls for cls, toks in COMED_CLASSES.items()
+                             if any(t in gl for t in toks)), None)
+                comeds.append({"drug": g, "psych_class": flag})
+    return {
+        "report_id": report.get("safetyreportid"),
+        "received": report.get("receivedate"),
+        "country": report.get("primarysourcecountry"),
+        "source": QUALIFICATION.get(str(report.get("primarysource", {}).get("qualification")), "unknown"),
+        "serious": report.get("serious"),
+        "death": report.get("seriousnessdeath"),
+        "age": p.get("patientonsetage"),
+        "sex": {"1":"male","2":"female"}.get(str(p.get("patientsex")), "unknown"),
+        "indication": _first(dd.get("drugindication")),
+        "action_taken": action_map.get(str(dd.get("actiondrug")), None),
+        "dose_text": dd.get("drugdosagetext"),
+        "reactions": [r.get("reactionmeddrapt") for r in p.get("reaction", [])],
+        "comeds": comeds,
+        "n_comeds": len(comeds),
+        "n_psych_comeds": sum(1 for c in comeds if c["psych_class"]),
+    }
+
+# Categories for LLM causal adjudication of a spontaneous report.
+ADJUDICATION_CATEGORIES = [
+    "plausible_drug_attributed",     # temporal + dechallenge + no dominant confounder
+    "confounded_by_indication",      # prescribed for obesity/depression-linked indication
+    "confounded_by_comedication",    # antidepressant/benzo co-reported, psych history implied
+    "notoriety_or_legal_sourced",    # consumer/lawyer report in post-Jul-2023 window, thin clinical detail
+    "duplicate_suspect",             # fields suggest overlap with another case
+    "uninterpretable",               # too little structured information to judge
+]
+
+ADJUDICATION_SYSTEM = (
+    "You are a pharmacovigilance reviewer adjudicating a single FAERS spontaneous "
+    "adverse-event report for a GLP-1 receptor agonist and a suicide/self-injury "
+    "outcome. You are given ONLY the structured case fields (no free-text narrative "
+    "exists in the public data). Judge causal interpretability, not truth. "
+    "Assign the SINGLE best-fitting category and a 0-1 confidence. Weigh: temporal "
+    "information (drug start/end vs event), dechallenge (action_taken), the "
+    "prescribing indication (confounding by indication if psychiatric or obesity-"
+    "with-known-mood-link), psychiatric co-medication, reporter type and receipt "
+    "date (consumer/lawyer reports in the post-July-2023 notoriety window with thin "
+    "clinical detail lean toward notoriety_or_legal_sourced), and sparsity. "
+    "Return STRICT JSON only: "
+    '{{"category":"<one of {cats}>","confidence":<0-1>,"rationale":"<=25 words"}}'
+).format(cats="|".join(ADJUDICATION_CATEGORIES))
+
+def adjudicate_cases(substrates, model=None, max_concurrency=8, host=None):
+    """
+    LLM-adjudicate a list of case substrates. Requires the kernel `host` object
+    (pass host=host). Returns list of {**substrate, category, confidence, rationale}.
+    Uses host.llm list fan-out for parallelism.
+    """
+    if host is None:
+        raise ValueError("pass host=host (the kernel singleton) for host.llm access")
+    import json as _json
+    prompts = []
+    for s in substrates:
+        compact = {k: s[k] for k in ("received","source","country","age","sex",
+                   "indication","action_taken","dose_text","reactions",
+                   "n_comeds","n_psych_comeds")}
+        compact["psych_comeds"] = [c["drug"] for c in s["comeds"] if c["psych_class"]]
+        prompts.append("Adjudicate this case. Fields:\n" + _json.dumps(compact, default=str))
+    reqs = [{"prompt": p, "system": ADJUDICATION_SYSTEM,
+             **({"model": model} if model else {})} for p in prompts]
+    results = host.llm(reqs, max_concurrency=max_concurrency)
+    out = []
+    for s, r in zip(substrates, results):
+        rec = dict(s)
+        if isinstance(r, dict) and "error" in r:
+            rec.update({"category": "uninterpretable", "confidence": None,
+                        "rationale": "llm_error"})
+        else:
+            txt = (r.get("text") if isinstance(r, dict) else str(r)) or ""
+            try:
+                start, end = txt.find("{"), txt.rfind("}")
+                parsed = _json.loads(txt[start:end+1])
+                rec.update({"category": parsed.get("category", "uninterpretable"),
+                            "confidence": parsed.get("confidence"),
+                            "rationale": parsed.get("rationale", "")})
+            except Exception:
+                rec.update({"category": "uninterpretable", "confidence": None,
+                            "rationale": "parse_error"})
+        out.append(rec)
+    return out
+
 def comedication(drug, outcome, comed_class, date_range=None):
     """
     Count of drug+outcome reports that ALSO mention a co-medication class,
