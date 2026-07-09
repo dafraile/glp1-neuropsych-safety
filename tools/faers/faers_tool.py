@@ -464,7 +464,10 @@ def adjudicate_cases(substrates, model=None, max_concurrency=8, host=None):
     for s, r in zip(substrates, results):
         rec = dict(s)
         if isinstance(r, dict) and "error" in r:
-            rec.update({"category": "uninterpretable", "confidence": None,
+            # Do NOT mask an LLM failure as a content judgment — a token-ceiling
+            # or rate-limit error is not an "uninterpretable" case. Tag it
+            # distinctly (category=None) so a caller can detect and re-run it.
+            rec.update({"category": None, "confidence": None,
                         "rationale": "llm_error"})
         else:
             txt = (r.get("text") if isinstance(r, dict) else str(r)) or ""
@@ -475,10 +478,40 @@ def adjudicate_cases(substrates, model=None, max_concurrency=8, host=None):
                             "confidence": parsed.get("confidence"),
                             "rationale": parsed.get("rationale", "")})
             except Exception:
-                rec.update({"category": "uninterpretable", "confidence": None,
+                rec.update({"category": None, "confidence": None,
                             "rationale": "parse_error"})
         out.append(rec)
     return out
+
+def adjudicate_with_retry(substrates, host=None, chunk=90, model=None,
+                          max_concurrency=8, max_rounds=4):
+    """
+    Adjudicate in chunks and automatically re-run any cases that came back with
+    rationale in {'llm_error','parse_error'} (category is None for those).
+    Chunking keeps each host.llm batch under the 512 cap; re-running across
+    rounds works around the per-frame token ceiling within a single session's
+    budget. Returns (results, n_failed_final). If n_failed_final > 0, the frame
+    budget is exhausted — finish the remainder in a fresh session or a delegated
+    worker (each gets its own token budget).
+    """
+    def _run(items):
+        out = []
+        for i in range(0, len(items), chunk):
+            out += adjudicate_cases(items[i:i+chunk], model=model,
+                                    max_concurrency=max_concurrency, host=host)
+        return out
+    results = _run(substrates)
+    by_id = {str(r["report_id"]): r for r in results}
+    for _ in range(max_rounds - 1):
+        failed = [s for s in substrates
+                  if by_id[str(s["report_id"])]["rationale"] in ("llm_error", "parse_error")]
+        if not failed:
+            break
+        for r in _run(failed):
+            by_id[str(r["report_id"])] = r
+    final = list(by_id.values())
+    n_failed = sum(1 for r in final if r["rationale"] in ("llm_error", "parse_error"))
+    return final, n_failed
 
 def comedication(drug, outcome, comed_class, date_range=None):
     """
