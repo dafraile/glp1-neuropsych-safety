@@ -1,0 +1,26 @@
+study,N_exposed,N_control,events_exp,events_ctrl,arm_ratio,double_zero,peto_questionable
+Ishii 2020,120,39,0,0,3.08,True,False
+Ahrén 2013,510,170,1,0,3.0,False,True
+Zinman 2019,546,184,0,1,2.97,False,True
+Tamborlane 2022,59,23,0,0,2.57,True,False
+DeFronzo 2010,92,45,1,0,2.04,False,True
+Arslanian 2022,104,51,0,1,2.04,False,True
+Seino 2012b,268,132,0,1,2.03,False,True
+Umpierrez 2014,539,268,0,1,2.01,False,True
+Pi-Sunyer 2015,2481,1242,2,1,2.0,False,False
+Kaku 2019,273,546,1,0,2.0,False,True
+Carydias 2022,84,42,1,0,2.0,False,True
+Wilding 2021,1306,655,1,1,1.99,False,False
+Buse 2011,137,122,0,1,1.12,False,False
+Blackman 2016,176,179,1,0,1.02,False,False
+Seino 2012a,154,157,0,1,1.02,False,False
+None 2014,481,484,0,1,1.01,False,False
+Kelly 2020,125,126,1,0,1.01,False,False
+Jabbour 2020,231,233,0,1,1.01,False,False
+Pfeffer 2015,3031,3032,2,0,1.0,False,False
+Mentz 2017,7344,7372,4,3,1.0,False,False
+Tack 2019,4668,4672,6,7,1.0,False,False
+Hernandez 2018,4717,4715,2,3,1.0,False,False
+Unger 2021,980,984,0,1,1.0,False,False
+Gerstein 2019,4943,4949,2,2,1.0,False,False
+Lincoff 2023,8803,8801,10,10,1.0,False,False

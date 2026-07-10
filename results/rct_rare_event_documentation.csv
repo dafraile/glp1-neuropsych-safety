@@ -1,0 +1,2 @@
+stratum,total_events_exposed,total_events_control,n_double_zero,double_zero_trials,k_informative,cc_scheme_MH,cc_scheme_sensitivity,n_arm_imbalanced_ge2to1,arm_imbalanced_trials
+RCT suicidal-behaviour composite (25 trials with 2x2),35,36,2,Ishii 2020; Tamborlane 2022,23,none (MH & Peto & logistic & GLMM handle zeros without CC),"0.5 added to both cells of zero-event arms (treatment-arm CC), IV pool only",8,Ahrén 2013; Arslanian 2022; Carydias 2022; DeFronzo 2010; Kaku 2019; Seino 2012b; Umpierrez 2014; Zinman 2019

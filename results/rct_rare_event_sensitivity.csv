@@ -1,0 +1,9 @@
+method,k_used,events_exp,events_ctrl,estimate,ci_low,ci_high,I2,note
+"Mantel-Haenszel RR, FE, no continuity correction (PRIMARY rare-event)",23,35,36,0.868,0.549,1.373,0.0,Standard MH handles zero cells; double-zero trials contribute nothing. Anchor Chen 2025 RR 0.84 (0.54-1.32).
+"Mantel-Haenszel RR, random-effects (DL)",23,35,36,0.844,0.541,1.317,0.0,tau2=0.000; near-zero heterogeneity so RE~FE. tau2 estimated on 0.5-CC per-study logRR.
+"Mantel-Haenszel OR, FE, no continuity correction",23,35,36,0.868,0.546,1.382,0.0,Greenland-Robins variance.
+"Mantel-Haenszel OR, random-effects (DL)",23,35,36,0.844,0.54,1.318,0.0,tau2=0.000; RE~FE.
+"Peto OR, FE",23,35,36,0.865,0.54,1.385,0.0,"No CC needed. Assumes rare events, balanced arms, small effects. 8 non-double-zero trials have arm ratio >=2:1 (Ahrén 2013, Arslanian 2022, Carydias 2022, DeFronzo 2010, Kaku 2019, Seino 2012b, Umpierrez 2014, Zinman 2019) -> Peto assumption questionable there; events so sparse impact minimal."
+Fixed-effect logistic (study fixed effects),23,35,36,0.865,0.54,1.385,,Conditional-logistic-equivalent; exact conditional likelihood infeasible (recursion blows up on n~8800 trials). No CC.
+"GLMM binomial-normal (random study intercept, VB)",23,35,36,0.845,0.608,1.174,,"Exact-ish likelihood, no CC, no zero-cell problem. Variational Bayes fit."
+"Inverse-variance OR, FE, treatment-arm 0.5 CC (SENSITIVITY)",23,35,36,0.844,0.54,1.318,0.0,0.5 added to both cells of arms in zero-event trials. Shown to demonstrate CC dependence is negligible here.

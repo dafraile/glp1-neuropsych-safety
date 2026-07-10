@@ -1,0 +1,6 @@
+scope,n_pairs,n_estimable,coverage,n_pos_est,n_neg_est,AUROC_ic025,AUROC_ror,sens_evans,spec_evans,sens_ic,spec_ic,sens_ror,spec_ror,threshold_desc,snapshot_date,api_key_used
+OVERALL,399,355,0.89,148,207,0.7609,0.7553,0.581,0.797,0.764,0.589,0.777,0.589,signal_evans = PRR>=2 & chi2_yates>=4 & a>=3 (tool default); sens/spec also reported for signal_ic (IC025>0) and signal_ror (ROR_lo>1),2026-04-28,False
+HOI Upper GI #3,91,79,0.868,22,57,0.862,0.8604,0.636,0.86,0.909,0.579,0.909,0.579,,2026-04-28,False
+OMOP Acute Liver Failure 1,118,102,0.864,69,33,0.8568,0.8037,0.667,0.879,0.783,0.758,0.797,0.758,,2026-04-28,False
+OMOP Acute Renal Failure 1,88,82,0.932,22,60,0.8148,0.8008,0.909,0.533,1.0,0.3,1.0,0.3,,2026-04-28,False
+OMOP Acute myocardial Infarction  1,102,92,0.902,35,57,0.6907,0.7464,0.171,0.965,0.486,0.807,0.514,0.807,,2026-04-28,False

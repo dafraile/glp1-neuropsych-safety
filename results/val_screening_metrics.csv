@@ -1,0 +1,8 @@
+metric,value,ci_low,ci_high,n,k,description
+precision_both_model_confirm,0.7741935483870968,0.6793336026404615,0.8472995797935337,93,72.0,share of pipeline-includes both models confirm eligible (abstract subset)
+miss_rate_both_model,0.014084507042253521,0.0038709351215819483,0.04989698843383708,142,2.0,share of pipeline-excludes both models say include (conservative)
+miss_rate_either_model,0.028169014084507043,0.011007563725265082,0.07018737653869253,142,4.0,share of pipeline-excludes either model says include (sensitive)
+est_missed_studies_both,9.80281690140845,2.694170844621036,34.72830394995061,696,2.0,miss_rate_both scaled to full exclude pool (N=696)
+est_missed_studies_either,19.6056338028169,7.661264352784497,48.85041407093,696,4.0,miss_rate_either scaled to full exclude pool (N=696)
+inter_model_kappa_abstract,0.8774814517746141,,,235,,"Cohen kappa modelA(sonnet-5) vs modelB(opus-4-8), abstract subset — CEILING (reproducibility not accuracy)"
+inter_model_kappa_all,0.8821679615242323,,,273,,Cohen kappa incl. title-only records

@@ -1,0 +1,4 @@
+group,pre_prop,post_prop,change,pre_num,pre_den,post_num,post_den,did_se,did_z,did_p,did_ci_low,did_ci_high,interruption,snapshot,api_key_used,scope
+semaglutide,0.00474,0.01376,0.00902,120.0,25308.0,792.0,57551.0,,,,,,20230701,2026-04-28,False,semaglutide x suicide_selfinjury SMQ narrow
+other_GLP1_RAs,0.00292,0.00408,0.00117,268.0,91842.0,611.0,149637.0,,,,,,20230701,2026-04-28,False,semaglutide x suicide_selfinjury SMQ narrow
+DiD_estimate,,,0.00785,,,,,0.00069,11.32,0.00e+00,0.0065,0.00921,20230701,2026-04-28,False,semaglutide x suicide_selfinjury SMQ narrow

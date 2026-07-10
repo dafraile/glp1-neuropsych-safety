@@ -1,0 +1,13 @@
+metric,value,ci_low,ci_high,n,description
+plausible_attribution_min,0.1118421052631579,,,912,lowest plausible-attribution % across 3 models (cat_haiku)
+plausible_attribution_max,0.26535087719298245,,,912,highest plausible-attribution % across 3 models (cat_sonnet5)
+plausible_attribution_consensus,0.14035087719298245,0.11931248631823489,0.1644064449904106,912,majority-vote (>=2/3) consensus plausible %
+cross_model_kappa_mean_pairwise,0.4778156302741798,,,912,mean pairwise Cohen kappa (3 models) — CEILING
+cross_model_fleiss_kappa,0.47287639087379446,,,912,"Fleiss kappa, 3 models, 5 categories"
+kappa_haiku_sonnet5,0.41815217732075116,,,912,pairwise
+kappa_haiku_gpt55,0.4457147505993942,,,912,pairwise
+kappa_sonnet5_gpt55,0.5695799629023938,,,912,pairwise
+fleiss_kappa_pre_july2023,0.297,,,120,"Fleiss kappa, reports received < 2023-07-01 (WEAKER — kappa does NOT hold pre-notoriety)"
+fleiss_kappa_post_july2023,0.488,,,792,"Fleiss kappa, reports received >= 2023-07-01"
+plausible_range_pre_july2023,,0.05,0.408,120,plausible % model range pre-notoriety (5.0%-40.8%)
+plausible_range_post_july2023,,0.107,0.244,792,plausible % model range post-notoriety (10.7%-24.4%)

@@ -1,0 +1,22 @@
+outcomeName,outcome_key,meddra_pt
+OMOP Acute Liver Failure 1,omop_ali,Acute hepatic failure
+OMOP Acute Liver Failure 1,omop_ali,Hepatic failure
+OMOP Acute Liver Failure 1,omop_ali,Hepatotoxicity
+OMOP Acute Liver Failure 1,omop_ali,Drug-induced liver injury
+OMOP Acute Liver Failure 1,omop_ali,Liver injury
+OMOP Acute Liver Failure 1,omop_ali,Hepatic necrosis
+OMOP Acute Liver Failure 1,omop_ali,Hepatitis fulminant
+OMOP Acute myocardial Infarction  1,omop_ami,Myocardial infarction
+OMOP Acute myocardial Infarction  1,omop_ami,Acute myocardial infarction
+OMOP Acute myocardial Infarction  1,omop_ami,Myocardial ischaemia
+HOI Upper GI #3,omop_ugib,Gastrointestinal haemorrhage
+HOI Upper GI #3,omop_ugib,Upper gastrointestinal haemorrhage
+HOI Upper GI #3,omop_ugib,Gastric haemorrhage
+HOI Upper GI #3,omop_ugib,Duodenal ulcer haemorrhage
+HOI Upper GI #3,omop_ugib,Peptic ulcer haemorrhage
+HOI Upper GI #3,omop_ugib,Haematemesis
+OMOP Acute Renal Failure 1,omop_arf,Acute kidney injury
+OMOP Acute Renal Failure 1,omop_arf,Renal failure
+OMOP Acute Renal Failure 1,omop_arf,Renal failure acute
+OMOP Acute Renal Failure 1,omop_arf,Acute renal failure
+OMOP Acute Renal Failure 1,omop_arf,Renal impairment

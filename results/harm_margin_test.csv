@@ -1,0 +1,15 @@
+stratum,estimate,ci_low,ci_high,harm_margin,upper_ci_excludes_margin,interpretation
+"RCT suicidal-behaviour (MH-RR, primary)",0.868,0.549,1.373,1.2,False,CANNOT rule out harm at this margin
+"RCT suicidal-behaviour (MH-RR, primary)",0.868,0.549,1.373,1.25,False,CANNOT rule out harm at this margin
+Obs: suicidal ideation,0.736,0.395,1.371,1.2,False,CANNOT rule out harm at this margin
+Obs: suicidal ideation,0.736,0.395,1.371,1.25,False,CANNOT rule out harm at this margin
+Obs: suicidality (composite),0.944,0.817,1.091,1.2,True,rules OUT harm >= margin
+Obs: suicidality (composite),0.944,0.817,1.091,1.25,True,rules OUT harm >= margin
+Obs: suicide attempt/self-harm,0.707,0.582,0.859,1.2,True,rules OUT harm >= margin
+Obs: suicide attempt/self-harm,0.707,0.582,0.859,1.25,True,rules OUT harm >= margin
+Obs: completed suicide,1.25,0.83,1.88,1.2,False,CANNOT rule out harm at this margin
+Obs: completed suicide,1.25,0.83,1.88,1.25,False,CANNOT rule out harm at this margin
+Obs: depression,1.53,0.799,2.931,1.2,False,CANNOT rule out harm at this margin
+Obs: depression,1.53,0.799,2.931,1.25,False,CANNOT rule out harm at this margin
+Obs: anxiety,0.537,0.333,0.867,1.2,True,rules OUT harm >= margin
+Obs: anxiety,0.537,0.333,0.867,1.25,True,rules OUT harm >= margin

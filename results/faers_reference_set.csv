@@ -1,0 +1,41 @@
+drug,outcome_pt,truth,source_note
+atorvastatin,Rhabdomyolysis,positive,statin-induced rhabdomyolysis (label-warned)
+simvastatin,Rhabdomyolysis,positive,statin-induced rhabdomyolysis (label-warned)
+lisinopril,Angioedema,positive,ACE-inhibitor angioedema (classic; EU-ADR TP)
+enalapril,Angioedema,positive,ACE-inhibitor angioedema (classic; EU-ADR TP)
+warfarin,Haemorrhage,positive,anticoagulant bleeding (label-warned)
+clozapine,Agranulocytosis,positive,clozapine agranulocytosis (REMS-monitored)
+allopurinol,Stevens-Johnson syndrome,positive,allopurinol SJS/TEN (HLA-B*5801; boxed)
+isotretinoin,Depression,positive,isotretinoin neuropsychiatric (boxed/label)
+methotrexate,Hepatotoxicity,positive,MTX hepatotoxicity (label-warned)
+amiodarone,Pulmonary fibrosis,positive,amiodarone pulmonary toxicity (boxed)
+digoxin,Arrhythmia,positive,digoxin toxicity arrhythmia (narrow TI); PT=Arrhythmia (FAERS-populated)
+gentamicin,Renal failure,positive,aminoglycoside nephrotoxicity (label)
+ciprofloxacin,Tendon rupture,positive,fluoroquinolone tendinopathy (boxed)
+infliximab,Tuberculosis,positive,anti-TNF reactivation TB (boxed)
+carbamazepine,Stevens-Johnson syndrome,positive,carbamazepine SJS (HLA-B*1502; boxed)
+valproate,Hepatic failure,positive,valproate hepatotoxicity (boxed)
+metformin,Lactic acidosis,positive,"metformin lactic acidosis (boxed, rare)"
+phenytoin,Stevens-Johnson syndrome,positive,phenytoin SJS (label)
+heparin,Thrombocytopenia,positive,heparin-induced thrombocytopenia (label)
+acetaminophen,Hepatotoxicity,positive,paracetamol hepatotoxicity (dose-related; classic)
+atorvastatin,Stevens-Johnson syndrome,negative,statin-SJS: OMOP negative control
+lisinopril,Rhabdomyolysis,negative,ACEi-rhabdo: no known assoc (neg control)
+metformin,Angioedema,negative,metformin-angioedema: neg control
+amoxicillin,Rhabdomyolysis,negative,amoxicillin-rhabdo: neg control
+omeprazole,Tendon rupture,negative,PPI-tendon rupture: neg control
+cetirizine,Agranulocytosis,negative,antihistamine-agranulocytosis: neg control
+loratadine,Rhabdomyolysis,negative,loratadine-rhabdo: neg control
+levothyroxine,Stevens-Johnson syndrome,negative,levothyroxine-SJS: neg control
+ibuprofen,Tendon rupture,negative,NSAID-tendon rupture: neg control
+aspirin,Tuberculosis,negative,aspirin-TB: neg control
+hydrochlorothiazide,Tuberculosis,negative,HCTZ-TB: neg control
+metoprolol,Agranulocytosis,negative,beta-blocker-agranulocytosis: neg control
+amlodipine,Pulmonary fibrosis,negative,CCB-pulmonary fibrosis: neg control
+simvastatin,Tuberculosis,negative,statin-TB: neg control
+cetirizine,Tendon rupture,negative,antihistamine-tendon: neg control
+omeprazole,Angioedema,negative,PPI-angioedema: neg control
+loratadine,Renal failure,negative,loratadine-renal failure: neg control
+acetaminophen,Tendon rupture,negative,paracetamol-tendon: neg control
+levothyroxine,Pulmonary fibrosis,negative,levothyroxine-pulm fibrosis: neg control
+amlodipine,Agranulocytosis,negative,CCB-agranulocytosis: neg control

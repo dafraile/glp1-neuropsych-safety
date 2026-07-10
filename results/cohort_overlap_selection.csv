@@ -1,0 +1,7 @@
+outcome,pmids_in_outcome,n_candidates,action,reason
+anxiety,35281896; 42373755,2,retain all as independent,distinct comparators/databases; no documented shared source population
+completed suicide,39226030,1,retain (only study),only study for this outcome
+depression,41592697; 39424950; 38852027,3,retain all as independent,distinct comparators/databases; no documented shared source population
+suicidal ideation,39103719; 39008852; 38182782,3,retain all as independent,distinct comparators/databases; no documented shared source population
+suicidality (composite),42209408; 40010803,2,retain all as independent,distinct comparators/databases; no documented shared source population
+suicide attempt/self-harm,30297350; 42000905; 41334076; 41050856,4,retain all as independent,distinct comparators/databases; no documented shared source population

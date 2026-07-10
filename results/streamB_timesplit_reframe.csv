@@ -1,0 +1,5 @@
+stratum,outcome,a,b,c,d,ROR,lo,hi,IC025,signal_ror
+Comparator bg — all dates,suicide_selfinjury,912,81999,1336,249210,2.075,1.906,2.258,0.613,True
+Comparator bg — pre Jul-2023,suicide_selfinjury,120,25240,1024,182678,0.848,0.702,1.025,-0.468,False
+Comparator bg — post Jul-2023,suicide_selfinjury,792,56759,312,66532,2.976,2.609,3.394,0.532,True
+Full-DB — all dates,suicide_selfinjury,912,81999,286854,19958810,0.774,0.725,0.826,-0.458,False

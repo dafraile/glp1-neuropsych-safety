@@ -1,0 +1,12 @@
+entity,kind,level_change,level_p,slope_change,slope_p,n_quarters,interruption,snapshot,scope,api_key_used
+semaglutide_suicide,TARGET,0.02056,0.0,-0.00257,0.0001,33.0,20230701,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+semaglutide_nausea,control_outcome,0.0257,0.2585,0.00308,0.3356,33.0,20230701,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+semaglutide_headache,control_outcome,-0.0019,0.8044,-0.00191,0.0851,33.0,20230701,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+semaglutide_injsite,control_outcome,-0.00663,0.3645,-0.00105,0.3083,33.0,20230701,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+tirzepatide_suicide,control_drug,0.08341,0.5128,0.01178,0.5118,32.0,20230701,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+dulaglutide_suicide,control_drug,0.003,0.0029,2e-05,0.9015,33.0,20230701,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+empagliflozin_suicide,control_drug,-0.0022,0.2948,0.0004,0.1816,33.0,20230701,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+semaglutide_suicide,sensitivity_altdate,0.01613,0.0017,-0.00114,0.0506,,20230101,,semaglutide x suicide_selfinjury SMQ narrow,False
+semaglutide_suicide,sensitivity_altdate,0.02081,0.0,-0.0019,0.0008,,20230401,,semaglutide x suicide_selfinjury SMQ narrow,False
+semaglutide_suicide,sensitivity_altdate,0.02056,0.0,-0.00257,0.0001,,20230701,,semaglutide x suicide_selfinjury SMQ narrow,False
+semaglutide_suicide,sensitivity_altdate,0.01871,0.0001,-0.00321,0.0,,20231001,,semaglutide x suicide_selfinjury SMQ narrow,False

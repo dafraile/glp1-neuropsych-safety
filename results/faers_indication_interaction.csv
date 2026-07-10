@@ -1,0 +1,4 @@
+stratum,background,a,b,c,d,ROR,ci_low,ci_high,se_lnROR,z,p_interaction,cochran_Q,p_Q,I2_pct,scope,snapshot,api_key_used
+obesity,full-DB (drugindication-restricted to obesity/weight),299.0,13712.0,673.0,63121.0,2.045,1.782,2.347,0.0701,,,,,,semaglutide x suicide_selfinjury SMQ narrow,2026-04-28,False
+T2D,full-DB (drugindication-restricted to T2D),152.0,21951.0,1302.0,332673.0,1.769,1.495,2.094,0.086,,,,,,semaglutide x suicide_selfinjury SMQ narrow,2026-04-28,False
+INTERACTION_TEST,z-test on difference of log-RORs; Cochran Q,,,,,1.156,0.93,1.437,0.111,1.306,0.1916,1.705,0.1916,41.4,semaglutide x suicide_selfinjury SMQ narrow,2026-04-28,False

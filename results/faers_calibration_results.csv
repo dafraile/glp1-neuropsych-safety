@@ -1,0 +1,4 @@
+rule,AUC,TP,FN,TN,FP,sensitivity,specificity,PPV,youden
+ROR lower-CI>1 & a>=3,0.995,20,0,9,11,1.0,0.45,0.645,0.45
+IC025>0,0.995,20,0,9,11,1.0,0.45,0.645,0.45
+Evans (PRR>=2 & chi2>=4 & a>=3),0.995,20,0,19,1,1.0,0.95,0.952,0.95

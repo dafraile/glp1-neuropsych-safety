@@ -1,0 +1,16 @@
+outcome,pmid,effect_type,estimate,ci_low,ci_high
+depression,41592697.0,HR,1.19,1.11,1.28
+depression,39424950.0,HR,2.95,2.82,3.08
+suicide attempt/self-harm,30297350.0,HR,0.8,0.57,1.13
+suicide attempt/self-harm,42000905.0,HR,0.93,0.57,1.52
+suicidal ideation,39103719.0,HR,1.04,0.35,3.14
+suicidality (composite),42209408.0,HR,0.88,0.74,1.05
+completed suicide,39226030.0,HR,1.25,0.83,1.88
+suicidal ideation,39008852.0,HR,1.02,0.85,1.22
+depression,38852027.0,RR,1.02,0.97,1.07
+suicidality (composite),40010803.0,HR,1.02,0.85,1.23
+anxiety,35281896.0,HR,0.41,0.27,0.61
+suicide attempt/self-harm,41334076.0,aHR,0.52,0.28,0.91
+suicidal ideation,38182782.0,HR,0.44,0.32,0.6
+suicide attempt/self-harm,41050856.0,aHR,0.63,0.47,0.85
+anxiety,42373755.0,HR,0.67,0.51,0.87

@@ -1,0 +1,15 @@
+outcome,study_dropped,pooled_without,ci_low,ci_high,significant_after_drop
+suicidal ideation,39103719,0.677,0.297,1.542,False
+suicidal ideation,39008852,0.572,0.263,1.244,False
+suicidal ideation,38182782,1.021,0.854,1.22,False
+suicidality (composite),42209408,1.02,0.8479242948259577,1.2269963325128563,False
+suicidality (composite),40010803,0.88,0.738760867295784,1.0482417711629368,False
+suicide attempt/self-harm,30297350,0.67,0.519,0.866,True
+suicide attempt/self-harm,42000905,0.672,0.545,0.829,True
+suicide attempt/self-harm,41334076,0.738,0.592,0.919,True
+suicide attempt/self-harm,41050856,0.769,0.597,0.991,True
+depression,41592697,1.735,0.613,4.912,False
+depression,39424950,1.099,0.945,1.278,False
+depression,38852027,1.874,0.77,4.563,False
+anxiety,35281896,0.67,0.5129798006374803,0.8750831893227604,True
+anxiety,42373755,0.41,0.27277264898223735,0.6162641328857955,True

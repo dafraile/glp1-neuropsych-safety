@@ -1,0 +1,14 @@
+reactionmeddrapt,smq,field,meddra_versioned_by_openfda,snapshot
+Suicidal ideation,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Suicide attempt,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Completed suicide,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Suicidal behaviour,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Suicidal depression,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Depression suicidal,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Intentional self-injury,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Self-injurious behaviour,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Self-injurious ideation,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Intentional overdose,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Multiple drug overdose intentional,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Poisoning deliberate,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28
+Self-mutilation,Suicide/self-injury (narrow),patient.reaction.reactionmeddrapt.exact,NO — openFDA public API does not expose/version MedDRA; PTs matched verbatim,2026-04-28

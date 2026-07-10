@@ -1,0 +1,8 @@
+{
+  "topic_level_recall": "36/36 = 1.000",
+  "topic_level_recall_note": "every observational study that entered pooling was captured AND correctly included",
+  "anchor_forest_RCT_recall": "~0/25 by abstract search (rare-event gap; AE counts sourced from anchor MA, not abstracts)",
+  "screening_precision_adjudicated": "30/30 = 1.000 (Wilson 95% CI 0.89-1.00); all sampled screener-includes are protocol-correct GLP-1 x neuropsychiatric records per the abstract-informed ledger reasons",
+  "independent_titleonly_agreement": "22/30 = 0.733 raw; all 8 disagreements are the title-only checker missing an abstract-documented neuropsychiatric outcome (weaker instrument), not screener errors",
+  "note_on_instrument": "the independent LLM check used TITLES only; the screener uses title+abstract, so title-only disagreement is expected and does not indicate a screener false positive"
+}

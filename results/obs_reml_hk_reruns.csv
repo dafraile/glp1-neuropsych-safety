@@ -1,0 +1,12 @@
+outcome,k,method,tau2,pooled,ci_dl_low,ci_dl_high,ci_hk_low,ci_hk_high,pi_low,pi_high,note
+suicidal ideation,3,REML,0.2309,0.736,0.395,1.371,0.209,2.589,0.0,1110.403,I2~90%.
+suicidal ideation,3,PM,0.1901,0.733,0.413,1.301,0.208,2.583,0.001,579.694,I2~90%.
+suicidality (composite),2,REML,0.0025,0.944,0.817,1.091,0.37,2.411,,,I2~23%. PI not interpretable (k<3).
+suicidality (composite),2,PM,0.0025,0.944,0.817,1.091,0.37,2.411,,,I2~23%. PI not interpretable (k<3).
+suicide attempt/self-harm,4,REML,0.0008,0.707,0.582,0.859,0.508,0.984,0.454,1.103,I2~10%.
+suicide attempt/self-harm,4,PM,0.0052,0.708,0.576,0.872,0.506,0.993,0.408,1.229,I2~10%.
+completed suicide,1,single-study,,1.25,0.83,1.88,,,,,k=1; not a pool. PI not interpretable.
+depression,3,REML,0.3289,1.53,0.799,2.931,0.368,6.369,0.0,6920.274,I2~100%.
+depression,3,PM,0.3287,1.53,0.799,2.93,0.368,6.369,0.0,6902.341,I2~100%.
+anxiety,2,REML,0.0897,0.537,0.333,0.867,0.024,11.975,,,I2~74%. PI not interpretable (k<3).
+anxiety,2,PM,0.0897,0.537,0.333,0.867,0.024,11.975,,,I2~74%. PI not interpretable (k<3).

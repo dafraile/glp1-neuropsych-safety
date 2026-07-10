@@ -1,0 +1,19 @@
+metric,value,ci_low,ci_high,n,description
+field_agreement_design,0.8857142857142857,0.7404820521187976,0.9546489414551025,35,inter-model agreement on design
+field_agreement_outcome_category,0.7428571428571429,0.5793037572935127,0.8583713127344985,35,inter-model agreement on outcome_category
+field_agreement_effect_type,0.5714285714285714,0.4085712925897337,0.7201566691832108,35,inter-model agreement on effect_type
+field_agreement_direction,0.7714285714285715,0.6098236221989801,0.879342632538209,35,inter-model agreement on direction
+field_agreement_adjusted,0.9142857142857143,0.7762040092883747,0.970418168994703,35,inter-model agreement on adjusted
+field_agreement_effect_est,0.7428571428571429,0.5793037572935127,0.8583713127344985,35,inter-model agreement on effect_est
+field_agreement_ci_low,0.7714285714285715,0.6098236221989801,0.879342632538209,35,inter-model agreement on ci_low
+field_agreement_ci_high,0.7714285714285715,0.6098236221989801,0.879342632538209,35,inter-model agreement on ci_high
+field_agreement_events_exp,0.9428571428571428,0.8139261926062996,0.984187170385956,35,inter-model agreement on events_exp
+field_agreement_N_exp,0.9428571428571428,0.8139261926062996,0.984187170385956,35,inter-model agreement on N_exp
+field_agreement_events_ctrl,0.9714285714285714,0.8546659090672868,0.9949386386341466,35,inter-model agreement on events_ctrl
+field_agreement_N_ctrl,0.9142857142857143,0.7762040092883747,0.970418168994703,35,inter-model agreement on N_ctrl
+material_discrepancy_any,0.5142857142857142,0.35568539626711626,0.6700601960874726,35,share of studies with >=1 material disagreement incl. one-model-null (upper bound)
+material_discrepancy_genuine,0.2857142857142857,0.16326363398295565,0.45055248069821086,35,share of studies with >=1 BOTH-VALUED material conflict (would move pooled estimate/CI/direction)
+sign_error_rate,0.0,0.0,0.09890426758938868,35,protective<->harmful direction flip between models
+inter_model_agreement_material_free,0.4857142857142857,,,35,share of studies with zero material discrepancies
+qc_pmid_40010803_adjusted_HR_resolved,1.0,,,1,CONFIRMED: table holds adjusted HR 1.02 (crude 2.08 attenuated); both models extracted 1.02 adjusted
+qc_pmid_40897378_mortality_mismap_resolved,1.0,,,1,"CONFIRMED: correctly non-poolable (substance-abuse outcome, not core neuropsych); both models agree"

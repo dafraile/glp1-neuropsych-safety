@@ -1,0 +1,9 @@
+drug,class,a_suicide,total_reports,ROR_comp,lo,hi,signal,a_pre,ROR_pre,pre_lo,pre_hi,a_post,ROR_post,pct_post_jul2023,signals_post
+semaglutide,GLP-1 RA,912,82911,2.075,1.906,2.258,True,120,0.848,0.702,1.025,792.0,2.976,86.8,True
+liraglutide,GLP-1 RA,302,50219,1.121,0.989,1.27,False,240,0.964,0.837,1.11,62.0,2.306,20.5,True
+tirzepatide,GIP/GLP-1 RA,491,140435,0.652,0.588,0.723,False,15,0.177,0.106,0.294,476.0,0.78,96.9,False
+dulaglutide,GLP-1 RA,209,86770,0.442,0.382,0.511,False,135,0.348,0.291,0.417,74.0,0.819,35.4,False
+exenatide,GLP-1 RA,130,52307,0.463,0.386,0.554,False,127,0.438,0.364,0.527,3.0,2.014,2.3,False
+lixisenatide,GLP-1 RA,3,3428,0.163,0.053,0.507,False,1,0.078,0.011,0.558,2.0,0.363,66.7,False
+albiglutide,GLP-1 RA,0,0,186.246,3.694,9389.549,False,0,179.55,3.561,9053.055,0.0,215.506,,
+efpeglenatide,GLP-1 RA,0,0,186.246,3.694,9389.549,False,0,179.55,3.561,9053.055,0.0,215.506,,

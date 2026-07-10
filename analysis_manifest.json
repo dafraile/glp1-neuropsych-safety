@@ -1,0 +1,210 @@
+{
+  "_schema": "glp1-neuropsych-safety analysis manifest v1",
+  "generated_utc": "2026-07-10T05:45:18.153632+00:00",
+  "git_commit": "80faa25d5d531e781316b6e694cbd59c32ab6f45",
+  "streams_are_never_pooled_together": true,
+  "stream_A": {
+    "search_and_screening": {
+      "identified_pubmed": 374,
+      "identified_openalex": 593,
+      "total_retrieved": 967,
+      "after_dedup": 794,
+      "duplicates_removed": 173,
+      "ta_included": 98,
+      "ta_excluded": 696,
+      "screen_method": {
+        "llm": 418,
+        "rule-based": 376
+      }
+    },
+    "study_table": {
+      "total_rows": 61,
+      "rct_rows": 25,
+      "observational_rows": 36,
+      "poolable": {
+        "yes": 40,
+        "no": 21
+      }
+    },
+    "pooling": {
+      "rct_with_2x2": 25,
+      "rct_double_zero_count": 2,
+      "rct_double_zero_studies": [
+        "Ishii 2020",
+        "Tamborlane 2022"
+      ],
+      "rct_pooled_k_MH": 23,
+      "rct_reconciliation": "25 RCTs with 2x2 data; Mantel-Haenszel drops 2 double-zero trial(s) (Ishii 2020, Tamborlane 2022) which cannot inform a relative effect but whose safety exposure is reported; pooled k=23",
+      "obs_poolable": 15,
+      "obs_nonpoolable": 21,
+      "total_poolable": 40,
+      "pooled_k_all_strata": {
+        "RCT (M-H counts)": 23,
+        "Observational (IV, all outcomes)": 15,
+        "Obs: suicidal ideation": 3,
+        "Obs: suicidality (composite)": 2,
+        "Obs: suicide attempt/self-harm": 4,
+        "Obs: completed suicide": 1,
+        "Obs: depression": 3,
+        "Obs: depression (excl. outlier)": 2,
+        "Obs: anxiety": 2,
+        "Obs sensitivity (excl. Serious RoB)": 10
+      }
+    }
+  },
+  "stream_B_faers": {
+    "primary_analysis_scope": "semaglutide (single molecule) x MedDRA SMQ suicide/self-injury (narrow). NOT class-level.",
+    "class_level_analyses": "Stream D FAERS footprint and the 8-molecule signal matrix are class-level / multi-molecule; scope is labelled per table.",
+    "faers_snapshot_cutoff": "2026-03-31",
+    "faers_quarter_span": "2018Q3 - 2026Q1",
+    "adjudicated_cases_total": 912,
+    "pct_post_july_2023": 87,
+    "adjudication_note": "All 912 cases adjudicated. Single-model category counts in faers_case_adjudication_full912.csv; the load-bearing headline is the cross-provider consensus RANGE, not a single-model point estimate."
+  },
+  "stream_D": {
+    "records_retrieved": 246,
+    "included_after_screening": 53,
+    "extracted_study_table": 52,
+    "raw_direction_breakdown_pre_reclass": {
+      "benefit": 28,
+      "mixed": 13,
+      "no-effect": 5,
+      "unclassified": 6
+    },
+    "reclassified_6_studies": {
+      "41384608": "EXCLUDE",
+      "41696398": "EXCLUDE",
+      "40980971": "EXCLUDE",
+      "40506208": "EXCLUDE",
+      "40037282": "no-effect",
+      "39246719": "EXCLUDE"
+    },
+    "excluded_after_reclass": 5,
+    "direction_eligible_N": 47,
+    "corrected_direction_breakdown": {
+      "benefit": 28,
+      "mixed": 13,
+      "no-effect": 6,
+      "harm": 0
+    },
+    "direction_reconciliation": "extracted N=52 -> 47 direction-eligible (28 benefit / 13 mixed / 6 no-effect / 0 harm) + 5 excluded = 52. '0 harm' = no study reported a pro-addiction direction, NOT evidence of safety. Stream D is exploratory."
+  },
+  "llm_steps": {
+    "screening": {
+      "models": [
+        "claude (Claude Science default, screening pass)",
+        "rule-based keyword classifier (no LLM)"
+      ],
+      "note": "418 records LLM-screened, 376 rule-based; method flagged per record in data/screening_ledger.csv"
+    },
+    "extraction": {
+      "models": [
+        "claude (Claude Science default)"
+      ],
+      "note": "abstract/full-text extraction into study_table.csv; 2 QC corrections logged"
+    },
+    "faers_adjudication": {
+      "models": [
+        "claude-haiku (kernel default)",
+        "claude-sonnet-5",
+        "gpt-5.5"
+      ],
+      "note": "cross-provider 3-model adjudication over structured fields; consensus = majority vote"
+    },
+    "risk_of_bias_grade": {
+      "models": [
+        "claude-sonnet-5",
+        "gpt-5.5"
+      ],
+      "note": "dual-reviewer-rob harness (cross-model), judge-adjudicated; grade-hybrid for GRADE judgment domains"
+    }
+  },
+  "analysis_status": {
+    "stream_A_pooling": "complete",
+    "rct_rare_event_sensitivity": "complete",
+    "observational_reml_hk_pi": "complete",
+    "grade_hybrid_crossmodel": "complete",
+    "grade_rules_based_firstpass": "superseded",
+    "risk_of_bias_dualreview": "complete",
+    "risk_of_bias_rules_firstpass": "superseded",
+    "faers_case_adjudication_partial800": "superseded",
+    "faers_case_adjudication_full912": "complete",
+    "faers_adjudication_crossprovider": "complete",
+    "faers_comparator_grid": "complete",
+    "faers_time_controlled_notoriety": "complete",
+    "faers_dedup_drug_role_sensitivity": "complete",
+    "disproportionality_calibration_omop": "complete",
+    "stream_D_benefit_synthesis": "complete (exploratory)",
+    "validation_layers_human_adjudication": "provisional"
+  },
+  "table_file_map": {
+    "README_headline_streamA": "results/pooled_estimates.csv",
+    "README_headline_streamA_GRADE": "results/grade_certainty_hybrid.csv",
+    "README_streamB_comparator_flip": "results/stream_B_signal_matrix.csv",
+    "README_streamB_timesplit": "results/streamB_timesplit_reframe.csv",
+    "README_streamD_headline": "data/stream_D_study_table.csv",
+    "README_streamD_pooled": "results/stream_D_pooled_estimates.csv",
+    "anchor_reproduction_A": "results/reproduction_check.csv",
+    "anchor_reproduction_D": "results/stream_D_reproduction_check.csv",
+    "prisma_A": "results/prisma_counts.csv",
+    "prisma_D": "results/stream_D_prisma_counts.csv",
+    "confounder_ranking": "results/confounder_ranking.csv",
+    "indication_stratified": "results/indication_stratified.csv",
+    "faers_footprint_streamD": "results/streamD_faers_benefit.csv",
+    "faers_adjudication": "results/faers_case_adjudication_full912.csv",
+    "faers_adjudication_crossprovider": "results/adjudication_crossprovider.csv",
+    "disproportionality_calibration_omop": "results/omop_calibration_results.csv",
+    "disproportionality_calibration_40pair": "results/faers_calibration_results.csv",
+    "validation_summary": "results/validation_summary.csv",
+    "rct_rare_event_sensitivity": "results/rct_rare_event_sensitivity.csv",
+    "obs_reml_hk_reruns": "results/obs_reml_hk_reruns.csv",
+    "harm_margin_test": "results/harm_margin_test.csv",
+    "absolute_risks": "results/absolute_risks.csv",
+    "cohort_overlap_matrix": "results/cohort_overlap_matrix.csv",
+    "faers_comparator_grid": "results/faers_comparator_grid.csv",
+    "faers_indication_interaction": "results/faers_indication_interaction.csv",
+    "faers_notoriety_its": "results/faers_notoriety_its.csv",
+    "faers_notoriety_did": "results/faers_notoriety_did.csv",
+    "faers_drug_role_sensitivity": "results/faers_drug_role_sensitivity.csv",
+    "stream_C_evidence_map": "results/stream_C_evidence_map.csv",
+    "stream_D_reclassification": "results/stream_D_reclassification.csv",
+    "stream_D_corrected_counts": "results/stream_D_corrected_counts.csv"
+  },
+  "input_file_sha256": {
+    "results/pooled_estimates.csv": "8a111adce3f513539980a7da6087bef856433a72b5992df78cdee109f0683f1b",
+    "results/grade_certainty_hybrid.csv": "54380d3294df917b9f07573748400275ed9a8f809cc125ae34e1789f7de2a27f",
+    "results/stream_B_signal_matrix.csv": "75b964a6f40d4d5cba1229605d181a8da38841197d4da8b59a3df5c32e288103",
+    "results/streamB_timesplit_reframe.csv": "5d740e9556f83c94428e19cad91f287c22f75fcc2f718ba0fdd8b5fcec3e0c3c",
+    "data/stream_D_study_table.csv": "aa303ee7ecc9ed0cf4fa1b3d07999490d3cfb23559fcdeb807381b2e25287588",
+    "results/stream_D_pooled_estimates.csv": "4441210785028678394e440f218fb38d46c69cfaed54951f8590467bc96316db",
+    "results/reproduction_check.csv": "a7bd9abff1d5f707eb47709d2e8ba5494ff79fe9d188edf864e698eb0334f85d",
+    "results/stream_D_reproduction_check.csv": "1f6d9af33b27610dc7064121f2219f3e9fbafc6b94ace352424c6319dc2e01ad",
+    "results/prisma_counts.csv": "028dc77efdd60efffe54880b2270f2605de3e2765ba4f7e030f3285853e223f6",
+    "results/stream_D_prisma_counts.csv": "2f070db1abb8cc614011a750cb1135d740ab3a5f3d2905b4eaff54693f86d7db",
+    "results/confounder_ranking.csv": "4e3a91fab762d0c364578b07760d1e20b5041438b5bdedde24d21c2af4596650",
+    "results/indication_stratified.csv": "4fe86d6c7859d4fbaab06703b421ef9b72fbf321db4c9163f9a0543966d30d01",
+    "results/streamD_faers_benefit.csv": "9b1df6b703f5a067513c165db125e982e802084af206c32b41c1bf02edc58d2e",
+    "results/faers_case_adjudication_full912.csv": "edf98b899e142744f89992fca249e9b9fa825d4de4613462a4db4d53af439849",
+    "results/adjudication_crossprovider.csv": "55249c3c4ddeb0f43f5ab76ff3b39ded773d8928b401a7a7d962356889a4b3d4",
+    "results/omop_calibration_results.csv": "2b95665c02a7b55eaf2c9bc20a80ceeb156d5dc2216eb3fb016c0224ce29e413",
+    "results/faers_calibration_results.csv": "42fdeb843adca8dd8ee904126025b9f1d717d276f904594e550261151264cc7e",
+    "results/validation_summary.csv": "09dba6e113b14cee5b2b91148102a80f3d29da3fa7e7cc658d63ca6ece440f9f",
+    "results/rct_rare_event_sensitivity.csv": "5beab246b294b22e6ac231896f04867fac1430003bd9b90f66afdeb7a6367442",
+    "results/obs_reml_hk_reruns.csv": "2d0c9927212efc8dca42ec94859b4760c056eee4a19c9a5d616a1901a407e3f7",
+    "results/harm_margin_test.csv": "683c677c76a155cddf788f1ebd4671ee71b6c3b661516fbfe89d0c3fbe20e0b1",
+    "results/absolute_risks.csv": "5173696b01b8b4b0a82d04b3781b060b93f831776ea643b00661febdba1684fa",
+    "results/cohort_overlap_matrix.csv": "82565bfc1b606b3f486dca442d1a12474ed215e2ad7ba1e6d0b0770deadf029f",
+    "results/faers_comparator_grid.csv": "8094394b276fe95868030dd7a374838029455923d8c781ec1e82e92de4fba3e4",
+    "results/faers_indication_interaction.csv": "7e0bf3c147599d0b9ddfd07f6b4c74273174ae06fa8bcc09ef41aa75a28a20a7",
+    "results/faers_notoriety_its.csv": "f599db599351435bdee74fcadfa7f1c8b8a0a08eeae7774fd25456c677694545",
+    "results/faers_notoriety_did.csv": "39b416ab879688c8220f47c3c55ede82710f578d565e4c6dccdc68fdf3d5469b",
+    "results/faers_drug_role_sensitivity.csv": "a967b83cfb40a045a3390d0276ec729ef22729d794baee94401c8b930e65c2f4",
+    "results/stream_C_evidence_map.csv": "1a8d7a5bb9b6573a68e33ca5fac09b30db3bf41e28a6a3076a334facc1b92dbe",
+    "results/stream_D_reclassification.csv": "b7410810fdd6afec4b8c186e383a385ab3666f6b50c8872a3b2771cf789f68f2",
+    "results/stream_D_corrected_counts.csv": "9b7d1f38190e35305cf347012874f4e617e098ebd1ad077794a8e2d38b495c60",
+    "data/study_table.csv": "2fc17bfce0828047ca75bd03e220da58ba011700174f1f2b879f0a519e2196d2",
+    "data/screening_ledger.csv": "478319430345ef9abd75b84663390181d36ea521723bca07b1a3f3cdc89cad62",
+    "data/dedup_pool.csv": "9bd2ddb2425b28cfabe12beca5789eccb6d6f0dd72a3880d24f437da27269f82",
+    "tools/faers/faers_tool.py": "2eb90a94ef496679f7543705030533915865e499ddcd8f80fa2a25c533802ae6"
+  }
+}

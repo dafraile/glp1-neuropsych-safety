@@ -1,0 +1,16 @@
+pmid,outcome,indication,molecule,comparator,data_source,country,extraction_note,overlap_assessment
+41592697.0,depression,T2D,GLP-1 RA class,SGLT2i,not documented,?,also anxiety 1.09; SI vs SU 0.62,No documented overlap (distinct DB or not co-analysable on same outcome).
+39424950.0,depression,obesity,semaglutide/liraglutide,non-GLP1,TriNetX (US EHR network),US,TriNetX; large positive outlier (channeling?),POTENTIAL OVERLAP: US EHR-network (TriNetX-type). Same source DB across 39424950/38182782/41334076/42373755 — different outcomes/molecules but shared underlying population possible.
+30297350.0,suicide attempt/self-harm,T2D,GLP-1 RA class,sulfonylurea,CPRD (UK),UK,CPRD; adjusted composite,No documented overlap (distinct DB or not co-analysable on same outcome).
+42000905.0,suicide attempt/self-harm,T2D,GLP-1 RA class,SGLT2i,nationwide cohort (registry),registry country,also vs DPP-4i 0.58,No documented overlap (distinct DB or not co-analysable on same outcome).
+39103719.0,suicidal ideation,obesity,semaglutide/liraglutide,non-GLP1,"not documented (RWD, small)",?,"wide CI, small events",No documented overlap (distinct DB or not co-analysable on same outcome).
+42209408.0,suicidality (composite),T2D,GLP-1 RA class,SGLT2i,not documented,?,,No documented overlap (distinct DB or not co-analysable on same outcome).
+39226030.0,completed suicide,T2D,GLP-1 RA class,SGLT2i,not documented,?,suicide death; null,No documented overlap (distinct DB or not co-analysable on same outcome).
+39008852.0,suicidal ideation,T2D,GLP-1 RA class,SGLT2i/DPP-4i,"Medicare (US, older adults)",US,FT approx; direction null (Medicare older adults),No documented overlap (distinct DB or not co-analysable on same outcome).
+38852027.0,depression,T2D,GLP-1 RA class,DPP-4i,not documented,?,,No documented overlap (distinct DB or not co-analysable on same outcome).
+40010803.0,suicidality (composite),T2D,GLP-1 RA class,DPP-4i,not documented,?,ADJUSTED (crude 2.08 attenuated to null),No documented overlap (distinct DB or not co-analysable on same outcome).
+35281896.0,anxiety,T2D,dulaglutide,non-users,not documented,Taiwan?,,No documented overlap (distinct DB or not co-analysable on same outcome).
+41334076.0,suicide attempt/self-harm,obesity+T2D,tirzepatide,non-users,real-world cohort (TriNetX-type),US,,POTENTIAL OVERLAP: US EHR-network (TriNetX-type). Same source DB across 39424950/38182782/41334076/42373755 — different outcomes/molecules but shared underlying population possible.
+38182782.0,suicidal ideation,obesity+T2D,semaglutide,non-GLP1 AOM/AHA,real-world cohort (TriNetX-type),US,,POTENTIAL OVERLAP: US EHR-network (TriNetX-type). Same source DB across 39424950/38182782/41334076/42373755 — different outcomes/molecules but shared underlying population possible.
+41050856.0,suicide attempt/self-harm,T2D,GLP-1 RA class,unexposed,not documented,?,,No documented overlap (distinct DB or not co-analysable on same outcome).
+42373755.0,anxiety,obesity+T2D,semaglutide,naltrexone-bupropion,real-world cohort (TriNetX-type),US,,POTENTIAL OVERLAP: US EHR-network (TriNetX-type). Same source DB across 39424950/38182782/41334076/42373755 — different outcomes/molecules but shared underlying population possible.

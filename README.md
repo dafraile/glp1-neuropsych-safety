@@ -5,24 +5,28 @@ Triangulating the GLP-1 receptor agonist neuropsychiatric safety signal.
 evidence support, refute, or fail to explain the neuropsychiatric safety signal
 (suicidality, self-harm, depression) seen in spontaneous adverse-event reports?
 
-This repository holds several evidence streams, kept **strictly separate and never pooled
-together**:
+Four evidence streams, kept **strictly separate and never pooled together**:
 - **Stream A** — designed-study synthesis of the neuropsychiatric **harm** question
   (RCTs + observational pharmacoepidemiology).
-- **Stream B** — FAERS spontaneous-report disproportionality (openFDA), for **comparison
-  only**. See `docs/stream_B_README.md`.
-- **Stream D** — designed-study synthesis of the addiction/reward **benefit** question
-  (alcohol, nicotine, gambling, other), the benefit counterpart to Stream A. See
-  `briefs/stream_D_synthesis_brief.md`.
+- **Stream B** — FAERS spontaneous-report disproportionality (openFDA), **comparison
+  only**. Scope: **semaglutide × SMQ suicide/self-injury** (not class-level).
+- **Stream C** — mechanistic plausibility, as a structured bidirectional evidence map.
+- **Stream D** — **exploratory** designed-study synthesis of the addiction/reward
+  **benefit** question, separate from the primary safety question.
 
-Stream C (mechanistic plausibility) is tracked separately. The point of the project is
-to compare these streams — not to merge them into one number.
+Every headline number below is generated from
+[`analysis_manifest.json`](analysis_manifest.json) (machine-built from the data files;
+run `./reproduce.sh` to regenerate and verify). See
+[`TRIANGULATION_SYNTHESIS.md`](TRIANGULATION_SYNTHESIS.md) for the integrated reading and
+[`VALIDATION_PROTOCOL.md`](VALIDATION_PROTOCOL.md) for measured pipeline error rates.
 
-## Headline result
+## Headline result (calibrated)
 
-Designed studies do **not** reproduce the spontaneous-report suicidality signal.
-Analysed in two design strata kept strictly separate, the pooled association is
-null-to-protective on every outcome.
+Designed studies and current regulatory assessments **do not show an increased average
+risk** of suicidal ideation or behaviour with GLP-1 RAs. The study-level evidence is
+**not precise enough to exclude** a modest relative effect or effects in underrepresented
+subgroups, and the depression outcome is **too heterogeneous to summarise** with a single
+pooled effect. This is "no detected increase," not proof of safety or equivalence.
 
 | Stratum | Outcome | Pooled estimate | I² | GRADE |
 |---|---|---|---|---|
@@ -31,128 +35,124 @@ null-to-protective on every outcome.
 | Observational (k=2, IV) | suicidality (composite) | 0.94 (0.82–1.09) | 23% | Very low |
 | Observational (k=4, IV) | suicide attempt/self-harm | 0.71 (0.58–0.87) | 10% | Very low |
 | Observational (k=1) | completed suicide | 1.25 (0.83–1.88) | – | Very low |
-| Observational (k=3, IV) | depression | 1.53 (0.74–3.16) → 1.10 excl. outlier | 100% | Very low |
+| Observational | depression | not summarisable (I² ≥ 92%) | ≥92% | Very low |
 | Observational (k=2, IV) | anxiety | 0.54 (0.33–0.87) | 74% | Very low |
 
-GRADE ratings above are the **hybrid** ratings (`results/grade_certainty_hybrid.csv`):
-mechanical domains computed deterministically, judgment domains via cross-model dual
-review (Claude + GPT-5.5). They supersede the earlier hand-built `grade_certainty.csv`,
-which under-applied the body-of-evidence risk-of-bias downgrade on two observational
-outcomes (suicidality composite, suicide attempt/self-harm — both now Very low).
+**A null test is not proof of safety.** The RCT upper CI (1.37) does **not** exclude a
+prespecified harm margin of RR 1.20/1.25; the stratum can only detect RR ≥ ~1.9 at 80%
+power (71 events). Absolute risk difference −0.86 per 10,000 treated (95% CI −4.94 to
++3.22). The pooled RCT estimate is stable across Mantel–Haenszel (no continuity
+correction), Peto, logistic, and GLMM specifications — so it is not a continuity-correction
+artifact. GRADE ratings are the cross-model **hybrid** ratings
+(`results/grade_certainty_hybrid.csv`), which supersede the earlier rules-based first pass
+(`results/grade_certainty.csv`, retained for provenance). Anchored to Chen et al.,
+*J Diabetes* 2025, reproduced to RR 0.84 (0.54–1.32), I²=0%.
 
-The pipeline is anchored to a published meta-analysis (Chen et al., *J Diabetes* 2025)
-and reproduces its pooled RR of 0.84 (0.54–1.32), I²=0%, to reported precision.
+## Stream B — the spontaneous signal is comparator- and calendar-dependent
 
-## Stream B headline — the spontaneous signal is comparator-dependent
+FAERS disproportionality for **semaglutide × SMQ suicide/self-injury** (a = 912;
+openFDA snapshot `2026-04-28`) does not converge across comparators — the reporting OR
+ranges from **0.51 (vs metformin) to 3.29 (vs other GLP-1 RAs)**, crossing the no-signal
+line depending only on the comparison group (`results/faers_comparator_grid.csv`). The
+conclusion that survives is **instability**, not any single ROR.
 
-FAERS disproportionality for **semaglutide × MedDRA SMQ suicide/self-injury** (a = 912
-reports) gives opposite conclusions depending on the comparison group:
+Within a fixed SGLT2i+DPP-4i comparator the signal is **absent before July 2023**
+(0.85, 0.70–1.02) and present after (2.98, 2.61–3.39). A difference-in-differences vs
+other GLP-1 RAs gives a semaglutide-specific jump (+0.0079, p < 0.001); control outcomes
+(headache, injection-site) and control drugs do **not** show the July-2023 discontinuity
+(`results/faers_notoriety_its.csv`, `faers_notoriety_did.csv`). This is **consistent with
+notoriety bias** — FAERS cannot prove which bias caused the pattern, only that the pattern
+is not robust to comparator and calendar time.
 
-| Background | Reporting OR (95% CI) | Signal? |
-|---|---|---|
-| Full FAERS database | 0.77 (0.73–0.83) | No (null-to-protective) |
-| SGLT2i + DPP-4i comparators | 2.08 (1.91–2.26) | Yes |
+Obesity vs T2D: interaction test p = 0.19 → **not significantly different**, not
+"approximately equal." Case adjudication over structured fields (no narrative exists) is
+**triage, not an attributable fraction**: plausibly-drug-attributed share 11–27% across
+three models (majority-vote 14%, cross-model κ = 0.48 — reproducibility, not accuracy).
+Full detail: [`docs/stream_B_README.md`](docs/stream_B_README.md).
 
-Same numerator, opposite sign. Among all GLP-1 RAs only semaglutide crosses into signal
-territory under the comparator background. **87% of these reports arrived after July 2023**
-(a 6.8× surge coinciding with the EMA/FDA reviews). LLM adjudication over the structured
-case fields (no free-text narrative exists in public data) classifies all 912 reports:
-only **11% are plausibly drug-attributed**, while **25% are notoriety/legal-sourced** and a
-further **22% are confounded** by indication or psychiatric co-medication. The
-`triangulation_forest.png` figure co-displays Stream A and Stream B on one axis in
-**separate, unpooled bands** — the divergence is the result. Full detail, caveats, and the
-reusable extraction tool: `docs/stream_B_README.md`.
+## Stream C — mechanism as a bidirectional evidence map
 
-## Stream D headline — the benefit side is symmetric in certainty
+`results/stream_C_evidence_map.csv` (28 rows, 25 verified PMIDs) classifies mechanistic
+evidence by level, construct, direction, and directness. GLP-1R signalling in mesolimbic
+reward circuitry is compatible with reduced craving/consumption, but reward/impulsivity/
+mood effects are context-dependent and some proposed harm mechanisms are unstudied.
+**Mechanistic plausibility is not clinical evidence and cannot adjudicate the clinical
+question in either direction; "no established mechanism for harm" is absence of explanatory
+evidence, not evidence of safety.**
 
-Designed studies consistently associate GLP-1 RA exposure with **reduced** addictive
-behaviour across substances, but at **Very low** certainty on every outcome — held down by
-the same methodological limits (serious observational risk of bias, imprecision,
-heterogeneity) that cap the harm-side evidence. Of 52 extracted studies: **28 benefit, 13
-mixed, 5 no-effect, 0 harm**.
+## Stream D — addiction/reward benefit (EXPLORATORY)
 
-| Substance | Stratum | k | Pooled | 95% CI | I² | GRADE |
-|---|---|---|---|---|---|---|
-| Alcohol | Observational (risk of adverse alcohol outcome) | 4 | RR 0.69 | 0.50–0.96 | 85% | Very low |
-| Nicotine | RCT + TTE (smoking abstinence / TUD) | 2 | RR 0.68 | 0.63–0.74 | 0% | Very low |
-| Alcohol | Mixed (AUDIT MD, anchor-reproduced) | 4 | MD −7.81 | −9.02 to −6.60 | 88% | Very low |
+Separate from the primary safety question. Of **52** extracted studies, the 6 previously
+unclassified resolve to 5 excluded + 1 no-effect → **47 direction-eligible: 28 benefit /
+13 mixed / 6 no-effect / 0 harm** (`results/stream_D_reclassification.csv`). "0 harm" means
+no study reported a pro-addiction direction, **not** evidence of safety. Vote-counting and
+"benefit–harm symmetry" are **hypothesis-generating framing only**. Exploratory pooled
+estimates (Very low certainty): alcohol RR 0.69 (0.50–0.96), nicotine RR 0.68 (0.63–0.74),
+AUDIT MD −7.81 (−9.02 to −6.60, anchor-reproduced). The FAERS "footprint" is relabelled
+**inverse disproportionality**, not benefit. See
+[`briefs/stream_D_reframe.md`](briefs/stream_D_reframe.md).
 
-Anchored to **Eshraghi et al., eClinicalMedicine 2025 (PMID 41324012)** — reproduced its
-pooled AUDIT MD −7.81 [−9.02, −6.60] and I²=87.5% within CI. **Gambling: 28 records
-retrieved, none qualified as a designed study — synthesis-empty.** The
-`figures/benefit_harm_symmetry.png` figure juxtaposes Stream A harm certainty against
-Stream D benefit certainty: both converge on Very low for observational evidence. Same
-mesolimbic mechanism, same evidentiary bar, symmetric certainty — the reward-pathway
-hypothesis points toward benefit and away from harm, but the designed evidence is too
-low-certainty to confirm either with confidence.
+## External concordance (method validation, not independent replication)
 
-### Stream D files (benefit/reward)
-- `briefs/stream_D_protocol.md`, `briefs/stream_D_synthesis_brief.md` — protocol + synthesis.
-- `data/stream_D_search_raw.csv`, `stream_D_screening_ledger.csv`, `stream_D_study_table.csv`.
-- `results/stream_D_pooled_estimates.csv`, `stream_D_reproduction_check.csv`,
-  `stream_D_risk_of_bias.csv`, `stream_D_rob_audit_trail.csv`, `stream_D_grade.csv`,
-  `stream_D_grade_judgment_audit.csv`, `stream_D_prisma_counts.csv`.
-- `figures/stream_D_prisma.png`, `stream_D_forest_by_substance.png`,
-  `stream_D_reproduction_check.png`, `stream_D_grade_summary.png`, `benefit_harm_symmetry.png`.
+- **FDA (13 Jan 2026):** meta-analysis of **91 placebo-controlled trials (107,910
+  patients)** and a **Sentinel cohort (~2.24M new users)** found no increased risk;
+  requested removal of the suicidality warning from Wegovy/Saxenda/Zepbound.
+- **EMA/PRAC (2024):** similar no-causal-association conclusion.
+
+Same direction as this project, and useful validation of the *method* — but **not**
+independent replications: the FDA's 91-trial corpus overlaps and exceeds our
+abstract-discoverable 23-trial pool, so it is the more precise trial evidence on the
+average effect. Examine overlap rather than counting concordance as confirmation.
+
+## Validation — measured error rates
+
+`results/validation_summary.csv` + [`VALIDATION_PROTOCOL.md`](VALIDATION_PROTOCOL.md).
+The disproportionality tool scores **AUROC 0.76** on the OMOP/Ryan reference set (355/399
+pairs estimable) — a correctly implemented method, which is why its comparator-/time-
+dependent GLP-1 reading is informative. Two-model LLM-layer metrics (cross-model
+reproducibility ceilings, not accuracy): screening precision 0.77 (~10–20 estimated missed
+studies); extraction 0% sign errors; RoB quote-verification 86%; adjudication κ 0.48.
+Human validation is **single-reviewer**: blinded disagreement-adjudication packets are in
+`packets/`; accuracy cells stay `awaiting_adjudication` until resolved.
 
 ## Repository layout
 
 ```
+analysis_manifest.json   machine-generated single source of truth for all headline counts
+build_manifest.py        regenerates the manifest from the data files
+reproduce.sh / Makefile  one-command reproducibility test (manifest -> hashes -> prose)
+tests/                   manifest/README consistency + input-hash verification
 data/      search, de-duplication, screening ledger, master study table, anchor 2x2 counts
-results/   pooled estimates, reproduction check, GRADE, PRISMA counts, risk-of-bias tables
-figures/   forest plots, PRISMA evidence map, RoB summary, GRADE table, reproduction check
-briefs/    Stream A synthesis brief + anchor reproduction brief + dual-review RoB brief
-tools/     dual-reviewer-rob + grade-hybrid harness source (cross-model RoB & GRADE);
-           faers/ — the openFDA/FAERS extraction + disproportionality client (Stream B)
-docs/      stream_B_README.md (FAERS methods, results, caveats) + stream_B_PENDING.md
+results/   pooled estimates, rare-event + REML/HK reruns, harm-margin, FAERS grid/ITS/DiD,
+           GRADE, PRISMA, risk-of-bias, calibration, validation metrics
+figures/   forest plots, PRISMA, RoB, GRADE, FAERS demo/ITS, calibration ROC
+briefs/    Stream A/D synthesis + hardening briefs, anchor + dual-review RoB briefs,
+           Stream C evidence map
+docs/      Stream B methods, FAERS task notes, calibration report, falsification, prior work
+packets/   blinded disagreement-adjudication packets (one per LLM layer) + scoring key
+tools/     dual-reviewer-rob + grade-hybrid harness; faers/ openFDA client (Stream B)
 ```
-
-### Stream B files (FAERS)
-- `tools/faers/faers_tool.py` — stdlib openFDA client: disproportionality (PRR/ROR/IC,
-  full-DB or active-comparator background), time trends, source split, co-medication,
-  case retrieval, and LLM case adjudication. Published as the `faers-pharmacovigilance` skill.
-- `results/faers_case_adjudication_full912.csv` — all 912 semaglutide-suicide reports tagged
-  (category + confidence + rationale) over structured fields.
-- `results/confounder_ranking.csv` — ranked confounders and how each biases the signal (deliverable #6).
-- `results/stream_B_signal_matrix.csv` — 8 GLP-1 RAs × 3 outcomes × 2 backgrounds.
-- `figures/triangulation_forest.png` — Stream A vs Stream B, shared axis, unpooled bands.
-- `figures/faers_demo.png`, `figures/faers_adjudication.png` — signal flip + adjudication breakdown.
-
-### Hardened risk-of-bias & GRADE layer
-The observational risk-of-bias and GRADE-judgment assessments were re-run with a
-two-model harness (Claude + GPT-5.5, judge-adjudicated, full audit trail):
-- `results/risk_of_bias_observational_dualreview.csv` — resolved ROBINS-I ratings
-- `results/rob_audit_trail.csv` — every study × domain × reviewer judgment + verbatim quotes
-- `results/rob_escalation_queue.csv` — disagreements tiered for human review (0 priority gaps)
-- `results/grade_certainty_hybrid.csv` — hybrid GRADE Summary of Findings
-- `results/grade_judgment_audit.csv` — cross-model judgment-domain trail
-- `briefs/rob_dualreview_brief.md` — narrative of the dual-review hardening
-- `tools/dual-reviewer-rob/`, `tools/grade-hybrid/` — the harness source
-
-### Key files
-- `data/screening_ledger.csv` — every record (n=794): source, IDs, include/exclude + reason,
-  design tag, screening method (LLM vs rule-based). Full audit trail.
-- `data/study_table.csv` — master table: 25 RCTs + 36 observational studies with design, N,
-  comparator, outcome, effect estimate + CI, risk-of-bias rating.
-- `results/pooled_estimates.csv` — design-stratified pooled estimates (never pooled across designs).
-- `briefs/stream_A_synthesis_brief.md` — full narrative, ranked confounders, mechanistic verdict.
 
 ## Methods notes
 
-- **Strata never pooled together.** RCT stratum: Mantel-Haenszel random-effects RR on 2×2 counts.
-  Observational stratum: inverse-variance random-effects on adjusted log-effects (DerSimonian-Laird).
-- **Screening** combined an LLM rubric (418 records) with a transparent rule-based keyword classifier
-  (376 records); the method is flagged per record in the ledger.
-- **Risk of bias / GRADE in this snapshot are a rules-based first pass** (RoB2 all "some concerns";
-  ROBINS-I rated primarily from confounding-control characteristics). A full-text, dual-reviewer
-  (cross-model) RoB assessment is the planned hardening step; ratings here are provisional.
-- Two extraction errors were caught and corrected in QC: PMID 40010803 (adjusted HR 1.02, not crude
-  2.08) and PMID 40897378 (0.56 was all-cause mortality, excluded from pooling).
+- **Strata never pooled together.** RCT: Mantel-Haenszel on 2×2 counts (no continuity
+  correction as primary; Peto/logistic/GLMM as sensitivity). Observational: inverse-variance
+  random-effects on adjusted log-effects, with REML/Paule-Mandel + Hartung-Knapp + prediction
+  intervals + leave-one-out as robustness.
+- **Screening** combined an LLM rubric (418 records) with a rule-based keyword classifier
+  (376 records), flagged per record in the ledger.
+- **Risk of bias / GRADE** use the cross-model dual-reviewer harness (Claude + GPT-5.5,
+  judge-adjudicated, full audit trail); the earlier rules-based first pass is superseded and
+  retained only for provenance (see `analysis_manifest.json` → `analysis_status`).
+- Two extraction errors were caught and corrected in QC (PMID 40010803 adjusted HR 1.02, not
+  crude 2.08; PMID 40897378 all-cause mortality, excluded from pooling) — both confirmed
+  correctly resolved in the two-model extraction re-check.
 
 ## Not included
 
-Publisher full-text articles are **not** committed (copyright). The screening ledger and study table
-carry the identifiers (PMID/DOI) needed to retrieve them.
+Publisher full-text articles are **not** committed (copyright). The screening ledger and
+study table carry PMIDs/DOIs to retrieve them.
 
 ---
-*Generated with Claude Science. Reproduction anchor: Chen et al., J Diabetes 2025;17(9):e70151.*
+*Generated with Claude Science. Reproduction anchors: Chen et al., J Diabetes 2025;17(9):e70151
+(Stream A); Eshraghi et al., eClinicalMedicine 2025 (Stream D). openFDA snapshot 2026-04-28.*

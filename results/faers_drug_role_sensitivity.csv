@@ -1,0 +1,4 @@
+scope,outcome,comparator_set,drug_role,a,b,c,d,n,ROR,ci_low,ci_high,IC025,signal,snapshot,api_key_used
+semaglutide (single molecule),suicide_selfinjury (SMQ narrow),SGLT2i+DPP-4i,primary_suspect,908,81755,1320,248387,332370,2.09,1.92,2.275,0.619,True,2026-04-28,False
+semaglutide (single molecule),suicide_selfinjury (SMQ narrow),SGLT2i+DPP-4i,all_suspect,909,81927,1330,249071,333237,2.078,1.909,2.262,0.614,True,2026-04-28,False
+semaglutide (single molecule),suicide_selfinjury (SMQ narrow),SGLT2i+DPP-4i,all_mentioned,912,81999,1336,249210,333457,2.075,1.906,2.258,0.613,True,2026-04-28,False

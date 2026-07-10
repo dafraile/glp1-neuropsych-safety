@@ -1,0 +1,14 @@
+metric,value,ci_low,ci_high,n,k,description
+quote_verification_rate_reported,0.861904761904762,0.8087072462838192,0.9020992572215794,210,181.0,share of domain ratings whose quote is verified substring of source (quote_verified col)
+quote_verification_independent_spotcheck,0.0,,,40,0.0,"my abstract-only substring check: 0/40 — quotes are from FULL-TEXT methods (contain ref numbers), not verifiable against abstracts; NOT evidence of fabrication"
+cross_model_agreement_overall,0.7142857142857143,,,105,75.0,raw agreement reviewer1(sonnet-5) vs reviewer2(gpt-5.5) across 15 studies x 7 domains
+cross_model_kappa,0.5774647887323944,,,105,,Cohen kappa reviewer1 vs reviewer2 — CEILING (reproducibility)
+major_disagreement_rate,0.05714285714285714,0.02644927392809686,0.11909801681367833,105,6.0,share of study x domain with major severity (pipeline severity col)
+escalate_to_human_domains,,,,105,24.0,count of unique study x domain flagged ESCALATE_TO_HUMAN (48 reviewer-rows)
+domain_agreement_D1,0.9333333333333333,,,15,,Confounding cross-model agreement
+domain_agreement_D2,0.8,,,15,,Selection of participants cross-model agreement
+domain_agreement_D3,0.8,,,15,,Classification of interventions cross-model agreement
+domain_agreement_D4,0.6,,,15,,Deviations from intended interventions cross-model agreement
+domain_agreement_D5,0.7333333333333333,,,15,,Missing data cross-model agreement
+domain_agreement_D6,0.7333333333333333,,,15,,Measurement of outcomes cross-model agreement
+domain_agreement_D7,0.4,,,15,,Selection of the reported result cross-model agreement

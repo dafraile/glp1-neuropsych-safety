@@ -1,0 +1,14 @@
+metric,value,note,snapshot,scope,api_key_used
+raw_records_returned,912,"openFDA rows for semaglutide x suicide/self-injury SMQ (all roles, all dates)",2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+unique_safetyreportid,912,openFDA serves ONE row per safetyreportid = the latest version,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+safetyreportid_collisions,0,duplicate safetyreportid rows within the pull (0 = already case-level),2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+report_version_level_count,912,"= case-level; openFDA does not return superseded versions, so version-level == case-level",2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+case_level_count,912,unique safetyreportid,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+records_flagged_duplicate,251,self-declared duplicate flag = 1,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+records_with_reportduplicate_block,252,carry duplicatesource/duplicatenumb (cross-source linkage),2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+unique_companynumb_nonnull,494,manufacturer control numbers present,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+companynumb_null,404,records with no companynumb (keep own srid as identity),2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+extra_rows_collapsible_by_companynumb,14,same companynumb appearing >1x = candidate near-dup case families,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+case_count_after_companynumb_collapse,898,"conservative dedup: collapse exact companynumb, None->own srid",2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+duplicatenumb_multi_within_set,40,shared cross-source duplicatenumb among the 912,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False
+max_safetyreportversion_seen,18,highest version number among returned latest-version rows,2026-04-28,semaglutide x suicide_selfinjury SMQ narrow,False

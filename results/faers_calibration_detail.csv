@@ -1,0 +1,41 @@
+drug,outcome_pt,truth,a,ROR,ROR_lo,ROR_hi,IC025,chi2,signal_ror,signal_ic,signal_evans,pred_signal,y,evans_correct
+atorvastatin,Rhabdomyolysis,positive,2249,4.83,4.628,5.041,2.137,6389.09,True,True,True,True,1,True
+simvastatin,Rhabdomyolysis,positive,5772,13.051,12.689,13.424,3.436,53849.31,True,True,True,True,1,True
+lisinopril,Angioedema,positive,6927,12.682,12.357,13.015,3.369,61121.41,True,True,True,True,1,True
+enalapril,Angioedema,positive,728,5.788,5.376,6.23,2.394,2795.83,True,True,True,True,1,True
+warfarin,Haemorrhage,positive,4071,6.836,6.622,7.057,2.639,18842.65,True,True,True,True,1,True
+clozapine,Agranulocytosis,positive,2065,21.827,20.841,22.86,4.194,35662.78,True,True,True,True,1,True
+allopurinol,Stevens-Johnson syndrome,positive,1105,7.061,6.645,7.503,2.662,5411.91,True,True,True,True,1,True
+isotretinoin,Depression,positive,5738,12.457,12.114,12.809,3.4,51903.2,True,True,True,True,1,True
+methotrexate,Hepatotoxicity,positive,2388,5.16,4.945,5.385,2.168,7077.99,True,True,True,True,1,True
+amiodarone,Pulmonary fibrosis,positive,394,42.104,38.035,46.608,5.171,14875.07,True,True,True,True,1,True
+digoxin,Arrhythmia,positive,1016,6.486,6.092,6.905,2.564,4540.02,True,True,True,True,1,True
+gentamicin,Renal failure,positive,699,7.317,6.781,7.895,2.7,3614.84,True,True,True,True,1,True
+ciprofloxacin,Tendon rupture,positive,1302,25.798,24.348,27.334,4.434,27299.01,True,True,True,True,1,True
+infliximab,Tuberculosis,positive,2027,16.274,15.515,17.069,3.712,24132.76,True,True,True,True,1,True
+carbamazepine,Stevens-Johnson syndrome,positive,914,13.624,12.745,14.563,3.599,10088.95,True,True,True,True,1,True
+valproate,Hepatic failure,positive,72,2.492,1.977,3.142,0.979,62.46,True,True,True,True,1,True
+metformin,Lactic acidosis,positive,18812,75.152,73.436,76.908,4.819,513494.69,True,True,True,True,1,True
+phenytoin,Stevens-Johnson syndrome,positive,1225,31.09,29.324,32.963,4.754,32612.84,True,True,True,True,1,True
+heparin,Thrombocytopenia,positive,471,6.614,6.032,7.252,2.548,2153.3,True,True,True,True,1,True
+acetaminophen,Hepatotoxicity,positive,1965,2.98,2.845,3.122,1.418,2339.51,True,True,True,True,1,True
+atorvastatin,Stevens-Johnson syndrome,negative,175,0.66,0.568,0.766,-0.807,30.11,False,False,False,False,0,True
+lisinopril,Rhabdomyolysis,negative,1010,1.655,1.555,1.762,0.622,253.95,True,True,False,True,0,True
+metformin,Angioedema,negative,1341,1.483,1.404,1.566,0.475,203.18,True,True,False,True,0,True
+amoxicillin,Rhabdomyolysis,negative,391,1.98,1.792,2.188,0.833,186.06,True,True,False,True,0,True
+omeprazole,Tendon rupture,negative,431,1.661,1.509,1.829,0.575,108.64,True,True,False,True,0,True
+cetirizine,Agranulocytosis,negative,92,0.615,0.501,0.755,-0.991,21.68,False,False,False,False,0,True
+loratadine,Rhabdomyolysis,negative,91,0.403,0.328,0.495,-1.601,79.68,False,False,False,False,0,True
+levothyroxine,Stevens-Johnson syndrome,negative,349,1.057,0.951,1.175,-0.073,0.99,False,False,False,False,0,True
+ibuprofen,Tendon rupture,negative,269,1.631,1.445,1.84,0.52,63.48,True,True,False,True,0,True
+aspirin,Tuberculosis,negative,163,0.472,0.405,0.551,-1.282,94.22,False,False,False,False,0,True
+hydrochlorothiazide,Tuberculosis,negative,105,0.823,0.679,0.997,-0.555,3.8,False,False,False,False,0,True
+metoprolol,Agranulocytosis,negative,184,0.599,0.518,0.692,-0.939,48.62,False,False,False,False,0,True
+amlodipine,Pulmonary fibrosis,negative,742,1.929,1.792,2.076,0.815,317.11,True,True,False,True,0,True
+simvastatin,Tuberculosis,negative,91,0.563,0.458,0.691,-1.118,30.29,False,False,False,False,0,True
+cetirizine,Tendon rupture,negative,108,1.068,0.884,1.291,-0.178,0.4,False,False,False,False,0,True
+omeprazole,Angioedema,negative,1525,1.659,1.576,1.746,0.635,382.86,True,True,False,True,0,True
+loratadine,Renal failure,negative,1387,1.926,1.827,2.032,0.854,603.03,True,True,False,True,0,True
+acetaminophen,Tendon rupture,negative,486,1.231,1.124,1.348,0.161,20.02,True,True,False,True,0,True
+levothyroxine,Pulmonary fibrosis,negative,934,3.457,3.236,3.692,1.641,1541.36,True,True,True,True,0,False
+amlodipine,Agranulocytosis,negative,550,1.468,1.348,1.598,0.418,78.94,True,True,False,True,0,True

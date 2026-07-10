@@ -1,0 +1,13 @@
+{
+  "instrument": "LLM causal adjudication over FAERS STRUCTURED fields (no free-text narrative in public data)",
+  "raterA": "kernel default (Haiku-class)",
+  "raterB": "claude-sonnet-5",
+  "n_sample": 100,
+  "kappa_6cat": 0.42,
+  "kappa_binary_plausible": 0.464,
+  "kappa_3way": 0.477,
+  "raw_agreement_binary": 0.84,
+  "plausible_rate_A": "14/100",
+  "plausible_rate_B": "22/100",
+  "interpretation": "moderate self-consistency (kappa 0.42-0.48); the two models disagree on the plausible-attribution RATE itself (14% vs 22%). This CONFIRMS the number is a soft, uncertainty-laden triage estimate, not a hard measurement. A dual-LLM kappa measures automation REPRODUCIBILITY, not accuracy against ground truth \u2014 and no accessible ground truth exists because public FAERS carries no narrative."
+}

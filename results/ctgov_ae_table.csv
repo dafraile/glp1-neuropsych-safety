@@ -1,0 +1,253 @@
+nct,title,drugs,kind,term,organ,group,arm,affected,atRisk
+NCT03548935,STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffer,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Sema 2.4 mg,other,1,1306
+NCT03548935,STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffer,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,0,655
+NCT03548935,STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffer,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Sema 2.4 mg,other,0,1306
+NCT03548935,STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffer,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,1,655
+NCT03914326,A Heart Disease Study of Semaglutide in Patients With Type 2 Diabetes,semaglutide,seriousEvents,Completed suicide,Psychiatric disorders,Oral Semaglutide,GLP1,3,4825
+NCT03914326,A Heart Disease Study of Semaglutide in Patients With Type 2 Diabetes,semaglutide,seriousEvents,Completed suicide,Psychiatric disorders,Placebo,comparator,1,4825
+NCT03914326,A Heart Disease Study of Semaglutide in Patients With Type 2 Diabetes,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Oral Semaglutide,GLP1,0,4825
+NCT03914326,A Heart Disease Study of Semaglutide in Patients With Type 2 Diabetes,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,1,4825
+NCT03914326,A Heart Disease Study of Semaglutide in Patients With Type 2 Diabetes,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Oral Semaglutide,GLP1,2,4825
+NCT03914326,A Heart Disease Study of Semaglutide in Patients With Type 2 Diabetes,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,2,4825
+NCT03021187,Efficacy and Safety of Oral Semaglutide Versus Placebo in Subjects With Type 2 D,semaglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Oral Semaglutide 3 mg,GLP1,0,184
+NCT03021187,Efficacy and Safety of Oral Semaglutide Versus Placebo in Subjects With Type 2 D,semaglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Oral Semaglutide 7 mg,GLP1,0,181
+NCT03021187,Efficacy and Safety of Oral Semaglutide Versus Placebo in Subjects With Type 2 D,semaglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Oral Semaglutide 14 mg,GLP1,0,181
+NCT03021187,Efficacy and Safety of Oral Semaglutide Versus Placebo in Subjects With Type 2 D,semaglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Placebo,comparator,1,184
+NCT05144984,A Research Study Looking at How Well a Combination of the Medicines Semaglutide ,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 2.4 mg + NNC0480-0389 2.4 mg,GLP1,0,77
+NCT05144984,A Research Study Looking at How Well a Combination of the Medicines Semaglutide ,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 2.4 mg + NNC0480-0389 7.2 mg,GLP1,0,74
+NCT05144984,A Research Study Looking at How Well a Combination of the Medicines Semaglutide ,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 2.4 mg + NNC0480-0389 12.0 mg,GLP1,0,77
+NCT05144984,A Research Study Looking at How Well a Combination of the Medicines Semaglutide ,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 2.4 mg + NNC0480-0389 21.6 mg,GLP1,0,77
+NCT05144984,A Research Study Looking at How Well a Combination of the Medicines Semaglutide ,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 2.4 mg + Placebo (NNC0480-0389),GLP1,1,75
+NCT05144984,A Research Study Looking at How Well a Combination of the Medicines Semaglutide ,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,NNC0480-0389 21.6 mg + Placebo (Semaglutide),GLP1,0,59
+NCT05144984,A Research Study Looking at How Well a Combination of the Medicines Semaglutide ,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,0,61
+NCT03574597,Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or O,semaglutide,seriousEvents,Completed suicide,Psychiatric disorders,Semaglutide,GLP1,5,8803
+NCT03574597,Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or O,semaglutide,seriousEvents,Completed suicide,Psychiatric disorders,Placebo,comparator,2,8801
+NCT03574597,Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or O,semaglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Semaglutide,GLP1,0,8803
+NCT03574597,Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or O,semaglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Placebo,comparator,1,8801
+NCT03574597,Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or O,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Semaglutide,GLP1,4,8803
+NCT03574597,Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or O,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,4,8801
+NCT03574597,Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or O,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide,GLP1,1,8803
+NCT03574597,Semaglutide Effects on Heart Disease and Stroke in Patients With Overweight or O,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,3,8801
+NCT02648204,Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in ,dulaglutide;semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 0.5 mg,GLP1,0,301
+NCT02648204,Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in ,dulaglutide;semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 1.0 mg,GLP1,0,300
+NCT02648204,Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in ,dulaglutide;semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Dulaglutide 0.75 mg,GLP1,1,299
+NCT02648204,Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in ,dulaglutide;semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Dulaglutide 1.5 mg,GLP1,0,299
+NCT03819153,A Research Study to See How Semaglutide Works Compared to Placebo in People With,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide,GLP1,0,1767
+NCT03819153,A Research Study to See How Semaglutide Works Compared to Placebo in People With,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,3,1766
+NCT03987451,A Research Study on How Semaglutide Works in People With Fatty Liver Disease and,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 2.4 mg,GLP1,0,47
+NCT03987451,A Research Study on How Semaglutide Works in People With Fatty Liver Disease and,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,1,24
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo/30 mg/kg Bimagrumab,comparator,0,55
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,10/30 mg/kg Bimagrumab,other,0,56
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,30 mg/kg Bimagrumab,other,0,57
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo + 1.0 mg Semaglutide,GLP1,0,55
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo + 2.4 mg Semaglutide,GLP1,0,56
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,10 mg/kg Bimagrumab + 1.0 mg Semaglutide,GLP1,1,56
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,10 mg/kg Bimagrumab + 2.4 mg Semaglutide,GLP1,0,55
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,30 mg/kg Bimagrumab + 1.0 mg Semaglutide,GLP1,0,56
+NCT05616013,Safety and Efficacy of Bimagrumab and Semaglutide in Adults Who Are Overweight o,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,30 mg/kg Bimagrumab + 2.4 mg Semaglutide,GLP1,0,55
+NCT03987919,A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Ther,semaglutide;tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,5 mg Tirzepatide,GLP1,0,470
+NCT03987919,A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Ther,semaglutide;tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,10 mg Tirzepatide,GLP1,0,469
+NCT03987919,A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Ther,semaglutide;tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,15 mg Tirzepatide,GLP1,1,470
+NCT03987919,A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Ther,semaglutide;tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,1 mg Semaglutide,GLP1,0,469
+NCT05646706,"A Research Study to See How Semaglutide Helps People With Excess Weight, Lose We",semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Semaglutide 7.2 mg,GLP1,1,1004
+NCT05646706,"A Research Study to See How Semaglutide Helps People With Excess Weight, Lose We",semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Semaglutide 2.4 mg,GLP1,0,201
+NCT05646706,"A Research Study to See How Semaglutide Helps People With Excess Weight, Lose We",semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,0,201
+NCT05564117,Research Study Looking at How Well Semaglutide Tablets Taken Once Daily Work in ,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Oral Semaglutide 25 mg,GLP1,0,204
+NCT05564117,Research Study Looking at How Well Semaglutide Tablets Taken Once Daily Work in ,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,1,102
+NCT05579249,A Research Study Comparing Wegovy to Other Weight Management Drugs in People Liv,liraglutide;semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 2.4 mg,GLP1,0,242
+NCT05579249,A Research Study Comparing Wegovy to Other Weight Management Drugs in People Liv,liraglutide;semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Other Anti-obesity Medications (AOMs),other,1,242
+NCT04865770,A Research Study to Find Out How Semaglutide Works in the Kidneys Compared to Pl,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Semaglutide 1.0 mg,GLP1,1,71
+NCT04865770,A Research Study to Find Out How Semaglutide Works in the Kidneys Compared to Pl,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,0,35
+NCT04865770,A Research Study to Find Out How Semaglutide Works in the Kidneys Compared to Pl,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Semaglutide 1.0 mg,GLP1,1,71
+NCT04865770,A Research Study to Find Out How Semaglutide Works in the Kidneys Compared to Pl,semaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,0,35
+NCT04515849,A Study of Cotadutide in Participants Who Have Chronic Kidney Disease With Type ,semaglutide,seriousEvents,Suspected suicide,Psychiatric disorders,Cotadutide 100 ug,other,1,52
+NCT04515849,A Study of Cotadutide in Participants Who Have Chronic Kidney Disease With Type ,semaglutide,seriousEvents,Suspected suicide,Psychiatric disorders,Cotadutide 300 ug,other,0,49
+NCT04515849,A Study of Cotadutide in Participants Who Have Chronic Kidney Disease With Type ,semaglutide,seriousEvents,Suspected suicide,Psychiatric disorders,Cotadutide 600 ug,other,0,51
+NCT04515849,A Study of Cotadutide in Participants Who Have Chronic Kidney Disease With Type ,semaglutide,seriousEvents,Suspected suicide,Psychiatric disorders,Placebo ug,comparator,0,51
+NCT04515849,A Study of Cotadutide in Participants Who Have Chronic Kidney Disease With Type ,semaglutide,seriousEvents,Suspected suicide,Psychiatric disorders,Semaglutide 1 mg,GLP1,0,45
+NCT02970942,Investigation of Efficacy and Safety of Three Dose Levels of Subcutaneous Semagl,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Semaglutide 0.1 mg,GLP1,1,80
+NCT02970942,Investigation of Efficacy and Safety of Three Dose Levels of Subcutaneous Semagl,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Semaglutide 0.2 mg,GLP1,0,78
+NCT02970942,Investigation of Efficacy and Safety of Three Dose Levels of Subcutaneous Semagl,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Semaglutide 0.4 mg,GLP1,0,81
+NCT02970942,Investigation of Efficacy and Safety of Three Dose Levels of Subcutaneous Semagl,semaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,0,80
+NCT02918279,Effect of Liraglutide for Weight Management in Pubertal Adolescent Subjects With,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Liraglutide 3.0 mg,GLP1,1,125
+NCT02918279,Effect of Liraglutide for Weight Management in Pubertal Adolescent Subjects With,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Placebo,comparator,0,126
+NCT00294723,To Evaluate the Effect of Liraglutide Versus Glimepiride (Amaryl®) on Haemoglobi,liraglutide,seriousEvents,Suicidal Ideation,Psychiatric disorders,Lira 1.8 (Weeks 0-104),other,0,246
+NCT00294723,To Evaluate the Effect of Liraglutide Versus Glimepiride (Amaryl®) on Haemoglobi,liraglutide,seriousEvents,Suicidal Ideation,Psychiatric disorders,Lira 1.2 (Weeks 0-104),other,1,251
+NCT00294723,To Evaluate the Effect of Liraglutide Versus Glimepiride (Amaryl®) on Haemoglobi,liraglutide,seriousEvents,Suicidal Ideation,Psychiatric disorders,Glimepiride (Weeks 0-104),comparator,0,248
+NCT00294723,To Evaluate the Effect of Liraglutide Versus Glimepiride (Amaryl®) on Haemoglobi,liraglutide,seriousEvents,Suicidal Ideation,Psychiatric disorders,Lira 1.8 (Weeks 104-195),other,0,62
+NCT00294723,To Evaluate the Effect of Liraglutide Versus Glimepiride (Amaryl®) on Haemoglobi,liraglutide,seriousEvents,Suicidal Ideation,Psychiatric disorders,Lira 1.2 (Weeks 104-195),other,0,53
+NCT00294723,To Evaluate the Effect of Liraglutide Versus Glimepiride (Amaryl®) on Haemoglobi,liraglutide,seriousEvents,Suicidal Ideation,Psychiatric disorders,Glimepiride (Weeks 104-195),comparator,0,28
+NCT01557166,Effect of Liraglutide in Obese Subjects With Moderate or Severe Obstructive Slee,liraglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Liraglutide 3.0 mg,GLP1,1,176
+NCT01557166,Effect of Liraglutide in Obese Subjects With Moderate or Severe Obstructive Slee,liraglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Placebo,comparator,0,179
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Liraglutide 0.6 mg,GLP1,1,350
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Liraglutide 1.2 mg,GLP1,0,348
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Liraglutide 1.8 mg,GLP1,0,347
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Placebo,comparator,0,348
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Liraglutide 0.6 mg,GLP1,1,350
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Liraglutide 1.2 mg,GLP1,0,348
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Liraglutide 1.8 mg,GLP1,0,347
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Placebo,comparator,0,348
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Liraglutide 0.6 mg,GLP1,1,350
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Liraglutide 1.2 mg,GLP1,0,348
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Liraglutide 1.8 mg,GLP1,0,347
+NCT01836523,The Efficacy and Safety of Liraglutide as Adjunct Therapy to Insulin in the Trea,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,1,348
+NCT02607306,"A Trial Comparing the Efficacy and Safety of Insulin Degludec/Liraglutide, Insul",liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Insulin Degludec/Liraglutide,GLP1,0,275
+NCT02607306,"A Trial Comparing the Efficacy and Safety of Insulin Degludec/Liraglutide, Insul",liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Insulin Degludec,comparator,0,271
+NCT02607306,"A Trial Comparing the Efficacy and Safety of Insulin Degludec/Liraglutide, Insul",liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Liraglutide,GLP1,1,273
+NCT02730377,Efficacy in Controlling Glycaemia With Victoza® (Liraglutide) as add-on to Metfo,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Liraglutide 1.8 mg,GLP1,0,980
+NCT02730377,Efficacy in Controlling Glycaemia With Victoza® (Liraglutide) as add-on to Metfo,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Oral Antidiabetic Drug,other,1,984
+NCT00393718,Effect of Liraglutide on Blood Glucose Control in Subjects With Type 2 Diabetes,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Liraglutide,GLP1,0,268
+NCT00393718,Effect of Liraglutide on Blood Glucose Control in Subjects With Type 2 Diabetes,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Glibenclamide,other,1,132
+NCT01117350,Efficacy Assessment of Insulin Glargine Versus LiraglutidE After Oral Agents Fai,liraglutide,seriousEvents,Suicidal behaviour,Psychiatric disorders,Comparative Period: Insulin Glargine,comparator,1,484
+NCT01117350,Efficacy Assessment of Insulin Glargine Versus LiraglutidE After Oral Agents Fai,liraglutide,seriousEvents,Suicidal behaviour,Psychiatric disorders,Comparative Period: Liraglutide,GLP1,0,481
+NCT01117350,Efficacy Assessment of Insulin Glargine Versus LiraglutidE After Oral Agents Fai,liraglutide,seriousEvents,Suicidal behaviour,Psychiatric disorders,Extension Period: Insulin Glargine,comparator,0,160
+NCT03279731,Binge Eating Liraglutide Intervention,liraglutide,otherEvents,suicidal ideation,Psychiatric disorders,Liraglutide (Saxenda) 6Mg/Ml Inj Pen 3Ml,GLP1,1,19
+NCT03279731,Binge Eating Liraglutide Intervention,liraglutide,otherEvents,suicidal ideation,Psychiatric disorders,Placebo,comparator,1,17
+NCT01179048,Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome ,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Liraglutide,GLP1,1,4668
+NCT01179048,Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome ,liraglutide,seriousEvents,Completed suicide,Psychiatric disorders,Placebo,comparator,4,4672
+NCT01179048,Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome ,liraglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Liraglutide,GLP1,1,4668
+NCT01179048,Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome ,liraglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,1,4672
+NCT01179048,Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome ,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Liraglutide,GLP1,4,4668
+NCT01179048,Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome ,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,2,4672
+NCT02443155,A Clinical Proof-of-principle Trial in Adult Subjects With Newly Diagnosed Type ,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,NNC0114-0006 + Liraglutide,GLP1,0,77
+NCT02443155,A Clinical Proof-of-principle Trial in Adult Subjects With Newly Diagnosed Type ,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,NNC0114-0006,other,1,77
+NCT02443155,A Clinical Proof-of-principle Trial in Adult Subjects With Newly Diagnosed Type ,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Liraglutide,GLP1,0,76
+NCT02443155,A Clinical Proof-of-principle Trial in Adult Subjects With Newly Diagnosed Type ,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,0,77
+NCT03799198,Real World Effectiveness of Combining an Employer-based Weight Management Progra,liraglutide,seriousEvents,Depression Suicidal,Psychiatric disorders,Weight Management Program (WMP) + Rx,other,0,100
+NCT03799198,Real World Effectiveness of Combining an Employer-based Weight Management Progra,liraglutide,seriousEvents,Depression Suicidal,Psychiatric disorders,Weight Management Program (WMP),other,1,100
+NCT01272219,Effect of Liraglutide on Body Weight in Non-diabetic Obese Subjects or Overweigh,liraglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,"Liraglutide 3.0 mg, Pre-diabetes",GLP1,1,1524
+NCT01272219,Effect of Liraglutide on Body Weight in Non-diabetic Obese Subjects or Overweigh,liraglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,"Liraglutide Placebo, Pre-diabetes",GLP1,0,755
+NCT01272219,Effect of Liraglutide on Body Weight in Non-diabetic Obese Subjects or Overweigh,liraglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,"Liraglutide 3.0 mg, no Pre-diabetes",GLP1,0,957
+NCT01272219,Effect of Liraglutide on Body Weight in Non-diabetic Obese Subjects or Overweigh,liraglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,"Liraglutide Placebo, no Pre-diabetes",GLP1,0,487
+NCT01272219,Effect of Liraglutide on Body Weight in Non-diabetic Obese Subjects or Overweigh,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,"Liraglutide 3.0 mg, Pre-diabetes",GLP1,1,1524
+NCT01272219,Effect of Liraglutide on Body Weight in Non-diabetic Obese Subjects or Overweigh,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,"Liraglutide Placebo, Pre-diabetes",GLP1,1,755
+NCT01272219,Effect of Liraglutide on Body Weight in Non-diabetic Obese Subjects or Overweigh,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,"Liraglutide 3.0 mg, no Pre-diabetes",GLP1,0,957
+NCT01272219,Effect of Liraglutide on Body Weight in Non-diabetic Obese Subjects or Overweigh,liraglutide,seriousEvents,Suicide attempt,Psychiatric disorders,"Liraglutide Placebo, no Pre-diabetes",GLP1,0,487
+NCT05412004,Obstructive Sleep Apnea Master Protocol GPIF: A Study of Tirzepatide (LY3298176),tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Tirzepatide MTD_GPI1,GLP1,2,114
+NCT05412004,Obstructive Sleep Apnea Master Protocol GPIF: A Study of Tirzepatide (LY3298176),tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo_GPI1,comparator,0,120
+NCT05412004,Obstructive Sleep Apnea Master Protocol GPIF: A Study of Tirzepatide (LY3298176),tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Tirzepatide MTD_GPI2,GLP1,0,119
+NCT05412004,Obstructive Sleep Apnea Master Protocol GPIF: A Study of Tirzepatide (LY3298176),tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo_GPI2,comparator,0,114
+NCT03882970,A Study of Tirzepatide (LY3298176) Versus Insulin Degludec in Participants With ,tirzepatide,seriousEvents,Depression suicidal,Psychiatric disorders,5 mg Tirzepatide,GLP1,0,358
+NCT03882970,A Study of Tirzepatide (LY3298176) Versus Insulin Degludec in Participants With ,tirzepatide,seriousEvents,Depression suicidal,Psychiatric disorders,10 mg Tirzepatide,GLP1,0,360
+NCT03882970,A Study of Tirzepatide (LY3298176) Versus Insulin Degludec in Participants With ,tirzepatide,seriousEvents,Depression suicidal,Psychiatric disorders,15 mg Tirzepatide,GLP1,1,359
+NCT03882970,A Study of Tirzepatide (LY3298176) Versus Insulin Degludec in Participants With ,tirzepatide,seriousEvents,Depression suicidal,Psychiatric disorders,Insulin Degludec,comparator,0,360
+NCT03882970,A Study of Tirzepatide (LY3298176) Versus Insulin Degludec in Participants With ,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,5 mg Tirzepatide,GLP1,0,358
+NCT03882970,A Study of Tirzepatide (LY3298176) Versus Insulin Degludec in Participants With ,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,10 mg Tirzepatide,GLP1,0,360
+NCT03882970,A Study of Tirzepatide (LY3298176) Versus Insulin Degludec in Participants With ,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,15 mg Tirzepatide,GLP1,0,359
+NCT03882970,A Study of Tirzepatide (LY3298176) Versus Insulin Degludec in Participants With ,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Insulin Degludec,comparator,1,360
+NCT04255433,A Study of Tirzepatide (LY3298176) Compared With Dulaglutide on Major Cardiovasc,dulaglutide;tirzepatide,seriousEvents,Completed suicide,Psychiatric disorders,Tirzepatide (MTD),GLP1,2,6647
+NCT04255433,A Study of Tirzepatide (LY3298176) Compared With Dulaglutide on Major Cardiovasc,dulaglutide;tirzepatide,seriousEvents,Completed suicide,Psychiatric disorders,1.5 mg Dulaglutide,GLP1,0,6647
+NCT04255433,A Study of Tirzepatide (LY3298176) Compared With Dulaglutide on Major Cardiovasc,dulaglutide;tirzepatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Tirzepatide (MTD),GLP1,1,6647
+NCT04255433,A Study of Tirzepatide (LY3298176) Compared With Dulaglutide on Major Cardiovasc,dulaglutide;tirzepatide,seriousEvents,Suicidal ideation,Psychiatric disorders,1.5 mg Dulaglutide,GLP1,2,6647
+NCT04255433,A Study of Tirzepatide (LY3298176) Compared With Dulaglutide on Major Cardiovasc,dulaglutide;tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Tirzepatide (MTD),GLP1,1,6647
+NCT04255433,A Study of Tirzepatide (LY3298176) Compared With Dulaglutide on Major Cardiovasc,dulaglutide;tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,1.5 mg Dulaglutide,GLP1,3,6647
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicidal ideation,Psychiatric disorders,5 mg Tirzepatide / Double-Blind Period,GLP1,0,32
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicidal ideation,Psychiatric disorders,TZP 10mg / Double-Blind Period,other,0,33
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo / Double-Blind Period,comparator,1,34
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicidal ideation,Psychiatric disorders,TZP 5mg / 5mg Open-Label and Safety Follow-Up Period,other,0,32
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicidal ideation,Psychiatric disorders,TZP 10mg / 10mg Open-Label and Safety Follow-Up Period,other,0,33
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo/TZP 5mg Open-Label and Safety Follow-Up Period,comparator,0,32
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,5 mg Tirzepatide / Double-Blind Period,GLP1,0,32
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,TZP 10mg / Double-Blind Period,other,0,33
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo / Double-Blind Period,comparator,1,34
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,TZP 5mg / 5mg Open-Label and Safety Follow-Up Period,other,0,32
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,TZP 10mg / 10mg Open-Label and Safety Follow-Up Period,other,1,33
+NCT05260021,A Study to Evaluate Tirzepatide (LY3298176) in Pediatric and Adolescent Particip,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo/TZP 5mg Open-Label and Safety Follow-Up Period,comparator,0,32
+NCT04184622,A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,0,643
+NCT04184622,A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,5 mg Tirzepatide,GLP1,0,630
+NCT04184622,A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,10 mg Tirzepatide,GLP1,1,636
+NCT04184622,A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,15 mg Tirzepatide,GLP1,1,630
+NCT04537923,A Study of Tirzepatide (LY3298176) Versus Insulin Lispro (U100) in Participants ,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,5 mg Tirzepatide,GLP1,0,243
+NCT04537923,A Study of Tirzepatide (LY3298176) Versus Insulin Lispro (U100) in Participants ,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,10 mg Tirzepatide,GLP1,0,238
+NCT04537923,A Study of Tirzepatide (LY3298176) Versus Insulin Lispro (U100) in Participants ,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,15 mg Tirzepatide,GLP1,0,236
+NCT04537923,A Study of Tirzepatide (LY3298176) Versus Insulin Lispro (U100) in Participants ,tirzepatide,seriousEvents,Suicide attempt,Psychiatric disorders,Insulin Lispro,comparator,1,708
+NCT02963766,A Study of Dulaglutide (LY2189265) in Children and Adolescents With Type 2 Diabe,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo: Double-Blind Period,comparator,1,51
+NCT02963766,A Study of Dulaglutide (LY2189265) in Children and Adolescents With Type 2 Diabe,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,0.75 mg Dulaglutide: Double-Blind Period,GLP1,0,51
+NCT02963766,A Study of Dulaglutide (LY2189265) in Children and Adolescents With Type 2 Diabe,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,1.5 mg Dulaglutide: Double-Blind Period,GLP1,0,52
+NCT02963766,A Study of Dulaglutide (LY2189265) in Children and Adolescents With Type 2 Diabe,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo/0.75 mg Dulaglutide: Open Label Extension (OLE),GLP1,0,47
+NCT02963766,A Study of Dulaglutide (LY2189265) in Children and Adolescents With Type 2 Diabe,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,0.75 mg Dulaglutide: OLE,GLP1,0,49
+NCT02963766,A Study of Dulaglutide (LY2189265) in Children and Adolescents With Type 2 Diabe,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,1.5 mg Dulaglutide: OLE,GLP1,0,50
+NCT03495102,A Study of the Efficacy and Safety of Dulaglutide (LY2189265) in Participants Wi,dulaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Dulaglutide 1.5 mg,GLP1,1,612
+NCT03495102,A Study of the Efficacy and Safety of Dulaglutide (LY2189265) in Participants Wi,dulaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Dulaglutide 3 mg,GLP1,0,616
+NCT03495102,A Study of the Efficacy and Safety of Dulaglutide (LY2189265) in Participants Wi,dulaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Dulaglutide 4.5 mg,GLP1,0,614
+NCT02750410,A Study of Dulaglutide in Japanese Participants With Type 2 Diabetes,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo Double-Blind (DB) Treatment Period,comparator,0,39
+NCT02750410,A Study of Dulaglutide in Japanese Participants With Type 2 Diabetes,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Dulaglutide 0.75 mg DB Treatment Period,GLP1,0,120
+NCT02750410,A Study of Dulaglutide in Japanese Participants With Type 2 Diabetes,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,"Placebo DB Treatment, Dulaglutide 0.75 mg Extension Period",GLP1,1,39
+NCT02750410,A Study of Dulaglutide in Japanese Participants With Type 2 Diabetes,dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Dulaglutide 0.75 mg DB Treatment/Extension Period,GLP1,0,120
+NCT01394952,Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND),dulaglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Placebo,comparator,1,4949
+NCT01394952,Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND),dulaglutide,seriousEvents,Depression suicidal,Psychiatric disorders,Dulaglutide,GLP1,0,4943
+NCT01394952,Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND),dulaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,1,4949
+NCT01394952,Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND),dulaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Dulaglutide,GLP1,1,4943
+NCT01394952,Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND),dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,0,4949
+NCT01394952,Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND),dulaglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Dulaglutide,GLP1,1,4943
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,0.75 mg LY2189265 (Baseline Through 26 Weeks),other,1,280
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,1.5 mg LY2189265 (Baseline Through 26 Weeks),other,0,279
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Exenatide (Baseline Through 26 Weeks),GLP1,0,278
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo (Baseline Through 26 Weeks),comparator,0,141
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,0.75 mg LY2189265 (Baseline Through 56 Weeks),other,1,280
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,1.5 mg LY2189265 (Baseline Through 56 Weeks),other,0,279
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Exenatide (Baseline Through 56 Weeks),GLP1,0,278
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo/0.75 mg LY2189265 (26 Weeks Through 56 Weeks),comparator,0,62
+NCT01064687,A Study in Participants With Type 2 Diabetes Mellitus,dulaglutide;exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo/1.5 mg LY2189265 (26 Weeks Through 56 Weeks),comparator,1,62
+NCT01126580,A Study in Participants With Type 2 Diabetes Mellitus (AWARD-3),dulaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,1.5 mg LY2189265,other,0,269
+NCT01126580,A Study in Participants With Type 2 Diabetes Mellitus (AWARD-3),dulaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,0.75 mg LY2189265,other,0,270
+NCT01126580,A Study in Participants With Type 2 Diabetes Mellitus (AWARD-3),dulaglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Metformin,comparator,1,268
+NCT00658021,Safety and Efficacy of Exenatide as Monotherapy and Adjunctive Therapy to Oral A,exenatide,seriousEvents,Intentional self-injury,Psychiatric disorders,Exenatide 5 mcg,GLP1,1,41
+NCT00658021,Safety and Efficacy of Exenatide as Monotherapy and Adjunctive Therapy to Oral A,exenatide,seriousEvents,Intentional self-injury,Psychiatric disorders,Exenatide 10 mcg,GLP1,0,37
+NCT00658021,Safety and Efficacy of Exenatide as Monotherapy and Adjunctive Therapy to Oral A,exenatide,seriousEvents,Intentional self-injury,Psychiatric disorders,Placebo,comparator,0,42
+NCT00765817,Addition Of Exenatide To Insulin Glargine In Type 2 Diabetes Mellitus,exenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Exenatide Arm,GLP1,0,137
+NCT00765817,Addition Of Exenatide To Insulin Glargine In Type 2 Diabetes Mellitus,exenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo Arm,comparator,1,122
+NCT00135330,An Evaluation of Exenatide and Rosiglitazone in Subjects With Type 2 Diabetes Me,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Exenatide,GLP1,0,45
+NCT00135330,An Evaluation of Exenatide and Rosiglitazone in Subjects With Type 2 Diabetes Me,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Exenatide Plus Rosiglitazone,GLP1,1,47
+NCT00135330,An Evaluation of Exenatide and Rosiglitazone in Subjects With Type 2 Diabetes Me,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Rosiglitazone,other,0,45
+NCT00707031,GLP-1 Receptor Agonist Lixisenatide Versus Exenatide in Patients With Type 2 Dia,exenatide;lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Lixisenatide,GLP1,0,318
+NCT00707031,GLP-1 Receptor Agonist Lixisenatide Versus Exenatide in Patients With Type 2 Dia,exenatide;lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Exenatide,GLP1,1,316
+NCT01144338,Exenatide Study of Cardiovascular Event Lowering Trial (EXSCEL): A Trial To Eval,exenatide,seriousEvents,Depression suicidal,Psychiatric disorders,Placebo,comparator,0,7372
+NCT01144338,Exenatide Study of Cardiovascular Event Lowering Trial (EXSCEL): A Trial To Eval,exenatide,seriousEvents,Depression suicidal,Psychiatric disorders,Exenatide Once Weekly,GLP1,1,7344
+NCT01144338,Exenatide Study of Cardiovascular Event Lowering Trial (EXSCEL): A Trial To Eval,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,1,7372
+NCT01144338,Exenatide Study of Cardiovascular Event Lowering Trial (EXSCEL): A Trial To Eval,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Exenatide Once Weekly,GLP1,2,7344
+NCT01144338,Exenatide Study of Cardiovascular Event Lowering Trial (EXSCEL): A Trial To Eval,exenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,2,7372
+NCT01144338,Exenatide Study of Cardiovascular Event Lowering Trial (EXSCEL): A Trial To Eval,exenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Exenatide Once Weekly,GLP1,1,7344
+NCT02229396,Phase 3 28-Week Study With 24-Week and 52-week Extension Phases to Evaluate Effi,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Dapagliflozin + Placebo,comparator,1,233
+NCT02229396,Phase 3 28-Week Study With 24-Week and 52-week Extension Phases to Evaluate Effi,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Exenatide + Dapagliflozin,GLP1,0,231
+NCT02229396,Phase 3 28-Week Study With 24-Week and 52-week Extension Phases to Evaluate Effi,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Exenatide + Placebo,GLP1,0,230
+NCT02417142,Exenatide Weekly Injections as an Adjunctive Treatment in Patients With Schizoph,exenatide,otherEvents,Suicidal Ideation,Psychiatric disorders,Experimental,other,2,35
+NCT02417142,Exenatide Weekly Injections as an Adjunctive Treatment in Patients With Schizoph,exenatide,otherEvents,Suicidal Ideation,Psychiatric disorders,Placebo,comparator,3,35
+NCT01554618,Safety and Efficacy Study of Exenatide Once Weekly in Adolescents With Type 2 Di,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Controlled Assessment Period - Exenatide,GLP1,0,59
+NCT01554618,Safety and Efficacy Study of Exenatide Once Weekly in Adolescents With Type 2 Di,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Controlled Assessment Period - Placebo,comparator,0,23
+NCT01554618,Safety and Efficacy Study of Exenatide Once Weekly in Adolescents With Type 2 Di,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Extension Period - Exenatide,GLP1,1,50
+NCT01554618,Safety and Efficacy Study of Exenatide Once Weekly in Adolescents With Type 2 Di,exenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Extension Period - Placebo to Exenatide,GLP1,1,22
+NCT00866658,GLP-1 Receptor Agonist Lixisenatide in Patients With Type 2 Diabetes for Glycemi,lixisenatide,seriousEvents,Completed suicide,Psychiatric disorders,Placebo,comparator,1,157
+NCT00866658,GLP-1 Receptor Agonist Lixisenatide in Patients With Type 2 Diabetes for Glycemi,lixisenatide,seriousEvents,Completed suicide,Psychiatric disorders,Lixisenatide,GLP1,0,154
+NCT00975286,24-week Treatment With Lixisenatide in Type 2 Diabetes Insufficiently Controlled,lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,1,223
+NCT00975286,24-week Treatment With Lixisenatide in Type 2 Diabetes Insufficiently Controlled,lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Lixisenatide,GLP1,0,223
+NCT01147250,Evaluation of Cardiovascular Outcomes in Patients With Type 2 Diabetes After Acu,lixisenatide,seriousEvents,Completed suicide,Psychiatric disorders,Placebo,comparator,0,3032
+NCT01147250,Evaluation of Cardiovascular Outcomes in Patients With Type 2 Diabetes After Acu,lixisenatide,seriousEvents,Completed suicide,Psychiatric disorders,Lixisenatide,GLP1,1,3031
+NCT01147250,Evaluation of Cardiovascular Outcomes in Patients With Type 2 Diabetes After Acu,lixisenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,0,3032
+NCT01147250,Evaluation of Cardiovascular Outcomes in Patients With Type 2 Diabetes After Acu,lixisenatide,seriousEvents,Suicidal ideation,Psychiatric disorders,Lixisenatide,GLP1,1,3031
+NCT00712673,GLP-1 Receptor Agonist Lixisenatide (Morning or Evening) in Patients With Type 2,lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo (Morning Injection),comparator,0,85
+NCT00712673,GLP-1 Receptor Agonist Lixisenatide (Morning or Evening) in Patients With Type 2,lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo (Evening Injection),comparator,0,85
+NCT00712673,GLP-1 Receptor Agonist Lixisenatide (Morning or Evening) in Patients With Type 2,lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo (Combined),comparator,0,170
+NCT00712673,GLP-1 Receptor Agonist Lixisenatide (Morning or Evening) in Patients With Type 2,lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Lixisenatide (Morning Injection),GLP1,1,255
+NCT00712673,GLP-1 Receptor Agonist Lixisenatide (Morning or Evening) in Patients With Type 2,lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Lixisenatide (Evening Injection),GLP1,0,255
+NCT00712673,GLP-1 Receptor Agonist Lixisenatide (Morning or Evening) in Patients With Type 2,lixisenatide,seriousEvents,Suicide attempt,Psychiatric disorders,Lixisenatide (Combined),GLP1,1,510
+NCT00849017,Safety and Efficacy Study of Albiglutide in Type 2 Diabetes,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,0,101
+NCT00849017,Safety and Efficacy Study of Albiglutide in Type 2 Diabetes,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Albiglutide 30 mg,GLP1,1,101
+NCT00849017,Safety and Efficacy Study of Albiglutide in Type 2 Diabetes,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Albiglutide 50 mg,GLP1,0,99
+NCT00976391,A Study to Determine the Safety and Efficacy of Albiglutide Administered in Comb,albiglutide,seriousEvents,Completed suicide,Psychiatric disorders,Albiglutide 30 mg With Insulin Glargine,GLP1,1,285
+NCT00976391,A Study to Determine the Safety and Efficacy of Albiglutide Administered in Comb,albiglutide,seriousEvents,Completed suicide,Psychiatric disorders,Preprandial Lispro Insulin With Insulin Glargine,comparator,0,281
+NCT02284009,Albiglutide Versus Placebo in Insulin-treated Subjects With New-onset Type 1 Dia,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,1,17
+NCT02284009,Albiglutide Versus Placebo in Insulin-treated Subjects With New-onset Type 1 Dia,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Albiglutide,GLP1,0,50
+NCT02465515,"Effect of Albiglutide, When Added to Standard Blood Glucose Lowering Therapies, ",albiglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Albiglutide,GLP1,1,4717
+NCT02465515,"Effect of Albiglutide, When Added to Standard Blood Glucose Lowering Therapies, ",albiglutide,seriousEvents,Suicide attempt,Psychiatric disorders,Placebo,comparator,2,4715
+NCT02465515,"Effect of Albiglutide, When Added to Standard Blood Glucose Lowering Therapies, ",albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Albiglutide,GLP1,1,4717
+NCT02465515,"Effect of Albiglutide, When Added to Standard Blood Glucose Lowering Therapies, ",albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo,comparator,1,4715
+NCT02465515,"Effect of Albiglutide, When Added to Standard Blood Glucose Lowering Therapies, ",albiglutide,seriousEvents,Completed suicide,Psychiatric disorders,Albiglutide,GLP1,1,4717
+NCT02465515,"Effect of Albiglutide, When Added to Standard Blood Glucose Lowering Therapies, ",albiglutide,seriousEvents,Completed suicide,Psychiatric disorders,Placebo,comparator,0,4715
+NCT00838903,Efficacy and Safety of Albiglutide in Treatment of Type 2 Diabetes,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo Plus Metformin,comparator,0,101
+NCT00838903,Efficacy and Safety of Albiglutide in Treatment of Type 2 Diabetes,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Sitagliptin 100 mg Plus Metformin,comparator,0,302
+NCT00838903,Efficacy and Safety of Albiglutide in Treatment of Type 2 Diabetes,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Glimepiride 2 mg Plus Metformin,comparator,0,307
+NCT00838903,Efficacy and Safety of Albiglutide in Treatment of Type 2 Diabetes,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Albiglutide 30 mg Plus Metformin,GLP1,1,302
+NCT00839527,A Study to Determine the Safety and Efficacy of Albiglutide in Subjects With Typ,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Placebo + Metformin + Glimepiride,comparator,0,115
+NCT00839527,A Study to Determine the Safety and Efficacy of Albiglutide in Subjects With Typ,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Pioglitazone + Metformin + Glimepiride,comparator,1,277
+NCT00839527,A Study to Determine the Safety and Efficacy of Albiglutide in Subjects With Typ,albiglutide,seriousEvents,Suicidal ideation,Psychiatric disorders,Albiglutide + Metformin + Glimepiride,GLP1,0,271
