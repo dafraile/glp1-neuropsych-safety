@@ -190,11 +190,12 @@ disproportionality**, NOT "protective/benefit," and is an exploratory consistenc
 
 ## External concordance (validation of the method, not independent replication)
 
-- **FDA, 13 January 2026.** A meta-analysis of **91 placebo-controlled trials
-  (107,910 patients; 60,338 GLP-1 RA vs 47,572 placebo)** found no increased risk of
-  suicidal ideation/behaviour or other psychiatric events; a **Sentinel cohort of ~2.24
-  million new users** (GLP-1 RA vs SGLT2i) found no increased intentional self-harm. FDA
-  requested removal of the suicidality warning from Wegovy/Saxenda/Zepbound labels.
+- **FDA, 13 January 2026** (Drug Safety Communication). A meta-analysis of **91
+  placebo-controlled trials (~107,910 patients)** and a **Sentinel cohort of ~2.24 million
+  new users** found no increased risk of suicidal ideation/behaviour; FDA requested removal
+  of the suicidality warning from Wegovy/Saxenda/Zepbound labels. (Figures as reported in
+  the FDA communication; verify exact trial/patient/cohort counts against the primary DSC
+  before citing downstream.)
 - **EMA/PRAC, 2024.** Reached a similar no-causal-association conclusion.
 
 These land in the same direction as this project and are useful external validation of the
@@ -248,7 +249,8 @@ See [`VALIDATION_PROTOCOL.md`](VALIDATION_PROTOCOL.md) and `results/validation_s
 Headlines: disproportionality tool AUROC **0.76** on the OMOP/Ryan reference set (355/399
 pairs estimable) — a *correctly implemented* method, which is exactly why its comparator-/
 time-dependent GLP-1 reading is informative; screening precision 0.77 with an estimated
-~10–20 missed eligible studies; extraction 0% sign errors (material-discrepancy 29% genuine,
+an estimated ~10 missed eligible studies (95% CI 3–35); extraction 0% sign errors
+(material-discrepancy 29% genuine,
 mostly multi-outcome studies for the human to adjudicate); RoB quote-verification 86%.
 Accuracy cells await single-reviewer adjudication of the blinded packets.
 

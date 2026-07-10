@@ -94,9 +94,10 @@ AUDIT MD −7.81 (−9.02 to −6.60, anchor-reproduced). The FAERS "footprint" 
 
 ## External concordance (method validation, not independent replication)
 
-- **FDA (13 Jan 2026):** meta-analysis of **91 placebo-controlled trials (107,910
-  patients)** and a **Sentinel cohort (~2.24M new users)** found no increased risk;
-  requested removal of the suicidality warning from Wegovy/Saxenda/Zepbound.
+- **FDA (13 Jan 2026, Drug Safety Communication):** meta-analysis of **~91
+  placebo-controlled trials (~107,910 patients)** and a **Sentinel cohort (~2.24M new
+  users)** found no increased risk; requested removal of the suicidality warning from
+  Wegovy/Saxenda/Zepbound. (Counts as reported by FDA; verify against the primary DSC.)
 - **EMA/PRAC (2024):** similar no-causal-association conclusion.
 
 Same direction as this project, and useful validation of the *method* — but **not**
@@ -110,8 +111,9 @@ average effect. Examine overlap rather than counting concordance as confirmation
 The disproportionality tool scores **AUROC 0.76** on the OMOP/Ryan reference set (355/399
 pairs estimable) — a correctly implemented method, which is why its comparator-/time-
 dependent GLP-1 reading is informative. Two-model LLM-layer metrics (cross-model
-reproducibility ceilings, not accuracy): screening precision 0.77 (~10–20 estimated missed
-studies); extraction 0% sign errors; RoB quote-verification 86%; adjudication κ 0.48.
+reproducibility ceilings, not accuracy): screening precision 0.77 (~10 estimated missed
+studies, 95% CI 3–35); extraction 0% sign errors; RoB quote-verification 86%; adjudication
+κ 0.48.
 Human validation is **single-reviewer**: blinded disagreement-adjudication packets are in
 `packets/`; accuracy cells stay `awaiting_adjudication` until resolved.
 
