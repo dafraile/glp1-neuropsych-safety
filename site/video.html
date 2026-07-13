@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GLP-1 safety triangulation — 3-minute deck</title>
+<meta name="description" content="A 5-beat, screen-recordable slide deck of the GLP-1 neuropsychiatric-safety triangulation project, timed to a 3-minute narration.">
+<style>
+/* ============================================================
+   3-MINUTE VIDEO DECK — same "null-line" clinical language as the
+   full site, re-cut as full-screen, keyboard-driven slides.
+   Dark stage by default (toggle to light). One beat per slide.
+   ============================================================ */
+:root{
+  --paper:#0B0F14; --paper-2:#0E141B; --card:#141B24; --plate:#FBFCFD;
+  --ink:#EAEEF3; --ink-soft:#9AA6B3; --ink-faint:#68727F;
+  --line:#222C38; --line-2:#33404E;
+  --teal:#4BBCC5; --teal-ink:#84D6DC; --teal-wash:#112A2D;
+  --red:#EC6E5F; --red-ink:#F2978B; --red-wash:#2C1613;
+  --amber:#D9AD4F; --amber-wash:#2A2412;
+  --serif:"Charter","Iowan Old Style","Palatino Linotype",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,monospace;
+  --shadow:0 2px 8px rgba(0,0,0,.4), 0 30px 70px rgba(0,0,0,.55);
+}
+:root[data-theme="light"]{
+  --paper:#EFF2F5; --paper-2:#FFFFFF; --card:#FFFFFF; --plate:#FFFFFF;
+  --ink:#141A22; --ink-soft:#515C6A; --ink-faint:#8B95A2;
+  --line:#DBE1E8; --line-2:#C4CCD6;
+  --teal:#0E6E78; --teal-ink:#0A565E; --teal-wash:#E4F0F1;
+  --red:#BE3626; --red-ink:#9E2C1E; --red-wash:#F7E4E1;
+  --amber:#9C6E14; --amber-wash:#F3EAD4;
+  --shadow:0 2px 6px rgba(19,27,37,.08), 0 24px 60px rgba(19,27,37,.14);
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%; margin:0}
+body{
+  background:radial-gradient(120% 90% at 50% 0%, var(--paper-2), var(--paper) 70%);
+  color:var(--ink); font-family:var(--sans); overflow:hidden;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+:focus-visible{outline:2px solid var(--teal); outline-offset:3px; border-radius:4px}
+
+/* ---------- deck + slides ---------- */
+.deck{position:fixed; inset:0}
+.slide{
+  position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center;
+  padding:clamp(28px,5vw,88px) clamp(28px,6vw,110px) clamp(70px,8vh,96px);
+  opacity:0; visibility:hidden; transform:translateY(14px) scale(.994);
+  transition:opacity .5s ease, transform .5s cubic-bezier(.2,.7,.2,1), visibility .5s;
+  pointer-events:none;
+}
+.slide.active{opacity:1; visibility:visible; transform:none; pointer-events:auto}
+@media (prefers-reduced-motion:reduce){.slide{transition:opacity .2s}}
+.inner{width:100%; max-width:1180px; margin:0 auto}
+
+/* ---------- shared bits ---------- */
+.beat{display:flex; align-items:center; gap:14px; font-family:var(--mono); font-size:clamp(11px,1.1vw,13px);
+  letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:clamp(14px,2.6vh,30px)}
+.beat .t{color:var(--teal); font-weight:600}
+.beat .clock{margin-left:auto; color:var(--ink-faint); border:1px solid var(--line-2); border-radius:20px; padding:4px 12px; letter-spacing:.08em}
+h1{font-family:var(--serif); font-weight:600; line-height:1.04; letter-spacing:-.02em; margin:0; text-wrap:balance;
+  font-size:clamp(2.2rem,6.4vw,5rem)}
+h1 .em{font-style:italic; color:var(--red)}
+h2{font-family:var(--serif); font-weight:600; line-height:1.06; letter-spacing:-.015em; margin:0 0 .5em; text-wrap:balance;
+  font-size:clamp(1.8rem,4.6vw,3.4rem)}
+.sub{font-size:clamp(1.05rem,1.7vw,1.5rem); color:var(--ink-soft); line-height:1.45; max-width:34ch; margin:clamp(18px,3vh,34px) 0 0}
+.sub b{color:var(--ink); font-weight:600}
+.pill{display:inline-block; font-family:var(--mono); font-size:clamp(10px,1vw,12px); letter-spacing:.06em; text-transform:uppercase;
+  padding:4px 11px; border-radius:20px; border:1px solid currentColor}
+.pill.teal{color:var(--teal)} .pill.red{color:var(--red)} .pill.amber{color:var(--amber)}
+
+/* ---------- figure plate ---------- */
+.plate{background:var(--plate); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden}
+.plate img{width:100%; display:block; padding:12px; background:var(--plate); max-height:64vh; object-fit:contain}
+.cap{border-top:1px solid #e6e8ec; background:#fff; color:#5b6572; font-family:var(--mono);
+  font-size:clamp(10px,1vw,12.5px); padding:10px 16px; letter-spacing:.02em}
+.cap b{color:#222}
+
+/* ---------- two-column slide ---------- */
+.cols{display:grid; grid-template-columns:1fr 1.15fr; gap:clamp(28px,4vw,64px); align-items:center}
+.cols.narrow{grid-template-columns:1fr 1fr}
+@media (max-width:880px){.cols{grid-template-columns:1fr; gap:22px}}
+
+/* ---------- hero (slide 1) null-line axis ---------- */
+.axiswrap{margin:clamp(26px,5vh,54px) 0 0; max-width:820px}
+.axiswrap .lab{display:flex; justify-content:space-between; font-family:var(--mono); font-size:clamp(10px,1vw,12px);
+  color:var(--ink-faint); letter-spacing:.04em; margin-bottom:12px}
+.axis{position:relative; height:150px}
+.axis .track{position:absolute; left:0; right:0; top:78px; height:1px; background:var(--line-2)}
+.axis .null{position:absolute; top:16px; bottom:26px; width:1.5px; background:var(--ink-faint)}
+.axis .nulllab{position:absolute; top:-2px; transform:translateX(-50%); font-family:var(--mono); font-size:clamp(10px,1vw,12px); color:var(--ink-faint); white-space:nowrap}
+.axis .tick{position:absolute; top:73px; height:10px; width:1px; background:var(--line-2)}
+.axis .ticklab{position:absolute; top:90px; transform:translateX(-50%); font-family:var(--mono); font-size:clamp(10px,1vw,12px); color:var(--ink-faint)}
+.axis .mk{position:absolute; top:78px}
+.axis .mk .dot{width:20px; height:20px; border-radius:50%; transform:translate(-50%,-50%); background:currentColor; border:3px solid var(--paper); box-shadow:0 0 0 1px currentColor}
+.axis .mk .ci{position:absolute; top:0; height:4px; transform:translateY(-50%); background:currentColor; opacity:.32; border-radius:3px}
+.axis .mk .val{position:absolute; bottom:22px; transform:translateX(-50%); font-family:var(--mono); font-weight:700; font-size:clamp(14px,1.5vw,19px); white-space:nowrap; text-align:center}
+.axis .mk .val small{display:block; font-weight:400; font-size:.62em; letter-spacing:.08em; text-transform:uppercase; opacity:.8}
+.axis .mk.teal{color:var(--teal)} .axis .mk.red{color:var(--red)}
+
+/* ---------- four streams (slide 2) ---------- */
+.streams{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(12px,1.4vw,18px); margin-top:clamp(18px,3vh,34px)}
+@media (max-width:880px){.streams{grid-template-columns:1fr 1fr}}
+.st{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:clamp(16px,2vw,24px); position:relative; overflow:hidden; box-shadow:var(--shadow)}
+.st::before{content:""; position:absolute; top:0; left:0; right:0; height:3px; background:var(--c)}
+.st .id{font-family:var(--serif); font-size:clamp(2rem,3.4vw,2.9rem); line-height:1; color:var(--c); font-weight:600}
+.st .role{font-family:var(--mono); font-size:clamp(9px,.9vw,11px); letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin:6px 0 12px}
+.st h3{font-family:var(--serif); font-size:clamp(1.05rem,1.5vw,1.35rem); font-weight:600; margin:0 0 8px}
+.st p{font-size:clamp(12.5px,1.1vw,15px); line-height:1.45; color:var(--ink-soft); margin:0}
+.st.a{--c:var(--teal)} .st.b{--c:var(--red)} .st.c{--c:var(--ink-faint)} .st.d{--c:var(--amber)}
+.neverpool{margin-top:clamp(16px,2.6vh,28px); font-family:var(--mono); font-size:clamp(12px,1.2vw,15px); color:var(--ink-soft);
+  border:1px dashed var(--line-2); border-radius:10px; padding:13px 18px; display:flex; gap:12px; align-items:baseline}
+.neverpool .x{color:var(--red); font-weight:700}
+
+/* ---------- comparator swing (slide 3a) ---------- */
+.swingnum{font-family:var(--serif); font-weight:600; line-height:.92; font-variant-numeric:tabular-nums;
+  font-size:clamp(4.4rem,13vw,10rem); letter-spacing:-.03em; transition:color .4s}
+.swingnum.lo{color:var(--teal)} .swingnum.hi{color:var(--red)}
+.swingmeta{font-family:var(--mono); font-size:clamp(12px,1.3vw,16px); color:var(--ink-soft); margin-top:6px; min-height:1.6em; letter-spacing:.02em}
+.swingtag{margin-top:16px; min-height:2em}
+.bigaxis{position:relative; height:200px; margin-top:8px}
+.bigaxis .zone{position:absolute; top:24px; bottom:44px; opacity:.6}
+.bigaxis .zone.p{left:0; background:linear-gradient(90deg,var(--teal-wash),transparent)}
+.bigaxis .zone.s{right:0; background:linear-gradient(270deg,var(--red-wash),transparent)}
+.bigaxis .track{position:absolute; left:0; right:0; top:96px; height:1px; background:var(--line-2)}
+.bigaxis .null{position:absolute; top:16px; bottom:40px; width:1.5px; background:var(--ink-faint)}
+.bigaxis .nulllab{position:absolute; top:-4px; transform:translateX(-50%); font-family:var(--mono); font-size:clamp(10px,1vw,12px); color:var(--ink-faint); white-space:nowrap}
+.bigaxis .tick{position:absolute; top:91px; height:11px; width:1px; background:var(--line-2)}
+.bigaxis .ticklab{position:absolute; top:108px; transform:translateX(-50%); font-family:var(--mono); font-size:clamp(10px,1vw,12.5px); color:var(--ink-faint)}
+.bigaxis .zlab{position:absolute; bottom:4px; font-family:var(--mono); font-size:clamp(10px,1vw,12px); letter-spacing:.08em; text-transform:uppercase}
+.bigaxis .zlab.l{left:0; color:var(--teal)} .bigaxis .zlab.r{right:0; color:var(--red)}
+.bigaxis .mk{position:absolute; top:96px; transition:left .62s cubic-bezier(.3,.8,.25,1), color .5s}
+.bigaxis .mk .ci{position:absolute; top:50%; height:5px; transform:translateY(-50%); background:currentColor; opacity:.32; border-radius:3px; transition:left .62s cubic-bezier(.3,.8,.25,1), width .62s cubic-bezier(.3,.8,.25,1)}
+.bigaxis .mk .dot{position:absolute; top:50%; left:0; width:24px; height:24px; border-radius:50%; transform:translate(-50%,-50%); background:currentColor; border:4px solid var(--paper); box-shadow:0 0 0 1px currentColor, 0 6px 18px rgba(0,0,0,.4); transition:left .62s cubic-bezier(.3,.8,.25,1)}
+.bigaxis .mk.lo{color:var(--teal)} .bigaxis .mk.hi{color:var(--red)}
+.replay{margin-top:14px; font-family:var(--mono); font-size:12px; color:var(--ink-soft); background:none; border:1px solid var(--line-2);
+  border-radius:20px; padding:6px 14px; cursor:pointer}
+.replay:hover{color:var(--ink); border-color:var(--ink-faint)}
+
+/* ---------- stat chips ---------- */
+.chips{display:flex; flex-wrap:wrap; gap:12px; margin-top:clamp(18px,3vh,30px)}
+.chip{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; box-shadow:var(--shadow)}
+.chip .v{font-family:var(--serif); font-size:clamp(1.5rem,2.6vw,2.2rem); font-weight:600; line-height:1; font-variant-numeric:tabular-nums}
+.chip .v.teal{color:var(--teal)} .chip .v.red{color:var(--red)} .chip .v.amber{color:var(--amber)}
+.chip .k{font-family:var(--mono); font-size:clamp(10px,.95vw,11.5px); color:var(--ink-soft); margin-top:8px; letter-spacing:.03em; line-height:1.4}
+
+/* ---------- tools row (slide 4) ---------- */
+.tools{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+.tool{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; flex:1; min-width:150px; box-shadow:var(--shadow)}
+.tool code{font-family:var(--mono); font-size:clamp(11px,1.05vw,13px); color:var(--teal-ink); background:var(--teal-wash); padding:3px 8px; border-radius:6px}
+.tool p{font-size:clamp(12px,1.05vw,14px); color:var(--ink-soft); margin:10px 0 0; line-height:1.4}
+
+/* ---------- close (slide 5) ---------- */
+.takeaway{display:flex; align-items:baseline; gap:clamp(12px,2vw,26px); font-family:var(--serif); font-weight:600;
+  font-variant-numeric:tabular-nums; margin-top:clamp(18px,3vh,30px); flex-wrap:wrap}
+.takeaway .n{font-size:clamp(2.6rem,6vw,4.6rem); line-height:1}
+.takeaway .n.lo{color:var(--teal)} .takeaway .n.hi{color:var(--red)}
+.takeaway .arw{font-family:var(--mono); font-size:clamp(1.4rem,3vw,2.4rem); color:var(--ink-faint)}
+.repo{margin-top:clamp(20px,3.4vh,34px); display:flex; gap:14px; align-items:center; flex-wrap:wrap; font-family:var(--mono); font-size:clamp(11px,1.1vw,13.5px); color:var(--ink-soft)}
+.repo .lz{color:var(--teal); border:1px solid var(--teal); border-radius:8px; padding:6px 12px; letter-spacing:.1em; text-transform:uppercase; font-size:11px}
+.repo a{color:var(--teal-ink)}
+
+/* ---------- chrome: progress, controls, notes ---------- */
+.chrome{position:fixed; left:0; right:0; bottom:0; z-index:40; display:flex; align-items:center; justify-content:space-between;
+  padding:14px clamp(20px,4vw,44px); pointer-events:none}
+.chrome > *{pointer-events:auto}
+.dots{display:flex; gap:9px; align-items:center}
+.dots button{width:9px; height:9px; border-radius:50%; border:0; background:var(--line-2); cursor:pointer; padding:0; transition:transform .2s, background .2s}
+.dots button.on{background:var(--teal); transform:scale(1.35)}
+.dots .count{font-family:var(--mono); font-size:12px; color:var(--ink-faint); margin-left:12px; letter-spacing:.06em; font-variant-numeric:tabular-nums}
+.nav{display:flex; gap:8px}
+.nav button, .hintbtn{font-family:var(--mono); font-size:12px; color:var(--ink-soft); background:var(--card); border:1px solid var(--line-2);
+  border-radius:9px; padding:8px 13px; cursor:pointer; transition:all .18s}
+.nav button:hover, .hintbtn:hover{color:var(--ink); border-color:var(--teal)}
+.nav button:disabled{opacity:.35; cursor:default}
+.topright{position:fixed; top:14px; right:clamp(20px,4vw,44px); z-index:40; display:flex; gap:8px}
+
+/* progress bar */
+.pbar{position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,var(--teal),var(--red)); z-index:50; transition:width .4s ease}
+
+/* speaker notes */
+.notes{position:fixed; inset:auto 0 0 0; z-index:45; background:color-mix(in srgb,var(--paper-2) 94%,transparent);
+  backdrop-filter:blur(12px); border-top:1px solid var(--line-2); transform:translateY(100%); transition:transform .3s;
+  padding:20px clamp(20px,5vw,64px) 26px; max-height:46vh; overflow:auto}
+.notes.open{transform:none}
+.notes h4{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin:0 0 10px; display:flex; gap:12px; align-items:center}
+.notes h4 .clk{color:var(--ink-faint); margin-left:auto; font-weight:400}
+.notes p{font-family:var(--serif); font-size:clamp(15px,1.7vw,20px); line-height:1.5; color:var(--ink); margin:0; max-width:70ch}
+.notes .hintline{font-family:var(--mono); font-size:11px; color:var(--ink-faint); margin-top:12px; letter-spacing:.03em}
+
+.kbd{font-family:var(--mono); font-size:10.5px; background:var(--card); border:1px solid var(--line-2); border-bottom-width:2px; border-radius:5px; padding:1px 6px; color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<div class="pbar" id="pbar"></div>
+
+<div class="topright">
+  <button class="hintbtn" id="notesBtn" title="Toggle speaker notes (S)">☰ Script</button>
+  <button class="hintbtn" id="themeBtn" title="Toggle theme">◐</button>
+  <button class="hintbtn" id="fsBtn" title="Fullscreen (F)">⤢</button>
+</div>
+
+<main class="deck" id="deck">
+
+  <!-- ===== SLIDE 1 — HOOK ===== -->
+  <section class="slide" data-clock="0:00–0:30"
+    data-note="GLP-1 drugs like Ozempic are taken by tens of millions of people. In 2023, both the FDA and the EMA opened investigations because adverse-event databases were filling up with reports of suicidal thoughts and self-harm. But here's the paradox: the randomised trials show no such risk. So which do you believe — the spontaneous reports, or the trials? We built a system to answer that — and the answer is more interesting than either 'safe' or 'dangerous'.">
+    <div class="inner">
+      <div class="beat"><span class="t">The hook</span> · the suicide-signal paradox <span class="clock">0:00–0:30</span></div>
+      <h1>Same drug. Same outcome. <span class="em">Opposite</span> signals.</h1>
+      <p class="sub">GLP-1 drugs are taken by tens of millions. In 2023 regulators opened suicide investigations — <b>yet the trials show no such risk.</b> Which do you believe?</p>
+      <div class="axiswrap">
+        <div class="lab"><span>◀ lower risk</span><span>relative effect on suicidality · log scale</span><span>higher risk ▶</span></div>
+        <div class="axis" id="heroAxis" aria-hidden="true">
+          <div class="track"></div><div class="null" id="hNull"></div><div class="nulllab" id="hNullLab">RR 1.0 · no effect</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 2 — DESIGN ===== -->
+  <section class="slide" data-clock="0:30–1:05"
+    data-note="The mistake most reviews make is pooling everything together. We did the opposite. We built four evidence streams and kept them strictly separate. Stream A: the designed studies — trials and cohorts — pooled properly with risk-of-bias and GRADE. Stream B: the FAERS spontaneous reports, for comparison only, never mixed in. Stream C: the biological mechanism. And Stream D, exploratory: does this same drug pathway actually reduce addiction? Four streams, four methods, compared at the end — not blended into one misleading average.">
+    <div class="inner">
+      <div class="beat"><span class="t">The design</span> · four streams, never pooled <span class="clock">0:30–1:05</span></div>
+      <h2>We refused to pool everything into one number.</h2>
+      <div class="streams">
+        <div class="st a"><div class="id">A</div><div class="role">Pooled · RoB · GRADE</div><h3>Designed studies</h3><p>Trials + cohorts, design-stratified. Do they show harm?</p></div>
+        <div class="st b"><div class="id">B</div><div class="role">Comparison only</div><h3>FAERS reports</h3><p>Disproportionality. Is the alarm real? Never mixed with A.</p></div>
+        <div class="st c"><div class="id">C</div><div class="role">Plausibility</div><h3>Mechanism</h3><p>Reward-circuit biology. Plausibility, not an effect size.</p></div>
+        <div class="st d"><div class="id">D</div><div class="role">Exploratory</div><h3>Addiction benefit</h3><p>Does the pathway <em>reduce</em> craving? Quarantined.</p></div>
+      </div>
+      <div class="neverpool"><span class="x">✕</span><span>Four methods, compared at the end — <b style="color:var(--ink)">not blended into one misleading average.</b></span></div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 3a — THE SWING (CORE) ===== -->
+  <section class="slide" id="slideSwing" data-clock="1:05–1:40"
+    data-note="Here's the heart of the project. That suicide signal for semaglutide? It isn't stable. Compare semaglutide to metformin and the reporting ratio is 0.51 — protective. Compare it to other GLP-1 drugs and it's 3.29 — a strong signal. Same drug, same outcome; the answer flips entirely based on what you compare it to.">
+    <div class="inner">
+      <div class="beat"><span class="t">The novel result</span> · it depends what you compare it to <span class="clock">1:05–1:40</span></div>
+      <div class="cols narrow">
+        <div>
+          <div class="swingnum lo" id="swingNum">0.51</div>
+          <div class="swingmeta" id="swingMeta">vs metformin · reporting OR</div>
+          <div class="swingtag" id="swingTag"><span class="pill teal">protective</span></div>
+          <button class="replay" id="replayBtn">▶ replay the swing</button>
+        </div>
+        <div>
+          <div class="bigaxis" id="bigAxis" aria-hidden="true">
+            <div class="zone p"></div><div class="zone s"></div>
+            <div class="track"></div>
+            <div class="null" id="bNull"></div><div class="nulllab" id="bNullLab">no signal · ROR 1</div>
+            <div class="mk lo" id="bMk"><div class="ci" id="bCi"></div><div class="dot"></div></div>
+            <span class="zlab l">◀ protective</span><span class="zlab r">signal ▶</span>
+          </div>
+          <p class="swingmeta" style="text-align:center">semaglutide × suicide/self-injury · same drug, same database</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 3b — THE TIMING ===== -->
+  <section class="slide" data-clock="1:40–2:00"
+    data-note="And look at the timing. The signal is basically absent before July 2023, then it jumps — but only for semaglutide, the drug that was in the news. Control outcomes like headache, and control drugs, show no such jump. That's the fingerprint of notoriety bias and confounding — not a real drug effect. We're not saying the drug is safe. We're showing the alarm signal isn't trustworthy.">
+    <div class="inner">
+      <div class="beat"><span class="t">…and when</span> · a spike with a date on it <span class="clock">1:40–2:00</span></div>
+      <div class="cols">
+        <div>
+          <h2>A spike with a date on it.</h2>
+          <p class="sub" style="max-width:32ch">Hold the comparator fixed and the signal is <b>absent before July&nbsp;2023 (0.85)</b> and <b>present after (2.98)</b> — but only for the drug in the news.</p>
+          <div class="chips">
+            <div class="chip"><div class="v red">p&lt;0.001</div><div class="k">difference-in-differences<br>vs other GLP-1 RAs</div></div>
+            <div class="chip"><div class="v teal">flat</div><div class="k">control drugs &amp; control<br>outcomes — no jump</div></div>
+          </div>
+        </div>
+        <figure class="plate">
+          <img src="figures/faers_notoriety_its.png" alt="Two-panel interrupted time series: semaglutide's suicide-report proportion jumps after July 2023 while control drugs and outcomes stay flat.">
+          <figcaption class="cap"><b>Notoriety fingerprint.</b> Semaglutide jumps at July 2023; controls stay flat.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 4 — WHY TRUST US ===== -->
+  <section class="slide" data-clock="2:00–2:35"
+    data-note="Two things make this credible. First, we didn't just assert our tool works — we calibrated it against a reference set of known drug-safety associations: AUROC 0.76, an honest number, not a cherry-picked 0.99. Second, everything is reusable. The risk-of-bias engine runs the official signalling questions through two different AI models that cross-check each other. The GRADE harness, the FAERS client — all published as skills. And one command reproduces every headline number in the repo from the raw data.">
+    <div class="inner">
+      <div class="beat"><span class="t">Why trust it</span> · calibrated, not asserted <span class="clock">2:00–2:35</span></div>
+      <div class="cols">
+        <figure class="plate">
+          <img src="figures/omop_calibration_roc.png" alt="ROC curve for the disproportionality tool on the OMOP reference set, AUROC 0.76.">
+          <figcaption class="cap"><b>Calibration ROC — AUROC 0.76.</b> On 355/399 known drug-safety pairs. Honest, not cherry-picked.</figcaption>
+        </figure>
+        <div>
+          <h2>We calibrated the tool<br>— then made it reusable.</h2>
+          <p class="sub" style="max-width:34ch">An <b>honest 0.76</b>, not a cherry-picked 0.99. And every piece travels to any systematic review:</p>
+          <div class="tools">
+            <div class="tool"><code>dual-reviewer-rob</code><p>Official signalling questions, two AI models cross-checking.</p></div>
+            <div class="tool"><code>grade-hybrid</code><p>Deterministic + dual-reviewer GRADE.</p></div>
+            <div class="tool"><code>faers_tool</code><p>Calibrated openFDA disproportionality.</p></div>
+          </div>
+          <p class="swingmeta" style="margin-top:16px">One command reproduces every headline number from raw data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 5 — CLOSE ===== -->
+  <section class="slide" data-clock="2:35–3:00"
+    data-note="So: the designed evidence shows no increased risk, but we're careful to say 'no detected increase,' not 'safe.' The spontaneous alarm is explained by comparison and calendar, not biology. And the same pathway may even reduce addiction. That's what triangulation gives you that a single pooled number never could. Thanks for watching.">
+    <div class="inner">
+      <div class="beat"><span class="t">The close</span> · what triangulation buys you <span class="clock">2:35–3:00</span></div>
+      <div class="cols">
+        <div>
+          <h2>“No detected increase.”<br>Not “safe.”</h2>
+          <p class="sub" style="max-width:36ch">The designed evidence shows no increased risk. The alarm is explained by <b>comparison and calendar, not biology.</b> And the same pathway may even <em>reduce</em> addiction.</p>
+          <div class="takeaway"><span class="n lo">0.51</span><span class="arw">→</span><span class="n hi">3.29</span></div>
+          <p class="swingmeta">the whole thesis in two numbers — the alarm isn't trustworthy</p>
+          <div class="repo">
+            <span class="lz">Apache 2.0</span>
+            <span>Open toolkit &amp; data · <a href="https://github.com/dafraile/glp1-neuropsych-safety" target="_blank" rel="noopener">github.com/dafraile/glp1-neuropsych-safety</a></span>
+          </div>
+        </div>
+        <figure class="plate">
+          <img src="figures/benefit_harm_symmetry.png" alt="Same FAERS database: the harm signal dissolves under comparator/time sensitivity while an addiction-reduction footprint survives.">
+          <figcaption class="cap"><b>One database, two fates.</b> Harm dissolves; the benefit footprint survives — held to the same standard.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="chrome">
+  <div class="dots" id="dots"></div>
+  <div class="nav">
+    <button id="prevBtn" title="Previous (←)">← Prev</button>
+    <button id="nextBtn" title="Next (→ or Space)">Next →</button>
+  </div>
+</div>
+
+<aside class="notes" id="notes" aria-live="polite">
+  <h4>Speaker script <span class="clk" id="notesClock"></span></h4>
+  <p id="notesText"></p>
+  <div class="hintline">Read while recording, then press <span class="kbd">S</span> to hide. Full write-up &amp; all figures: <a href="index.html" style="color:var(--teal-ink)">the full site →</a></div>
+</aside>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+  var i = 0, n = slides.length;
+
+  /* log-axis helper */
+  function pos(v,min,max){ return (Math.log(v)-Math.log(min))/(Math.log(max)-Math.log(min))*100; }
+
+  /* ---------- build progress dots ---------- */
+  var dots = document.getElementById("dots");
+  var dotEls = slides.map(function(_,k){
+    var b=document.createElement("button"); b.setAttribute("aria-label","Go to slide "+(k+1));
+    b.addEventListener("click",function(){ go(k); }); dots.appendChild(b); return b;
+  });
+  var count=document.createElement("span"); count.className="count"; dots.appendChild(count);
+
+  /* ---------- hero axis (slide 1) ---------- */
+  var HMIN=0.4,HMAX=4, heroData=[
+    {v:0.84,lo:0.54,hi:1.32,cls:"teal",lab:"Designed studies"},
+    {v:2.08,lo:1.91,hi:2.26,cls:"red", lab:"Spontaneous reports"}
+  ];
+  function layoutHero(){
+    var ax=document.getElementById("heroAxis"); if(!ax) return;
+    document.getElementById("hNull").style.left=pos(1,HMIN,HMAX)+"%";
+    document.getElementById("hNullLab").style.left=pos(1,HMIN,HMAX)+"%";
+    ax.querySelectorAll(".tick,.ticklab,.mk").forEach(function(e){e.remove();});
+    [0.5,1,2,4].forEach(function(t){
+      var tk=document.createElement("div"); tk.className="tick"; tk.style.left=pos(t,HMIN,HMAX)+"%"; ax.appendChild(tk);
+      var tl=document.createElement("div"); tl.className="ticklab"; tl.style.left=pos(t,HMIN,HMAX)+"%"; tl.textContent=t; ax.appendChild(tl);
+    });
+    heroData.forEach(function(d){
+      var mk=document.createElement("div"); mk.className="mk "+d.cls; mk.style.left=pos(d.v,HMIN,HMAX)+"%";
+      mk.innerHTML='<div class="ci" style="left:'+(pos(d.lo,HMIN,HMAX)-pos(d.v,HMIN,HMAX))+'%;width:'+(pos(d.hi,HMIN,HMAX)-pos(d.lo,HMIN,HMAX))+'%"></div>'
+        +'<div class="dot"></div><div class="val">'+d.v.toFixed(2)+'<small>'+d.lab+'</small></div>';
+      ax.appendChild(mk);
+    });
+  }
+
+  /* ---------- comparator swing (slide 3a) ---------- */
+  var BMIN=0.4,BMAX=4;
+  var swing=[
+    {v:0.51,lo:0.48,hi:0.55,d:"vs metformin",sig:"lo",tag:'<span class="pill teal">protective</span>'},
+    {v:0.75,lo:0.69,hi:0.81,d:"vs sulfonylurea",sig:"lo",tag:'<span class="pill teal">no signal</span>'},
+    {v:0.77,lo:0.73,hi:0.83,d:"vs full FAERS database",sig:"lo",tag:'<span class="pill teal">no signal</span>'},
+    {v:0.84,lo:0.78,hi:0.90,d:"vs non-GLP-1 antidiabetics",sig:"lo",tag:'<span class="pill teal">no signal</span>'},
+    {v:1.65,lo:1.49,hi:1.81,d:"vs DPP-4 inhibitors",sig:"hi",tag:'<span class="pill red">signal</span>'},
+    {v:2.08,lo:1.91,hi:2.26,d:"vs SGLT2i + DPP-4i (anchor)",sig:"hi",tag:'<span class="pill red">signal</span>'},
+    {v:2.64,lo:2.38,hi:2.92,d:"vs SGLT2 inhibitors",sig:"hi",tag:'<span class="pill red">signal</span>'},
+    {v:3.29,lo:3.02,hi:3.60,d:"vs other GLP-1 RAs (within class)",sig:"hi",tag:'<span class="pill red">strong signal</span>'}
+  ];
+  var bMk=document.getElementById("bMk"), bCi=document.getElementById("bCi"),
+      sNum=document.getElementById("swingNum"), sMeta=document.getElementById("swingMeta"), sTag=document.getElementById("swingTag");
+  function layoutBigAxis(){
+    var ax=document.getElementById("bigAxis");
+    document.getElementById("bNull").style.left=pos(1,BMIN,BMAX)+"%";
+    document.getElementById("bNullLab").style.left=pos(1,BMIN,BMAX)+"%";
+    ax.querySelectorAll(".tick,.ticklab").forEach(function(e){e.remove();});
+    [0.5,1,2,4].forEach(function(t){
+      var tk=document.createElement("div"); tk.className="tick"; tk.style.left=pos(t,BMIN,BMAX)+"%"; ax.appendChild(tk);
+      var tl=document.createElement("div"); tl.className="ticklab"; tl.style.left=pos(t,BMIN,BMAX)+"%"; tl.textContent=t; ax.appendChild(tl);
+    });
+  }
+  function paintSwing(s){
+    bMk.className="mk "+s.sig; bMk.style.left=pos(s.v,BMIN,BMAX)+"%";
+    bCi.style.left=(pos(s.lo,BMIN,BMAX)-pos(s.v,BMIN,BMAX))+"%";
+    bCi.style.width=(pos(s.hi,BMIN,BMAX)-pos(s.lo,BMIN,BMAX))+"%";
+    sNum.textContent=s.v.toFixed(2); sNum.className="swingnum "+s.sig;
+    sMeta.textContent=s.d+" · reporting OR"; sTag.innerHTML=s.tag;
+  }
+  var swingTimer=null;
+  function playSwing(){
+    if(swingTimer){ clearInterval(swingTimer); swingTimer=null; }
+    var k=0; paintSwing(swing[0]);
+    if(reduce){ paintSwing(swing[swing.length-1]); return; }
+    swingTimer=setInterval(function(){
+      k++;
+      if(k>=swing.length){ clearInterval(swingTimer); swingTimer=null; return; }
+      paintSwing(swing[k]);
+    }, 720);
+  }
+  document.getElementById("replayBtn").addEventListener("click",playSwing);
+
+  /* ---------- navigation ---------- */
+  var notes=document.getElementById("notes"), notesText=document.getElementById("notesText"),
+      notesClock=document.getElementById("notesClock"), pbar=document.getElementById("pbar"),
+      prevBtn=document.getElementById("prevBtn"), nextBtn=document.getElementById("nextBtn");
+  function render(){
+    slides.forEach(function(s,k){ s.classList.toggle("active",k===i); });
+    dotEls.forEach(function(d,k){ d.classList.toggle("on",k===i); });
+    count.textContent=(i+1)+" / "+n;
+    pbar.style.width=((i+1)/n*100)+"%";
+    prevBtn.disabled=(i===0); nextBtn.disabled=(i===n-1);
+    var s=slides[i];
+    notesText.textContent=s.getAttribute("data-note")||"";
+    notesClock.textContent=s.getAttribute("data-clock")||"";
+    if(s.id==="slideSwing") setTimeout(playSwing, reduce?0:350);
+    else if(swingTimer){ clearInterval(swingTimer); swingTimer=null; }
+  }
+  function go(k){ i=Math.max(0,Math.min(n-1,k)); render(); }
+  function next(){ go(i+1); } function prev(){ go(i-1); }
+  nextBtn.addEventListener("click",next); prevBtn.addEventListener("click",prev);
+
+  document.addEventListener("keydown",function(e){
+    if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){ e.preventDefault(); next(); }
+    else if(e.key==="ArrowLeft"||e.key==="PageUp"){ e.preventDefault(); prev(); }
+    else if(e.key==="Home"){ go(0); } else if(e.key==="End"){ go(n-1); }
+    else if(e.key.toLowerCase()==="s"){ notes.classList.toggle("open"); }
+    else if(e.key.toLowerCase()==="f"){ toggleFs(); }
+    else if(e.key>="1"&&e.key<="9"){ go(parseInt(e.key,10)-1); }
+  });
+  /* click-advance on the stage (ignore clicks on controls/links/buttons) */
+  document.getElementById("deck").addEventListener("click",function(e){
+    if(e.target.closest("button,a,.replay")) return;
+    next();
+  });
+
+  document.getElementById("notesBtn").addEventListener("click",function(){ notes.classList.toggle("open"); });
+  document.getElementById("themeBtn").addEventListener("click",function(){
+    var root=document.documentElement, cur=root.getAttribute("data-theme")||"dark";
+    root.setAttribute("data-theme", cur==="dark"?"light":"dark");
+    layoutHero(); layoutBigAxis();
+  });
+  function toggleFs(){
+    if(!document.fullscreenElement){ (document.documentElement.requestFullscreen||function(){})(); }
+    else if(document.exitFullscreen){ document.exitFullscreen(); }
+  }
+  document.getElementById("fsBtn").addEventListener("click",toggleFs);
+  window.addEventListener("resize",function(){ layoutHero(); layoutBigAxis(); });
+
+  layoutHero(); layoutBigAxis(); render();
+})();
+</script>
+</body>
+</html>

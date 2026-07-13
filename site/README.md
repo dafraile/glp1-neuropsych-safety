@@ -1,8 +1,27 @@
 # Presentation site
 
-A self-contained, scroll-driven walkthrough of the GLP-1 neuropsychiatric-safety triangulation
-project. One HTML file, no build step, no external dependencies — all figures are local PNGs and
-all CSS/JS is inlined.
+Two self-contained views of the GLP-1 neuropsychiatric-safety triangulation project — no build
+step, no external dependencies, all figures local, all CSS/JS inlined:
+
+- **[`index.html`](index.html)** — the full scroll-driven walkthrough (consult for the complete narrative and results).
+- **[`video.html`](video.html)** — a **3-minute, 5-beat slide deck** built for screen-recording the video presentation.
+
+## The 3-minute deck (`video.html`)
+
+Six full-screen slides timed to a 3-minute narration, matching the beats in the video guide.
+Keyboard/click driven, so the presenter controls pacing while narrating:
+
+| Key | Action |
+|---|---|
+| `→` `Space` · click stage | next slide |
+| `←` | previous slide |
+| `S` · **☰ Script** button | toggle speaker notes (the narration script, per slide) |
+| `F` | fullscreen (for a clean recording) |
+| `1`–`6` | jump to a slide |
+
+The comparator swing (0.51 → 3.29) auto-animates when its slide opens; press **▶ replay** to run it
+again. Speaker notes are hidden by default so recordings stay clean — open them on a second
+monitor, or read and hide with `S`. Dark stage by default; **◐** toggles light.
 
 ## Narrative arc
 
