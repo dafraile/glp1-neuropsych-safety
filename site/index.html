@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triangulating the GLP-1 neuropsychiatric safety signal</title>
+<meta name="description" content="Reconciling the GLP-1 suicide-signal paradox with four strictly-separated evidence streams, calibrated tooling, and an open meta-science toolkit.">
+<style>
+/* ============================================================
+   THE NULL LINE — a clinical editorial for a pharmacovigilance study.
+   Motif: the forest-plot reference line at RR = 1. Findings sit left
+   (protective) or right (signal) of it. Teal = designed evidence,
+   red = the spontaneous alarm, amber = exploratory benefit.
+   ============================================================ */
+
+:root{
+  --paper:#F1F4F7; --card:#FFFFFF; --plate:#FFFFFF;
+  --ink:#151B23; --ink-soft:#525E6C; --ink-faint:#8A95A2;
+  --line:#DBE1E8; --line-2:#C4CCD6;
+  --teal:#0E6E78; --teal-ink:#0A565E; --teal-wash:#E4F0F1;
+  --red:#BE3626; --red-ink:#9E2C1E; --red-wash:#F7E4E1;
+  --amber:#9C6E14; --amber-wash:#F3EAD4;
+  --accent:var(--teal);
+  --shadow:0 1px 2px rgba(19,27,37,.04), 0 8px 30px rgba(19,27,37,.06);
+  --shadow-lift:0 2px 6px rgba(19,27,37,.06), 0 24px 60px rgba(19,27,37,.12);
+  --serif:"Charter","Iowan Old Style","Palatino Linotype",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,monospace;
+  --maxw:1140px; --readw:39rem;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0C1015; --card:#141A22; --plate:#FBFCFD;
+    --ink:#E7ECF2; --ink-soft:#9DA8B5; --ink-faint:#697382;
+    --line:#232C38; --line-2:#333E4C;
+    --teal:#48BAC3; --teal-ink:#7CD3DA; --teal-wash:#122A2C;
+    --red:#EB6D5E; --red-ink:#F19488; --red-wash:#2C1613;
+    --amber:#D8AC4E; --amber-wash:#2A2412;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 34px rgba(0,0,0,.5);
+    --shadow-lift:0 2px 8px rgba(0,0,0,.45), 0 28px 64px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="light"]{
+  --paper:#F1F4F7; --card:#FFFFFF; --plate:#FFFFFF;
+  --ink:#151B23; --ink-soft:#525E6C; --ink-faint:#8A95A2;
+  --line:#DBE1E8; --line-2:#C4CCD6;
+  --teal:#0E6E78; --teal-ink:#0A565E; --teal-wash:#E4F0F1;
+  --red:#BE3626; --red-ink:#9E2C1E; --red-wash:#F7E4E1;
+  --amber:#9C6E14; --amber-wash:#F3EAD4;
+  --shadow:0 1px 2px rgba(19,27,37,.04), 0 8px 30px rgba(19,27,37,.06);
+  --shadow-lift:0 2px 6px rgba(19,27,37,.06), 0 24px 60px rgba(19,27,37,.12);
+}
+:root[data-theme="dark"]{
+  --paper:#0C1015; --card:#141A22; --plate:#FBFCFD;
+  --ink:#E7ECF2; --ink-soft:#9DA8B5; --ink-faint:#697382;
+  --line:#232C38; --line-2:#333E4C;
+  --teal:#48BAC3; --teal-ink:#7CD3DA; --teal-wash:#122A2C;
+  --red:#EB6D5E; --red-ink:#F19488; --red-wash:#2C1613;
+  --amber:#D8AC4E; --amber-wash:#2A2412;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 34px rgba(0,0,0,.5);
+  --shadow-lift:0 2px 8px rgba(0,0,0,.45), 0 28px 64px rgba(0,0,0,.6);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:18px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%; display:block}
+a{color:var(--teal-ink); text-decoration:none}
+a:hover{text-decoration:underline; text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--teal); outline-offset:3px; border-radius:3px}
+
+/* ---- progress bar ---- */
+.progress{position:fixed; top:0; left:0; height:3px; width:0;
+  background:linear-gradient(90deg,var(--teal),var(--red)); z-index:60; transition:width .1s linear}
+
+/* ---- top bar ---- */
+.topbar{position:fixed; top:0; left:0; right:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px clamp(18px,4vw,44px);
+  font-family:var(--mono); font-size:12px; letter-spacing:.04em;
+  color:var(--ink-soft); background:transparent; transition:background .3s, border-color .3s;
+  border-bottom:1px solid transparent}
+.topbar.stuck{background:color-mix(in srgb,var(--paper) 86%,transparent);
+  backdrop-filter:saturate(1.4) blur(10px); border-bottom-color:var(--line)}
+.topbar .brand{display:flex; align-items:center; gap:10px; color:var(--ink); font-weight:600}
+.topbar .brand .glyph{color:var(--red)}
+.topbar .links{display:flex; align-items:center; gap:18px}
+.topbar .links a{color:var(--ink-soft)}
+.topbar .links a:hover{color:var(--ink); text-decoration:none}
+.theme-btn{font:inherit; color:var(--ink-soft); background:none; border:1px solid var(--line-2);
+  border-radius:20px; padding:4px 12px; cursor:pointer}
+.theme-btn:hover{color:var(--ink); border-color:var(--ink-faint)}
+@media (max-width:640px){.topbar .links .hide-sm{display:none}}
+
+/* ---- layout primitives ---- */
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(18px,4vw,44px)}
+.read{max-width:var(--readw)}
+section{padding:clamp(64px,9vw,120px) 0; position:relative}
+.eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-faint); display:flex; align-items:center; gap:12px; margin:0 0 22px}
+.eyebrow .tag{color:var(--accent); font-weight:600}
+.eyebrow::before{content:""; width:26px; height:1px; background:var(--line-2)}
+h1,h2,h3{font-family:var(--serif); font-weight:600; line-height:1.08; letter-spacing:-.01em; text-wrap:balance; margin:0}
+h2{font-size:clamp(1.9rem,4.4vw,3rem); margin:0 0 .5em}
+h3{font-size:clamp(1.3rem,2.6vw,1.7rem); letter-spacing:0; margin:0 0 .4em}
+p{margin:0 0 1.15em}
+.lead{font-size:clamp(1.12rem,1.6vw,1.32rem); color:var(--ink); line-height:1.55}
+.muted{color:var(--ink-soft)}
+strong{font-weight:600}
+.serif-note{font-family:var(--serif); font-style:italic; color:var(--ink-soft)}
+
+/* reveal */
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-in{opacity:1; transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none}}
+
+/* ============ HERO ============ */
+.hero{min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+  padding-top:96px; padding-bottom:56px; position:relative; overflow:hidden}
+.hero .kicker{font-family:var(--mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--ink-faint); margin:0 0 26px}
+.hero .kicker b{color:var(--red); font-weight:600}
+.hero h1{font-size:clamp(2.6rem,6.6vw,5.1rem); letter-spacing:-.022em; max-width:16ch}
+.hero h1 .em{font-style:italic; color:var(--red)}
+.hero .sub{margin:30px 0 0; max-width:34rem; font-size:clamp(1.1rem,1.7vw,1.35rem); color:var(--ink-soft); line-height:1.5}
+.hero .sub b{color:var(--ink); font-weight:600}
+
+/* hero axis — the two worlds on one null line */
+.axisfig{margin:44px 0 0; max-width:720px}
+.axisfig .cap{display:flex; justify-content:space-between; font-family:var(--mono);
+  font-size:11.5px; letter-spacing:.05em; color:var(--ink-faint); margin-bottom:10px}
+.axis{position:relative; height:120px}
+.axis .track{position:absolute; left:0; right:0; top:64px; height:1px; background:var(--line-2)}
+.axis .null{position:absolute; top:14px; bottom:22px; width:1px; background:var(--ink-faint)}
+.axis .nulllab{position:absolute; top:0; transform:translateX(-50%);
+  font-family:var(--mono); font-size:11px; color:var(--ink-faint)}
+.axis .tick{position:absolute; top:60px; height:8px; width:1px; background:var(--line-2)}
+.axis .ticklab{position:absolute; top:74px; transform:translateX(-50%);
+  font-family:var(--mono); font-size:11px; color:var(--ink-faint)}
+.axis .mk{position:absolute; top:64px; transform:translate(-50%,-50%); transition:left 1.1s cubic-bezier(.3,.8,.25,1)}
+.axis .mk .dot{width:15px; height:15px; border-radius:50%; border:2.5px solid var(--paper);
+  box-shadow:0 0 0 1px currentColor}
+.axis .mk .ci{position:absolute; top:50%; height:3px; transform:translateY(-50%); border-radius:2px;
+  background:currentColor; opacity:.32}
+.axis .mk .lbl{position:absolute; bottom:20px; left:50%; transform:translateX(-50%); white-space:nowrap;
+  font-family:var(--mono); font-size:12px; font-weight:600; text-align:center}
+.axis .mk .lbl small{display:block; font-weight:400; font-size:10.5px; letter-spacing:.04em; opacity:.72; text-transform:uppercase}
+.axis .mk.teal{color:var(--teal)} .axis .mk.teal .dot{background:var(--teal)}
+.axis .mk.red{color:var(--red)} .axis .mk.red .dot{background:var(--red)}
+.hero.armed .axis .mk{}
+.scrollcue{margin-top:52px; font-family:var(--mono); font-size:11.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-faint); display:flex; align-items:center; gap:10px}
+.scrollcue .bar{width:1px; height:34px; background:linear-gradient(var(--line-2),transparent);
+  animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%,100%{opacity:.3; transform:scaleY(.7); transform-origin:top}50%{opacity:1; transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.scrollcue .bar{animation:none}}
+
+/* ============ generic figure plate ============ */
+.figure{background:var(--plate); border:1px solid var(--line); border-radius:14px;
+  box-shadow:var(--shadow); overflow:hidden; margin:8px 0 0}
+.figure img{width:100%; padding:14px; background:var(--plate)}
+.figure figcaption{border-top:1px solid var(--line); padding:12px 18px;
+  font-family:var(--mono); font-size:12px; letter-spacing:.02em; color:#5b6572;
+  display:flex; gap:12px; align-items:baseline; background:#fff}
+.figure figcaption .n{color:var(--red); font-weight:600; flex:none}
+.figure figcaption b{color:#222; font-weight:600}
+
+/* ============ paradox / split ============ */
+.split{display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:center}
+@media (max-width:860px){.split{grid-template-columns:1fr; gap:34px}}
+
+/* ============ four streams ============ */
+.streams{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:12px}
+@media (max-width:900px){.streams{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.streams{grid-template-columns:1fr}}
+.stream{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 20px 24px;
+  box-shadow:var(--shadow); position:relative; overflow:hidden}
+.stream::before{content:""; position:absolute; top:0; left:0; right:0; height:3px; background:var(--sc,var(--teal))}
+.stream .id{font-family:var(--serif); font-size:2.6rem; line-height:1; color:var(--sc,var(--teal)); font-weight:600}
+.stream .role{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin:4px 0 14px}
+.stream h4{font-family:var(--serif); font-size:1.16rem; margin:0 0 8px; font-weight:600}
+.stream p{font-size:14.5px; line-height:1.5; color:var(--ink-soft); margin:0}
+.stream.a{--sc:var(--teal)} .stream.b{--sc:var(--red)} .stream.c{--sc:var(--ink-faint)} .stream.d{--sc:var(--amber)}
+.neverpool{margin-top:26px; font-family:var(--mono); font-size:12.5px; letter-spacing:.03em; color:var(--ink-soft);
+  border:1px dashed var(--line-2); border-radius:10px; padding:14px 18px; display:flex; gap:12px; align-items:baseline}
+.neverpool .x{color:var(--red); font-weight:700; flex:none}
+
+/* ============ stat row ============ */
+.stats{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; margin-top:14px;
+  border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--line)}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}}
+.stat{background:var(--card); padding:22px 20px}
+.stat .v{font-family:var(--serif); font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:600; line-height:1;
+  font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+.stat .v.teal{color:var(--teal)} .stat .v.red{color:var(--red)} .stat .v.amber{color:var(--amber)}
+.stat .k{font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--ink-soft); margin-top:10px; line-height:1.4}
+
+/* ============ forest rows (data-driven) ============ */
+.forest{margin:26px 0 0; border:1px solid var(--line); border-radius:14px; background:var(--card); box-shadow:var(--shadow); overflow:hidden}
+.forest .fhead{display:grid; grid-template-columns:1fr 150px; gap:12px; padding:12px 20px; border-bottom:1px solid var(--line);
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint)}
+.forest .fhead .plot{position:relative}
+.frow{display:grid; grid-template-columns:1fr 150px; gap:12px; padding:15px 20px; align-items:center; border-bottom:1px solid var(--line)}
+.frow:last-child{border-bottom:0}
+.frow .lab{font-size:14.5px; line-height:1.35}
+.frow .lab small{display:block; font-family:var(--mono); font-size:11px; color:var(--ink-faint); letter-spacing:.02em; margin-top:2px}
+.frow .val{font-family:var(--mono); font-size:13px; text-align:right; font-variant-numeric:tabular-nums; color:var(--ink)}
+.frow .val.sig-lo{color:var(--teal)} .frow .val.sig-null{color:var(--ink-soft)} .frow .val.sig-hi{color:var(--red)}
+.fplot{grid-column:1 / -1; position:relative; height:30px; margin-top:2px}
+.fplot .fnull{position:absolute; top:-4px; bottom:6px; width:1px; background:var(--ink-faint); opacity:.5}
+.fplot .fci{position:absolute; top:50%; height:2px; transform:translateY(-50%); border-radius:2px; opacity:.4}
+.fplot .fdot{position:absolute; top:50%; width:10px; height:10px; border-radius:50%; transform:translate(-50%,-50%); border:2px solid var(--card)}
+.fplot .ftick{position:absolute; bottom:-2px; font-family:var(--mono); font-size:9.5px; color:var(--ink-faint); transform:translateX(-50%)}
+.fplot.lo .fci,.fplot.lo .fdot{background:var(--teal); color:var(--teal)}
+.fplot.hi .fci,.fplot.hi .fdot{background:var(--red); color:var(--red)}
+.fplot.null .fci,.fplot.null .fdot{background:var(--ink-soft); color:var(--ink-soft)}
+
+/* ============ scrolly comparator ============ */
+.scrolly{position:relative}
+.scrolly .grid{display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,5vw,80px); align-items:start}
+@media (max-width:900px){.scrolly .grid{grid-template-columns:1fr}}
+.scrolly .steps{}
+.step{min-height:74vh; display:flex; flex-direction:column; justify-content:center; padding:6vh 0}
+.step .num{font-family:var(--mono); font-size:12px; letter-spacing:.1em; color:var(--ink-faint); margin-bottom:14px}
+.step .ror{font-family:var(--serif); font-size:clamp(2.4rem,6vw,3.8rem); font-weight:600; line-height:1; font-variant-numeric:tabular-nums}
+.step .cmp{font-family:var(--mono); font-size:13px; color:var(--ink-soft); margin:10px 0 16px; letter-spacing:.02em}
+.step p{font-size:16px; color:var(--ink-soft); max-width:30rem; margin:0}
+.step .ror.lo{color:var(--teal)} .step .ror.hi{color:var(--red)}
+.step.active .ror.lo{color:var(--teal)}
+.step:not(.active){opacity:.32; transition:opacity .4s}
+.step.active{opacity:1}
+@media (prefers-reduced-motion:reduce){.step:not(.active){opacity:.7}}
+.sticky{position:sticky; top:0; height:100vh; display:flex; align-items:center}
+@media (max-width:900px){.sticky{top:56px; height:auto; padding:20px 0 40px}}
+.plotcard{width:100%; background:var(--card); border:1px solid var(--line); border-radius:16px;
+  box-shadow:var(--shadow-lift); padding:30px 28px 26px}
+.plotcard .ptitle{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px}
+.plotcard .pdrug{font-family:var(--serif); font-size:1.25rem; font-weight:600; margin-bottom:30px}
+.bigaxis{position:relative; height:150px}
+.bigaxis .track{position:absolute; left:0; right:0; top:70px; height:1px; background:var(--line-2)}
+.bigaxis .zone{position:absolute; top:20px; bottom:34px; opacity:.5}
+.bigaxis .zone.protect{left:0; background:linear-gradient(90deg,var(--teal-wash),transparent)}
+.bigaxis .zone.signal{right:0; background:linear-gradient(270deg,var(--red-wash),transparent)}
+.bigaxis .null{position:absolute; top:12px; bottom:30px; width:1.5px; background:var(--ink-faint)}
+.bigaxis .nulllab{position:absolute; top:-2px; transform:translateX(-50%); font-family:var(--mono); font-size:10.5px; color:var(--ink-faint); white-space:nowrap}
+.bigaxis .tick{position:absolute; top:66px; height:9px; width:1px; background:var(--line-2)}
+.bigaxis .ticklab{position:absolute; top:82px; transform:translateX(-50%); font-family:var(--mono); font-size:10.5px; color:var(--ink-faint)}
+.bigaxis .zlab{position:absolute; bottom:2px; font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase}
+.bigaxis .zlab.l{left:0; color:var(--teal)} .bigaxis .zlab.r{right:0; color:var(--red)}
+.bigaxis .mk{position:absolute; top:70px; transition:left .6s cubic-bezier(.3,.8,.25,1), color .6s}
+.bigaxis .mk .ci{position:absolute; top:50%; height:4px; transform:translateY(-50%); border-radius:3px; background:currentColor; opacity:.3; transition:left .6s cubic-bezier(.3,.8,.25,1), width .6s cubic-bezier(.3,.8,.25,1)}
+.bigaxis .mk .dot{position:absolute; top:50%; left:0; width:19px; height:19px; border-radius:50%; transform:translate(-50%,-50%);
+  background:currentColor; border:3px solid var(--card); box-shadow:0 0 0 1px currentColor, 0 4px 12px rgba(0,0,0,.14); transition:left .6s cubic-bezier(.3,.8,.25,1)}
+.bigaxis .mk .rlab{position:absolute; bottom:26px; transform:translateX(-50%); font-family:var(--mono); font-size:15px; font-weight:700;
+  transition:left .6s cubic-bezier(.3,.8,.25,1); font-variant-numeric:tabular-nums}
+.mk.lo{color:var(--teal)} .mk.hi{color:var(--red)}
+.plotcard .verdict{margin-top:26px; padding-top:18px; border-top:1px solid var(--line);
+  font-family:var(--mono); font-size:12px; color:var(--ink-soft); letter-spacing:.02em; min-height:2.6em}
+.plotcard .verdict b.lo{color:var(--teal)} .plotcard .verdict b.hi{color:var(--red)}
+
+/* ============ callout / quote ============ */
+.callout{border-left:2px solid var(--accent); padding:6px 0 6px 26px; margin:30px 0;
+  font-family:var(--serif); font-size:clamp(1.2rem,2.2vw,1.55rem); line-height:1.4; color:var(--ink); text-wrap:balance}
+.callout.red{border-color:var(--red)} .callout.amber{border-color:var(--amber)}
+.pill{display:inline-block; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+  padding:3px 9px; border-radius:20px; border:1px solid currentColor; vertical-align:middle}
+.pill.teal{color:var(--teal)} .pill.red{color:var(--red)} .pill.amber{color:var(--amber)}
+
+/* ============ future / idea cards ============ */
+.ideas{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:16px}
+@media (max-width:860px){.ideas{grid-template-columns:1fr}}
+.idea{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px 24px; box-shadow:var(--shadow)}
+.idea .ic{font-family:var(--mono); font-size:12px; color:var(--accent); letter-spacing:.06em; margin-bottom:16px}
+.idea h4{font-family:var(--serif); font-size:1.24rem; font-weight:600; margin:0 0 10px}
+.idea p{font-size:15px; color:var(--ink-soft); margin:0; line-height:1.55}
+
+/* ============ tools ============ */
+.tools{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:16px}
+@media (max-width:860px){.tools{grid-template-columns:1fr}}
+.tool{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; box-shadow:var(--shadow); display:flex; flex-direction:column}
+.tool code{font-family:var(--mono); font-size:12.5px; color:var(--teal-ink); background:var(--teal-wash); padding:3px 8px; border-radius:6px; align-self:flex-start; margin-bottom:14px}
+.tool h4{font-family:var(--serif); font-size:1.18rem; font-weight:600; margin:0 0 8px}
+.tool p{font-size:14.5px; color:var(--ink-soft); margin:0 0 14px; line-height:1.5; flex:1}
+.tool .meta{font-family:var(--mono); font-size:11px; color:var(--ink-faint); letter-spacing:.04em}
+.license{margin-top:22px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 26px;
+  display:flex; gap:18px; align-items:center; box-shadow:var(--shadow); flex-wrap:wrap}
+.license .lz{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal);
+  border:1px solid var(--teal); border-radius:8px; padding:8px 14px; flex:none}
+.license p{margin:0; font-size:15px; color:var(--ink-soft)}
+.license b{color:var(--ink); font-weight:600}
+
+/* ============ CTA buttons ============ */
+.btnrow{display:flex; gap:14px; flex-wrap:wrap; margin-top:26px}
+.btn{display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:13px; letter-spacing:.02em;
+  padding:12px 20px; border-radius:10px; border:1px solid var(--line-2); color:var(--ink); background:var(--card); transition:all .2s}
+.btn:hover{text-decoration:none; border-color:var(--teal); color:var(--teal-ink); transform:translateY(-1px)}
+.btn.primary{background:var(--teal); color:#fff; border-color:var(--teal)}
+:root[data-theme="dark"] .btn.primary,@media (prefers-color-scheme:dark){.btn.primary{color:#08252a}}
+.btn.primary:hover{color:#fff; filter:brightness(1.06)}
+:root[data-theme="dark"] .btn.primary:hover{color:#08252a}
+
+/* ============ footer ============ */
+.footer{border-top:1px solid var(--line); padding:56px 0 70px; background:var(--card)}
+.footer .cols{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:34px}
+@media (max-width:760px){.footer .cols{grid-template-columns:1fr; gap:26px}}
+.footer h5{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 14px}
+.footer p{font-size:14px; color:var(--ink-soft); margin:0 0 10px; line-height:1.55}
+.footer a{color:var(--ink-soft)} .footer a:hover{color:var(--teal-ink)}
+.footer .anchors{font-family:var(--mono); font-size:12px; color:var(--ink-faint); line-height:1.7}
+.footer .fine{margin-top:40px; padding-top:22px; border-top:1px solid var(--line);
+  font-family:var(--mono); font-size:11.5px; color:var(--ink-faint); letter-spacing:.02em; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+
+.disclaim{margin-top:14px; font-size:13px; color:var(--ink-faint); font-style:italic; max-width:var(--readw)}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="topbar" id="topbar">
+  <div class="brand"><span class="glyph">✚</span> GLP-1 · Neuropsych Safety</div>
+  <nav class="links">
+    <a class="hide-sm" href="#streams">Design</a>
+    <a class="hide-sm" href="#faers">The signal</a>
+    <a class="hide-sm" href="#toolkit">Toolkit</a>
+    <a href="https://github.com/dafraile/glp1-neuropsych-safety" target="_blank" rel="noopener">GitHub ↗</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle colour theme">Theme</button>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero wrap" id="top">
+  <p class="kicker reveal">A meta-science investigation · <b>the suicide-signal paradox</b></p>
+  <h1 class="reveal d1">Same drug. Same outcome.<br><span class="em">Opposite</span> signals.</h1>
+  <p class="sub reveal d2">Tens of millions take GLP-1 drugs like Ozempic. In 2023 the FDA and EMA opened investigations because adverse-event databases were filling with reports of suicidal thoughts — <b>yet the randomised trials show no such risk.</b> So which do you believe? We rebuilt the whole evidence base to find out.</p>
+
+  <div class="axisfig reveal d3">
+    <div class="cap"><span>◀ lower risk</span><span>relative effect on suicidality (log scale)</span><span>higher risk ▶</span></div>
+    <div class="axis" id="heroAxis" aria-hidden="true">
+      <div class="track"></div>
+      <div class="null" id="hNull"></div>
+      <div class="nulllab" id="hNullLab">RR 1.0 · no effect</div>
+      <!-- ticks + markers injected by JS -->
+    </div>
+  </div>
+
+  <div class="scrollcue reveal d4"><span class="bar"></span> Scroll to read the reconciliation</div>
+</section>
+
+<!-- ================= THE PARADOX ================= -->
+<section class="wrap" id="paradox">
+  <div class="split">
+    <div class="read reveal">
+      <p class="eyebrow"><span class="tag">01</span> The contradiction</p>
+      <h2>A signal that won't hold still</h2>
+      <p class="lead">Spontaneous-report databases scream. Designed studies shrug. Both describe the same molecule and the same outcome — and careless pooling of the two produces a confidently wrong answer.</p>
+      <p class="muted">The question is not just <em>“is it safe?”</em> but <strong>“why do the evidence sources disagree, and which one should a regulator believe?”</strong> That is a meta-science problem — and exactly where this project lives.</p>
+      <div class="callout">One pooled number can't hold a contradiction. The <em>comparison</em> is the result.</div>
+    </div>
+    <figure class="figure reveal d1">
+      <img src="figures/triangulation_forest.png" alt="Forest plot: designed-study points cluster near RR 1.0 while the FAERS spontaneous-report point sits at 2.08, on one log axis, explicitly not pooled across streams.">
+      <figcaption><span class="n">FIG</span><span><b>Triangulation forest.</b> Trials &amp; cohorts near 1.0 (teal/green) vs the FAERS report point at 2.08 (red). Ratios are <b>not</b> pooled across streams.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= FOUR STREAMS ================= -->
+<section class="wrap" id="streams">
+  <p class="eyebrow reveal"><span class="tag">02</span> The design</p>
+  <h2 class="read reveal">Four streams, kept strictly apart</h2>
+  <p class="lead read reveal d1">The mistake most reviews make is pooling everything into one average. We did the opposite: four evidence streams, each with its own PRISMA flow, study table, pooled estimate and GRADE certainty — compared at the end, never blended.</p>
+  <div class="streams">
+    <div class="stream a reveal d1"><div class="id">A</div><div class="role">Pooled · RoB · GRADE</div><h4>Designed studies</h4><p>RCTs and observational cohorts, pooled properly and design-stratified. Do trials and cohorts show neuropsychiatric harm?</p></div>
+    <div class="stream b reveal d2"><div class="id">B</div><div class="role">Comparison only</div><h4>FAERS reports</h4><p>openFDA disproportionality. Is the spontaneous signal real — or an artifact of how it's measured? Never pooled with A.</p></div>
+    <div class="stream c reveal d3"><div class="id">C</div><div class="role">Plausibility</div><h4>Mechanism</h4><p>A bidirectional evidence map of GLP-1 reward-circuit biology. Plausibility — not an effect size, and not a verdict.</p></div>
+    <div class="stream d reveal d4"><div class="id">D</div><div class="role">Exploratory</div><h4>Addiction benefit</h4><p>Does the same pathway <em>reduce</em> craving and use? Quarantined from the safety question and treated as hypothesis-generating.</p></div>
+  </div>
+  <div class="neverpool read reveal d2"><span class="x">✕</span><span>Streams are <strong>never pooled together.</strong> Mixing risk ratios, adjusted odds/hazard ratios and reporting-ORs into one number would be indefensible — the cross-stream comparison <em>is</em> the finding.</span></div>
+</section>
+
+<!-- ================= STREAM A — PIPELINE ================= -->
+<section class="wrap" id="streamA">
+  <p class="eyebrow reveal"><span class="tag">03 · Stream A</span> Validating the pipeline</p>
+  <h2 class="read reveal">First, earn the right to be believed</h2>
+  <p class="lead read reveal d1">Before reading a new signal, we proved the machinery works: an auditable search, a published meta-analysis reproduced to the decimal, a disproportionality tool calibrated against a known-answer reference set, and small-study &amp; confounding sensitivity tests.</p>
+
+  <div class="stats reveal d1">
+    <div class="stat"><div class="v" data-to="967">0</div><div class="k">records retrieved<br>PubMed + OpenAlex</div></div>
+    <div class="stat"><div class="v" data-to="61">0</div><div class="k">designed studies<br>after screening</div></div>
+    <div class="stat"><div class="v teal" data-to="0.84" data-dec="2">0</div><div class="k">RCT pooled RR<br>k=23 · I²=0%</div></div>
+    <div class="stat"><div class="v teal" data-to="0.76" data-dec="2">0</div><div class="k">tool AUROC<br>OMOP reference set</div></div>
+  </div>
+
+  <figure class="figure reveal d1" style="margin-top:40px">
+    <img src="figures/prisma_evidence_map.png" alt="PRISMA flow diagram: 967 records retrieved, 794 after de-duplication, screened down to 61 designed studies.">
+    <figcaption><span class="n">A·0</span><span><b>An auditable evidence base.</b> 967 records retrieved → 794 after de-duplication → 61 designed studies. Every screen is logged, method-flagged per record.</span></figcaption>
+  </figure>
+
+  <div class="split" style="margin-top:52px">
+    <figure class="figure reveal">
+      <img src="figures/forest_reproduction.png" alt="Forest plot reproducing Chen et al. 2025: pooled RR 0.844, CI 0.541 to 1.317, I-squared 0 percent across 25 trials.">
+      <figcaption><span class="n">A·1</span><span><b>Anchor reproduction.</b> Chen et&nbsp;al. 2025 published RR 0.84 (0.54–1.32), I²=0% — reproduced to <b>0.844</b>, source-verified against all 25 trials.</span></figcaption>
+    </figure>
+    <div class="read reveal d1">
+      <h3>The estimate reproduces exactly</h3>
+      <p>Our pipeline recovers the published anchor — point estimate, CI, I², p-value and the 35-vs-36 event totals all coincide. A trust-check, not a coincidence.</p>
+      <h3 style="margin-top:1.4em">The calibration is honest</h3>
+      <p>The FAERS disproportionality tool scores <strong>AUROC 0.76</strong> on the OMOP/Ryan reference set (355/399 estimable pairs) — a real, imperfect number, not a cherry-picked 0.99. A <em>correctly implemented</em> method is exactly why its later reading is worth trusting.</p>
+      <figure class="figure" style="margin-top:1.5em">
+        <img src="figures/omop_calibration_roc.png" alt="ROC curve for the disproportionality tool on the OMOP/Ryan reference set, area under the curve 0.76.">
+        <figcaption><span class="n">A·2</span><span><b>Calibration ROC.</b> AUROC <b>0.76</b> — a correctly implemented, honestly imperfect tool.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="split" style="margin-top:52px">
+    <div class="read reveal">
+      <h3>“No detected increase” — not “safe”</h3>
+      <p>The RCT pool sits at <strong>RR 0.84 (0.54–1.32)</strong>. But the upper bound (1.37) does <em>not</em> exclude a clinically important harm margin of RR 1.20–1.25, and with 71 events the stratum can only detect RR ≥ ~1.9 at 80% power. So the calibrated statement is <strong>“no detected increase,”</strong> never “harm excluded.”</p>
+      <p class="muted">We applied the same skepticism to the <em>protective</em> observational reads: E-values show the significant benefits are fragile — self-harm 0.71 collapses under an unmeasured confounder of just RR≈1.56.</p>
+      <div class="callout">A null test is not proof of safety. We quantified what we can and cannot say — instead of picking a side.</div>
+    </div>
+    <div class="reveal d1">
+      <div class="forest" id="forestA">
+        <div class="fhead"><span>Stream A · design-stratified estimate</span><span style="text-align:right">RR (95% CI)</span></div>
+        <div class="frow" data-est="0.84" data-lo="0.54" data-hi="1.32">
+          <div class="lab">Suicidal behaviour <small>RCT · k=23 · GRADE Low</small></div>
+          <div class="val"></div><div class="fplot"></div>
+        </div>
+        <div class="frow" data-est="0.71" data-lo="0.58" data-hi="0.87">
+          <div class="lab">Suicide attempt / self-harm <small>Observational · k=4 · Very low</small></div>
+          <div class="val"></div><div class="fplot"></div>
+        </div>
+        <div class="frow" data-est="0.94" data-lo="0.82" data-hi="1.09">
+          <div class="lab">Suicidality composite <small>Observational · k=2 · Very low</small></div>
+          <div class="val"></div><div class="fplot"></div>
+        </div>
+        <div class="frow" data-est="0.54" data-lo="0.33" data-hi="0.87">
+          <div class="lab">Anxiety <small>Observational · k=2 · Very low</small></div>
+          <div class="val"></div><div class="fplot"></div>
+        </div>
+      </div>
+      <p class="disclaim">Strata are never pooled together. Depression is too heterogeneous (I²≈100%) to summarise with one effect and is not shown as a point estimate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STREAM B — THE FAERS CONNECTION (SCROLLY) ================= -->
+<section class="wrap" id="faers">
+  <p class="eyebrow reveal"><span class="tag">04 · Stream B</span> The novel result</p>
+  <h2 class="read reveal">The alarm depends on what you compare it to</h2>
+  <p class="lead read reveal d1">Here is the heart of the project. For semaglutide × the suicide/self-injury term set, the FAERS reporting odds ratio doesn't converge — it <strong>swings across the no-signal line depending only on the comparison group.</strong> Scroll to watch it move.</p>
+</section>
+
+<section class="scrolly wrap" id="scrolly">
+  <div class="grid">
+    <div class="steps" id="steps">
+      <div class="step" data-ror="0.51" data-lo="0.48" data-hi="0.55" data-sig="lo" data-drug="Metformin" data-verdict="Against first-line metformin the signal reads &lt;b class='lo'&gt;protective&lt;/b&gt;.">
+        <div class="num">COMPARATOR 1 / 8</div><div class="ror lo">0.51</div>
+        <div class="cmp">vs metformin · 0.48–0.55</div>
+        <p>Compared against metformin — the most-prescribed first-line diabetes drug — semaglutide looks <em>protective</em>. A regulator stopping here would close the case.</p>
+      </div>
+      <div class="step" data-ror="0.75" data-lo="0.69" data-hi="0.81" data-sig="lo" data-drug="Sulfonylurea" data-verdict="Still below the line — &lt;b class='lo'&gt;no signal&lt;/b&gt;.">
+        <div class="num">COMPARATOR 2 / 8</div><div class="ror lo">0.75</div>
+        <div class="cmp">vs sulfonylurea · 0.69–0.81</div>
+        <p>Swap the comparator to a sulfonylurea and it drifts upward — but still sits below 1. No signal.</p>
+      </div>
+      <div class="step" data-ror="0.77" data-lo="0.73" data-hi="0.83" data-sig="lo" data-drug="Full database" data-verdict="The whole database is not indication-matched — just another background.">
+        <div class="num">COMPARATOR 3 / 8</div><div class="ror lo">0.77</div>
+        <div class="cmp">vs full FAERS database · 0.73–0.83</div>
+        <p>Against every other drug in FAERS at once — still under 1. But the full database isn't an indication-matched control; it's just another reporting background.</p>
+      </div>
+      <div class="step" data-ror="0.84" data-lo="0.78" data-hi="0.90" data-sig="lo" data-drug="Non-GLP-1 antidiabetics" data-verdict="Approaching the line, still &lt;b class='lo'&gt;below&lt;/b&gt; it.">
+        <div class="num">COMPARATOR 4 / 8</div><div class="ror lo">0.84</div>
+        <div class="cmp">vs combined non-GLP-1 antidiabetics · 0.78–0.90</div>
+        <p>Pool the non-GLP-1 diabetes drugs together and the estimate climbs toward the null — but hasn't crossed it.</p>
+      </div>
+      <div class="step" data-ror="1.65" data-lo="1.49" data-hi="1.81" data-sig="hi" data-drug="DPP-4 inhibitors" data-verdict="Across the line: now a &lt;b class='hi'&gt;signal&lt;/b&gt;.">
+        <div class="num">COMPARATOR 5 / 8</div><div class="ror hi">1.65</div>
+        <div class="cmp">vs DPP-4 inhibitors · 1.49–1.81</div>
+        <p>Now it crosses. Against DPP-4 inhibitors the same drug, same outcome, same database reads as a <em>signal</em>.</p>
+      </div>
+      <div class="step" data-ror="2.08" data-lo="1.91" data-hi="2.26" data-sig="hi" data-drug="SGLT2i + DPP-4i" data-verdict="The primary anchor comparator — a clear &lt;b class='hi'&gt;signal&lt;/b&gt;.">
+        <div class="num">COMPARATOR 6 / 8</div><div class="ror hi">2.08</div>
+        <div class="cmp">vs SGLT2i + DPP-4i (primary anchor) · 1.91–2.26</div>
+        <p>The pre-registered anchor comparator lands at 2.08 — the number the headlines would run with.</p>
+      </div>
+      <div class="step" data-ror="2.64" data-lo="2.38" data-hi="2.92" data-sig="hi" data-drug="SGLT2 inhibitors" data-verdict="Stronger still against SGLT2 inhibitors.">
+        <div class="num">COMPARATOR 7 / 8</div><div class="ror hi">2.64</div>
+        <div class="cmp">vs SGLT2 inhibitors · 2.38–2.92</div>
+        <p>Against SGLT2 inhibitors it climbs further from the line.</p>
+      </div>
+      <div class="step" data-ror="3.29" data-lo="3.02" data-hi="3.60" data-sig="hi" data-drug="Other GLP-1 RAs" data-verdict="Within its own class — the &lt;b class='hi'&gt;strongest&lt;/b&gt; signal of all.">
+        <div class="num">COMPARATOR 8 / 8</div><div class="ror hi">3.29</div>
+        <div class="cmp">vs other GLP-1 RAs (within class) · 3.02–3.60</div>
+        <p>Compared within its own class, semaglutide produces the strongest signal of all — <strong>3.29</strong>. Six-fold different from where we began.</p>
+      </div>
+    </div>
+
+    <div class="sticky">
+      <div class="plotcard">
+        <div class="ptitle">Reporting odds ratio · semaglutide × suicide/self-injury</div>
+        <div class="pdrug" id="pdrug">vs metformin</div>
+        <div class="bigaxis" id="bigAxis" aria-hidden="true">
+          <div class="zone protect"></div><div class="zone signal"></div>
+          <div class="track"></div>
+          <div class="null" id="bNull"></div>
+          <div class="nulllab" id="bNullLab">no signal · ROR 1</div>
+          <div class="mk lo" id="bMk"><div class="ci" id="bCi"></div><div class="dot"></div><div class="rlab" id="bRlab">0.51</div></div>
+          <span class="zlab l">◀ protective</span><span class="zlab r">signal ▶</span>
+        </div>
+        <div class="verdict" id="bVerdict">Against first-line metformin the signal reads <b class="lo">protective</b>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NOTORIETY ================= -->
+<section class="wrap" id="notoriety">
+  <div class="split">
+    <div class="read reveal">
+      <p class="eyebrow"><span class="tag">04 · continued</span> …and <em>when</em></p>
+      <h2>A spike with a date on it</h2>
+      <p class="lead">Hold the comparator fixed and split by calendar time. The signal is <strong>absent before July 2023 (ROR 0.85) and present after (2.98)</strong> — a jump that is specific to semaglutide, the drug that was in the news.</p>
+      <p class="muted">A difference-in-differences test against other GLP-1 RAs gives <strong>+0.0079 (z = 11.3, p &lt; 0.001)</strong>. Control outcomes (headache, injection-site reactions) and control drugs show <em>no</em> July-2023 discontinuity. That is the fingerprint of <strong>notoriety bias plus confounding by indication</strong> — not a drug effect.</p>
+      <div class="callout red">We are not saying the drug is safe. We are showing the <em>alarm signal</em> isn't trustworthy — it isn't stable to the variables a causal signal should be robust to.</div>
+    </div>
+    <figure class="figure reveal d1">
+      <img src="figures/faers_notoriety_its.png" alt="Two-panel interrupted time series: semaglutide's suicide-report proportion spikes after July 2023 while control drugs and control outcomes stay flat.">
+      <figcaption><span class="n">B·1</span><span><b>Time-controlled notoriety analysis.</b> Semaglutide's report proportion jumps at July 2023; control drugs (A) and control outcomes (B) stay flat.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= STREAM D — BENEFIT ================= -->
+<section class="wrap" id="streamD">
+  <p class="eyebrow reveal"><span class="tag">05 · Stream D</span> <span class="pill amber">Exploratory</span></p>
+  <h2 class="read reveal">The same scrutiny, the opposite fate</h2>
+  <p class="lead read reveal d1">Now turn the machine on a hopeful question. In the <em>same</em> database, read against the <em>same</em> comparator: the harm signal dissolves under comparator/time sensitivity — while an <strong>addiction-reduction footprint survives</strong> across four substance classes. One database, symmetric treatment, opposite outcomes.</p>
+
+  <div class="stats reveal d1">
+    <div class="stat"><div class="v amber" data-to="45">0</div><div class="k">direction-eligible<br>Stream D studies</div></div>
+    <div class="stat"><div class="v amber" data-to="26">0</div><div class="k">report addiction<br><em>benefit</em> direction</div></div>
+    <div class="stat"><div class="v teal" data-to="0">0</div><div class="k">report a<br>pro-addiction direction</div></div>
+    <div class="stat"><div class="v amber" data-to="4">0</div><div class="k">substance classes<br>alcohol · nicotine · drug · behavioural</div></div>
+  </div>
+
+  <div class="split" style="margin-top:52px">
+    <figure class="figure reveal">
+      <img src="figures/benefit_harm_symmetry.png" alt="Same FAERS database: harm signal dissolves post-notoriety while an addiction-reduction footprint survives across substance classes.">
+      <figcaption><span class="n">D·1</span><span><b>One database, two fates.</b> The harm signal survives only post-notoriety and only for news-named brands; the benefit footprint persists.</span></figcaption>
+    </figure>
+    <div class="read reveal d1">
+      <h3>A benefit footprint that survives</h3>
+      <p>Design-stratified exploratory pools (harmonised so &lt;1 favours GLP-1): alcohol <strong>RR 0.69</strong>, nicotine <strong>0.68</strong>, AUDIT score <strong>−7.81</strong> (anchor-reproduced from Eshraghi et&nbsp;al. 2025). All <span class="pill amber">Very low</span> certainty.</p>
+      <p class="muted"><strong>“0 harm” is not evidence of safety.</strong> It means no study reported a pro-addiction direction — confirmed by an independent blind pass across all 52 studies. The FAERS footprint is relabelled <em>inverse disproportionality</em>, not “benefit.” Vote-counting and “symmetry” are demoted to hypothesis-generating framing.</p>
+      <div class="callout amber">That is what triangulation gives you that a single pooled number never could: a harm alarm you can explain away, and a benefit lead worth chasing — held to the same standard.</div>
+    </div>
+  </div>
+
+  <figure class="figure reveal" style="margin-top:34px">
+    <img src="figures/stream_D_forest_by_substance.png" alt="Forest plot of exploratory addiction-reduction pools by substance class: alcohol, nicotine, and AUDIT score, all favouring GLP-1.">
+    <figcaption><span class="n">D·2</span><span><b>Exploratory benefit by substance.</b> Design-stratified pools harmonised so &lt;1 favours GLP-1 — all <b>Very low</b> certainty. Vote-counting and “symmetry” are hypothesis-generating framing, not statistical proof.</span></figcaption>
+  </figure>
+</section>
+
+<!-- ================= FUTURE ================= -->
+<section class="wrap" id="future">
+  <p class="eyebrow reveal"><span class="tag">06</span> Why it generalises</p>
+  <h2 class="read reveal">A method, not just a verdict</h2>
+  <p class="lead read reveal d1">The GLP-1 case is a proving ground. The same architecture — separated streams, calibrated tooling, and calibrated language — is a reusable way to do drug safety, monitoring, and discovery under contradiction.</p>
+  <div class="ideas">
+    <div class="idea reveal d1"><div class="ic">▚ living evidence</div><h4>Continuous meta-research</h4><p>Re-run the whole provenance chain on a schedule as trials report and databases refresh. Evidence syntheses that stay current instead of freezing on publication day.</p></div>
+    <div class="idea reveal d2"><div class="ic">◭ comparator-aware</div><h4>Smarter drug monitoring</h4><p>A pharmacovigilance signal that reports its own comparator- and calendar-sensitivity — so regulators see an unstable alarm <em>as</em> unstable, before it drives a label change.</p></div>
+    <div class="idea reveal d3"><div class="ic">✦ repurposing</div><h4>Finding the next indication</h4><p>The exploratory stream that surfaced the addiction-benefit footprint is a template: mine the same evidence base for where a drug's mechanism might <em>help</em>, quarantined from the safety question.</p></div>
+  </div>
+</section>
+
+<!-- ================= TOOLKIT ================= -->
+<section class="wrap" id="toolkit">
+  <p class="eyebrow reveal"><span class="tag">07</span> The build track</p>
+  <h2 class="read reveal">Everything here is reusable — and open</h2>
+  <p class="lead read reveal d1">The pieces that made this credible aren't bespoke to GLP-1. They travel with the project as versioned source and run on <em>any</em> systematic review.</p>
+  <div class="tools">
+    <div class="tool reveal d1"><code>dual-reviewer-rob</code><h4>Risk-of-bias engine</h4><p>Runs the official signalling questions (RoB2: 22 Qs/5 domains; ROBINS-I: 34 Qs/7 domains) through two cross-model reviewers with a judge tier and a full quote-verified audit trail.</p><div class="meta">Claude + GPT · per-question quotes</div></div>
+    <div class="tool reveal d2"><code>grade-hybrid</code><h4>GRADE certainty</h4><p>A deterministic engine for the arithmetic domains (RoB aggregation, I² inconsistency, imprecision) plus a dual-reviewer harness for the judgment calls. Consumes the RoB output.</p><div class="meta">Deterministic + dual-reviewer</div></div>
+    <div class="tool reveal d3"><code>faers_tool.py</code><h4>Disproportionality client</h4><p>An openFDA client that standardises outcomes to the MedDRA suicide/self-injury term set and computes PRR / ROR / IC against full-database or custom active-comparator backgrounds.</p><div class="meta">Calibrated · AUROC 0.76</div></div>
+  </div>
+  <div class="license reveal d1">
+    <span class="lz">Apache 2.0</span>
+    <p>Every tool, dataset manifest, and analysis in this project is released under the <b>Apache License 2.0</b> — free to use, modify, and build on, with attribution. Reproduce every headline number with one command: <code style="font-family:var(--mono);font-size:13px">./reproduce.sh</code>.</p>
+  </div>
+  <div class="btnrow reveal d2">
+    <a class="btn primary" href="https://github.com/dafraile/glp1-neuropsych-safety" target="_blank" rel="noopener">Explore the repository ↗</a>
+    <a class="btn" href="https://github.com/dafraile/glp1-neuropsych-safety/tree/main/tools" target="_blank" rel="noopener">The three tools</a>
+    <a class="btn" href="https://github.com/dafraile/glp1-neuropsych-safety/blob/main/TRIANGULATION_SYNTHESIS.md" target="_blank" rel="noopener">Full synthesis</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h5>The calibrated bottom line</h5>
+        <p>Designed studies and current regulatory assessments do not show an increased <em>average</em> risk of suicidality with GLP-1 receptor agonists — but the evidence cannot yet <em>exclude</em> modest or subgroup-specific effects. The FAERS alarm is comparator- and calendar-dependent, and compatible with reporting and selection bias. Stream D is exploratory.</p>
+        <p class="muted" style="font-size:13px">Consistent with the FDA (Jan 2026) and EMA/PRAC no-causal-harm conclusions. Convergence here means consistent <em>direction</em> under separate methods — not four independent proofs.</p>
+      </div>
+      <div>
+        <h5>Anchors &amp; sources</h5>
+        <div class="anchors">
+          Chen et&nbsp;al., <em>J Diabetes</em> 2025 — Stream A<br>
+          Eshraghi et&nbsp;al., <em>eClinicalMedicine</em> 2025 — Stream D<br>
+          openFDA snapshot · 2026-04-28<br>
+          FDA DSC · 13 Jan 2026 (~91 trials)<br>
+          OMOP / Ryan reference set — calibration
+        </div>
+      </div>
+      <div>
+        <h5>Repository</h5>
+        <p><a href="https://github.com/dafraile/glp1-neuropsych-safety" target="_blank" rel="noopener">github.com/dafraile/glp1-neuropsych-safety ↗</a></p>
+        <p><a href="https://github.com/dafraile/glp1-neuropsych-safety/blob/main/LICENSE" target="_blank" rel="noopener">Apache License 2.0</a></p>
+        <p class="muted" style="font-size:13px">Human validation is single-reviewer (a hackathon constraint, stated openly); LLM-layer agreement figures are cross-model reproducibility ceilings, not accuracy.</p>
+      </div>
+    </div>
+    <div class="fine">
+      <span>Triangulating the GLP-1 neuropsychiatric safety signal</span>
+      <span>Built with Claude Science · calibrated language throughout — “no detected increase,” never “safe.”</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+  /* ---------- theme toggle ---------- */
+  var root = document.documentElement;
+  document.getElementById("themeBtn").addEventListener("click", function(){
+    var cur = root.getAttribute("data-theme");
+    if(!cur){ cur = window.matchMedia("(prefers-color-scheme:dark)").matches ? "dark":"light"; }
+    var next = cur === "dark" ? "light":"dark";
+    root.setAttribute("data-theme", next);
+    // reposition axis-dependent graphics after theme swap
+    layoutHeroAxis(); layoutForest();
+  });
+
+  /* ---------- shared log-axis helper ---------- */
+  function pos(v,min,max){ return (Math.log(v)-Math.log(min))/(Math.log(max)-Math.log(min))*100; }
+
+  /* ---------- progress bar + sticky topbar ---------- */
+  var prog = document.getElementById("progress"), topbar = document.getElementById("topbar");
+  function onScroll(){
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    prog.style.width = (max>0 ? (h.scrollTop/max*100):0) + "%";
+    topbar.classList.toggle("stuck", h.scrollTop > 40);
+  }
+  window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+  /* ---------- reveal on scroll ---------- */
+  var revs = document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window && !reduce){
+    var ro = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("is-in"); ro.unobserve(e.target); } });
+    }, {threshold:0.12, rootMargin:"0px 0px -8% 0px"});
+    revs.forEach(function(el){ ro.observe(el); });
+  } else { revs.forEach(function(el){ el.classList.add("is-in"); }); }
+
+  /* ---------- count-up stats ---------- */
+  function countUp(el){
+    var to = parseFloat(el.getAttribute("data-to")),
+        dec = parseInt(el.getAttribute("data-dec")||"0",10);
+    if(reduce){ el.textContent = to.toFixed(dec); return; }
+    var dur = 1100, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts; var p = Math.min((ts-t0)/dur,1);
+      var e = 1-Math.pow(1-p,3);
+      el.textContent = (to*e).toFixed(dec);
+      if(p<1) requestAnimationFrame(step); else el.textContent = to.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  var stats = document.querySelectorAll(".stat .v[data-to]");
+  if("IntersectionObserver" in window){
+    var so = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); so.unobserve(e.target); } });
+    }, {threshold:0.6});
+    stats.forEach(function(el){ so.observe(el); });
+  } else { stats.forEach(countUp); }
+
+  /* ---------- hero axis ---------- */
+  var HMIN=0.4, HMAX=4.0;
+  var heroData = [
+    {v:0.84, lo:0.54, hi:1.32, cls:"teal", lab:"Designed studies", sub:"trials &amp; cohorts ~1.0"},
+    {v:2.08, lo:1.91, hi:2.26, cls:"red",  lab:"Spontaneous reports", sub:"FAERS · ROR 2.08"}
+  ];
+  function layoutHeroAxis(){
+    var ax = document.getElementById("heroAxis"); if(!ax) return;
+    document.getElementById("hNull").style.left = pos(1,HMIN,HMAX)+"%";
+    document.getElementById("hNullLab").style.left = pos(1,HMIN,HMAX)+"%";
+    ax.querySelectorAll(".tick,.ticklab,.mk").forEach(function(n){ n.remove(); });
+    [0.5,1,2,4].forEach(function(t){
+      var tk=document.createElement("div"); tk.className="tick"; tk.style.left=pos(t,HMIN,HMAX)+"%"; ax.appendChild(tk);
+      var tl=document.createElement("div"); tl.className="ticklab"; tl.style.left=pos(t,HMIN,HMAX)+"%"; tl.textContent=t; ax.appendChild(tl);
+    });
+    heroData.forEach(function(d){
+      var mk=document.createElement("div"); mk.className="mk "+d.cls;
+      mk.style.left = pos(d.v,HMIN,HMAX)+"%";
+      var ciw = pos(d.hi,HMIN,HMAX)-pos(d.lo,HMIN,HMAX);
+      mk.innerHTML = '<div class="ci" style="left:'+(pos(d.lo,HMIN,HMAX)-pos(d.v,HMIN,HMAX))+'%;width:'+ciw+'%"></div>'
+        + '<div class="dot"></div>'
+        + '<div class="lbl">'+d.v.toFixed(2)+'<small>'+d.lab+'</small></div>';
+      ax.appendChild(mk);
+    });
+  }
+  layoutHeroAxis();
+
+  /* ---------- Stream A static forest rows ---------- */
+  var FMIN=0.3, FMAX=3.4;
+  function layoutForest(){
+    document.querySelectorAll("#forestA .frow").forEach(function(row){
+      var est=+row.dataset.est, lo=+row.dataset.lo, hi=+row.dataset.hi;
+      var sig = hi<1 ? "lo" : (lo>1 ? "hi" : "null");
+      var plot=row.querySelector(".fplot"), val=row.querySelector(".val");
+      val.textContent = est.toFixed(2)+" ("+lo.toFixed(2)+"–"+hi.toFixed(2)+")";
+      val.className = "val sig-"+sig;
+      plot.className = "fplot "+sig;
+      plot.innerHTML = '<div class="fnull" style="left:'+pos(1,FMIN,FMAX)+'%"></div>'
+        + '<div class="fci" style="left:'+pos(lo,FMIN,FMAX)+'%;width:'+(pos(hi,FMIN,FMAX)-pos(lo,FMIN,FMAX))+'%"></div>'
+        + '<div class="fdot" style="left:'+pos(est,FMIN,FMAX)+'%"></div>'
+        + '<span class="ftick" style="left:'+pos(1,FMIN,FMAX)+'%">1.0</span>';
+    });
+  }
+  layoutForest();
+
+  /* ---------- scrolly comparator ---------- */
+  var BMIN=0.4, BMAX=4.0;
+  var bNull=document.getElementById("bNull"), bNullLab=document.getElementById("bNullLab"),
+      bMk=document.getElementById("bMk"), bCi=document.getElementById("bCi"),
+      bRlab=document.getElementById("bRlab"), bAxis=document.getElementById("bigAxis"),
+      pdrug=document.getElementById("pdrug"), bVerdict=document.getElementById("bVerdict");
+  function layoutBigAxis(){
+    bNull.style.left = pos(1,BMIN,BMAX)+"%"; bNullLab.style.left = pos(1,BMIN,BMAX)+"%";
+    bAxis.querySelectorAll(".tick,.ticklab").forEach(function(n){ n.remove(); });
+    [0.5,1,2,4].forEach(function(t){
+      var tk=document.createElement("div"); tk.className="tick"; tk.style.left=pos(t,BMIN,BMAX)+"%"; bAxis.appendChild(tk);
+      var tl=document.createElement("div"); tl.className="ticklab"; tl.style.left=pos(t,BMIN,BMAX)+"%"; tl.textContent=t; bAxis.appendChild(tl);
+    });
+  }
+  layoutBigAxis();
+  function setStep(s){
+    var v=+s.dataset.ror, lo=+s.dataset.lo, hi=+s.dataset.hi, sig=s.dataset.sig;
+    bMk.className = "mk "+sig;
+    bMk.style.left = pos(v,BMIN,BMAX)+"%";
+    bCi.style.left = (pos(lo,BMIN,BMAX)-pos(v,BMIN,BMAX))+"%";
+    bCi.style.width = (pos(hi,BMIN,BMAX)-pos(lo,BMIN,BMAX))+"%";
+    bRlab.textContent = v.toFixed(2);
+    pdrug.textContent = "vs "+s.dataset.drug;
+    bVerdict.innerHTML = s.dataset.verdict;
+  }
+  var steps = Array.prototype.slice.call(document.querySelectorAll("#steps .step"));
+  if("IntersectionObserver" in window){
+    var co = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          steps.forEach(function(x){ x.classList.remove("active"); });
+          e.target.classList.add("active");
+          setStep(e.target);
+        }
+      });
+    }, {rootMargin:"-45% 0px -45% 0px", threshold:0});
+    steps.forEach(function(s){ co.observe(s); });
+  }
+  if(steps[0]){ steps[0].classList.add("active"); setStep(steps[0]); }
+
+  window.addEventListener("resize", function(){ layoutHeroAxis(); layoutForest(); layoutBigAxis(); }, {passive:true});
+})();
+</script>
+</body>
+</html>

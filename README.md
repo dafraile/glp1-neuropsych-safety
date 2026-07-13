@@ -180,6 +180,22 @@ tools/     dual-reviewer-rob + grade-hybrid harness; faers/ openFDA client (Stre
 Publisher full-text articles are **not** committed (copyright). The screening ledger and
 study table carry PMIDs/DOIs to retrieve them.
 
+## Presentation
+
+A scrollable, figure-driven walkthrough of the whole project lives in [`site/index.html`](site/index.html)
+— a self-contained page (no build step, no external dependencies) that runs the narrative from the
+research question through pipeline validation, the FAERS comparator/notoriety dissection, the
+Stream D exploratory benefit signal, and the reusable toolkit. Open it locally, or serve `site/`
+from any static host (see [`site/README.md`](site/README.md) for GitHub Pages).
+
+## License
+
+All code, tooling (`tools/dual-reviewer-rob`, `tools/grade-hybrid`, `tools/faers`), the analysis
+manifest, and derived result tables are released under the **Apache License 2.0** — see
+[`LICENSE`](LICENSE). You are free to use, modify, and build on them with attribution. Third-party
+publisher full texts and upstream reference sets (OMOP/Ryan, openFDA, cited trials) retain their
+own terms.
+
 ---
 *Generated with Claude Science. Reproduction anchors: Chen et al., J Diabetes 2025;17(9):e70151
 (Stream A); Eshraghi et al., eClinicalMedicine 2025 (Stream D). openFDA snapshot 2026-04-28.*
