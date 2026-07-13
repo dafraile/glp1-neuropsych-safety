@@ -44,6 +44,15 @@ never pooled together.
 | Observational (k=2, IV) | anxiety | 0.54 (0.33–0.87) | 74% | Very low |
 | Observational | depression | **not summarised by one effect** (see below) | ≥92% | Very low |
 
+*Certainty basis (signalling-question RoB engine — ROBINS-I 2016 for observational, RoB2 for
+RCTs; R1 Claude Opus 4.8, R2 GPT-5.6-sol, blinded Sonnet-5 judge): the core poolable
+observational pool is 13 Serious / 3 Moderate, driven by confounding by indication (D1) — as
+the PICO anticipated — so every observational stratum starts Low and is downgraded to Very
+low. RCTs are 18 High / 2 Some concerns (D4 outcome measurement: psychiatric events captured
+through spontaneous adverse-event reporting rather than a systematic instrument), so the RCT
+composite starts High and lands at Low. No low-RoB observational subset exists to pool, so an
+"exclude Serious-RoB" sensitivity estimate is not estimable (`results/grade_certainty_hybrid.csv`).*
+
 **A null test is not proof of safety.** The RCT composite (0.84, 0.54–1.32) is reassuring
 but its upper bound permits a ~32–37% relative increase. Against a prespecified clinically
 important harm margin of RR 1.20/1.25, the RCT upper CI (1.37) **does not exclude** that

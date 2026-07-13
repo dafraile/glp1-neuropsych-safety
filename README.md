@@ -146,8 +146,14 @@ tools/     dual-reviewer-rob + grade-hybrid harness; faers/ openFDA client (Stre
   intervals + leave-one-out as robustness.
 - **Screening** combined an LLM rubric (418 records) with a rule-based keyword classifier
   (376 records), flagged per record in the ledger.
-- **Risk of bias / GRADE** use the cross-model dual-reviewer harness (Claude + GPT-5.5,
-  judge-adjudicated, full audit trail); the earlier rules-based first pass is superseded and
+- **Risk of bias** uses a signalling-question dual-reviewer engine (ROBINS-I 2016 for
+  observational studies, RoB2 for RCTs): Reviewer 1 = Claude Opus 4.8, Reviewer 2 = GPT-5.6-sol,
+  with hardened reconciliation on disagreements and a blinded Claude Sonnet-5 judge on residual
+  splits (full audit trail). The core poolable observational pool is 13 Serious / 3 Moderate
+  (confounding by indication, D1, dominates); RCTs are 18 High / 2 Some concerns (outcome
+  measurement, D4 — psychiatric events captured via spontaneous AE reporting). **GRADE**
+  judgment domains use the cross-model grade-hybrid harness (Claude + GPT-5.5), with the RoB
+  downgrade sourced from those ratings. The earlier rules-based first pass is superseded and
   retained only for provenance (see `analysis_manifest.json` → `analysis_status`).
 - Two extraction errors were caught and corrected in QC (PMID 40010803 adjusted HR 1.02, not
   crude 2.08; PMID 40897378 all-cause mortality, excluded from pooling) — both confirmed

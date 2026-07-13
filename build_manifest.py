@@ -194,9 +194,13 @@ llm_steps = {
         "models": ["claude-haiku (kernel default)", "claude-sonnet-5", "gpt-5.5"],
         "note": "cross-provider 3-model adjudication over structured fields; consensus = majority vote",
     },
-    "risk_of_bias_grade": {
+    "risk_of_bias": {
+        "models": ["claude-opus-4.8 (reviewer 1)", "gpt-5.6-sol (reviewer 2)", "claude-sonnet-5 (blinded judge)"],
+        "note": "signalling-question dual-reviewer-rob engine (ROBINS-I 2016 for observational, RoB2 for RCTs); hardened reconciliation on disagreements, blinded judge on residual splits; full audit trail",
+    },
+    "grade": {
         "models": ["claude-sonnet-5", "gpt-5.5"],
-        "note": "dual-reviewer-rob harness (cross-model), judge-adjudicated; grade-hybrid for GRADE judgment domains",
+        "note": "grade-hybrid cross-model for GRADE judgment domains; RoB downgrade sourced from the signalling-question RoB ratings above",
     },
 }
 
