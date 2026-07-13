@@ -15,6 +15,6 @@ study_id,framework,D1,D2,D3,D4,D5,D6,D7,overall
 40897378,ROBINS-I,Serious,Serious,Moderate,Serious,Moderate,Moderate,Low,Serious
 41389474,ROBINS-I,Serious,Serious,Moderate,Moderate,Moderate,Moderate,Moderate,Serious
 41479367,ROBINS-I,Moderate,Moderate,Low,Moderate,Moderate,Moderate,Low,Moderate
-41616750,ROBINS-I,Serious,Serious,Moderate,ESCALATE_TO_HUMAN,Serious,Serious,Moderate,Serious (provisional; escalations pending)
-41862258,ROBINS-I,Serious,Moderate,ESCALATE_TO_HUMAN,Moderate,Low,ESCALATE_TO_HUMAN,Low,Serious (provisional; escalations pending)
+41616750,ROBINS-I,Serious,Serious,Moderate,Serious,Serious,Serious,Moderate,Serious
+41862258,ROBINS-I,Serious,Moderate,Moderate,Moderate,Low,Moderate,Low,Serious
 42380063,ROBINS-I,Serious,Low,ESCALATE_TO_HUMAN,Serious,Moderate,Serious,Moderate,Serious (provisional; escalations pending)
