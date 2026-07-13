@@ -33,8 +33,10 @@ Every published statistic matches, and every input trial is confirmed present in
 | N (exp vs ctrl) | 42 172 vs 39 223 | 42 172 vs 39 223 | exact |
 | k pooled / df | 23 / 22 | 23 / 22 | exact |
 
-- **Study-set fidelity:** all 25 trials in `anchor_jdiabetes_2x2.csv` (24 unique first
-  authors incl. Pi-Sunyer 2015) are named in the Chen 2025 full text — zero phantom studies,
+- **Study-set fidelity:** all 25 trials in `anchor_jdiabetes_2x2.csv` are present in the
+  Chen 2025 full text — 24 confirmed by first-author name (incl. Pi-Sunyer 2015), and 1 row
+  the paper leaves with a blank first author ('None 2014') confirmed by its trial registration
+  and arm sizes (NCT01117350, liraglutide 1.2 mg vs placebo, N=481/484). Zero phantom studies,
   none missing.
 - **Double-zero handling matches:** Ishii 2020 and Tamborlane 2022 are double-zero and dropped
   by M-H (23 estimable), consistent with the anchor's df=22.

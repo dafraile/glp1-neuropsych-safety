@@ -47,7 +47,8 @@ artifact. GRADE ratings are the cross-model **hybrid** ratings
 (`results/grade_certainty_hybrid.csv`), which supersede the earlier rules-based first pass
 (`results/grade_certainty.csv`, retained for provenance). Anchored to Chen et al.,
 *J Diabetes* 2025, reproduced to RR 0.84 (0.54–1.32), I²=0% — source-verified against the
-Chen 2025 full text (all statistics + 25 trials confirmed, `docs/anchor_reproduction_VERIFIED.md`).
+Chen 2025 full text (all statistics + all 25 trials confirmed — 24 by author, 1 by NCT id;
+`docs/anchor_reproduction_VERIFIED.md`).
 
 ## Stream B — the spontaneous signal is comparator- and calendar-dependent
 
