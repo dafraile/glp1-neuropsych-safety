@@ -1,7 +1,7 @@
 {
   "_schema": "glp1-neuropsych-safety analysis manifest v1",
-  "generated_utc": "2026-07-13T13:13:32.334253+00:00",
-  "git_commit": "6dd2a04b35594351c960d3849060bf85c33ccf40",
+  "generated_utc": "2026-07-13T13:20:47.777453+00:00",
+  "git_commit": "e76d927e220a0dbde4b0b4e2456c134613064da9",
   "streams_are_never_pooled_together": true,
   "stream_A": {
     "search_and_screening": {
@@ -179,7 +179,7 @@
   },
   "input_file_sha256": {
     "results/pooled_estimates.csv": "422559ad3649845c8e77b0fd8d6cdec55b279d652628030211d8fc60a09542e8",
-    "results/grade_certainty_hybrid.csv": "6f5f592a4b854b1a2d2caa888f3748a2cd8282570cf345c115bc67590d8e190c",
+    "results/grade_certainty_hybrid.csv": "fa19e06c5f12dd3e9827b524e949fc22ae7d9ebc37c5fad6c0c6028eebfdffc5",
     "results/stream_B_signal_matrix.csv": "75b964a6f40d4d5cba1229605d181a8da38841197d4da8b59a3df5c32e288103",
     "results/streamB_timesplit_reframe.csv": "5d740e9556f83c94428e19cad91f287c22f75fcc2f718ba0fdd8b5fcec3e0c3c",
     "data/stream_D_study_table.csv": "0f6c2c7287887d4fae3e5560f1ff8b044ee7695fc4d0167058195c84078d4a9e",
