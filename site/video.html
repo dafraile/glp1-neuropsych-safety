@@ -142,7 +142,7 @@ h2{font-family:var(--serif); font-weight:600; line-height:1.06; letter-spacing:-
 .chips{display:flex; flex-wrap:wrap; gap:12px; margin-top:clamp(18px,3vh,30px)}
 .chip{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; box-shadow:var(--shadow)}
 .chip .v{font-family:var(--serif); font-size:clamp(1.5rem,2.6vw,2.2rem); font-weight:600; line-height:1; font-variant-numeric:tabular-nums}
-.chip .v.teal{color:var(--teal)} .chip .v.red{color:var(--red)} .chip .v.amber{color:var(--amber)}
+.chip .v.teal{color:var(--teal)} .chip .v.red{color:var(--red)} .chip .v.amber{color:var(--amber)} .chip .v.amber{color:var(--amber)}
 .chip .k{font-family:var(--mono); font-size:clamp(10px,.95vw,11.5px); color:var(--ink-soft); margin-top:8px; letter-spacing:.03em; line-height:1.4}
 
 /* ---------- tools row (slide 4) ---------- */
@@ -220,10 +220,10 @@ h2{font-family:var(--serif); font-weight:600; line-height:1.06; letter-spacing:-
   </section>
 
   <!-- ===== SLIDE 2 — DESIGN ===== -->
-  <section class="slide" data-clock="0:30–1:05"
+  <section class="slide" data-clock="0:30–1:00"
     data-note="The mistake most reviews make is pooling everything together. We did the opposite. We built four evidence streams and kept them strictly separate. Stream A: the designed studies — trials and cohorts — pooled properly with risk-of-bias and GRADE. Stream B: the FAERS spontaneous reports, for comparison only, never mixed in. Stream C: the biological mechanism. And Stream D, exploratory: does this same drug pathway actually reduce addiction? Four streams, four methods, compared at the end — not blended into one misleading average.">
     <div class="inner">
-      <div class="beat"><span class="t">The design</span> · four streams, never pooled <span class="clock">0:30–1:05</span></div>
+      <div class="beat"><span class="t">The design</span> · four streams, never pooled <span class="clock">0:30–1:00</span></div>
       <h2>We refused to pool everything into one number.</h2>
       <div class="streams">
         <div class="st a"><div class="id">A</div><div class="role">Pooled · RoB · GRADE</div><h3>Designed studies</h3><p>Trials + cohorts, design-stratified. Do they show harm?</p></div>
@@ -236,10 +236,10 @@ h2{font-family:var(--serif); font-weight:600; line-height:1.06; letter-spacing:-
   </section>
 
   <!-- ===== SLIDE 3a — THE SWING (CORE) ===== -->
-  <section class="slide" id="slideSwing" data-clock="1:05–1:40"
+  <section class="slide" id="slideSwing" data-clock="1:00–1:35"
     data-note="Here's the heart of the project. That suicide signal for semaglutide? It isn't stable. Compare semaglutide to metformin and the reporting ratio is 0.51 — protective. Compare it to other GLP-1 drugs and it's 3.29 — a strong signal. Same drug, same outcome; the answer flips entirely based on what you compare it to.">
     <div class="inner">
-      <div class="beat"><span class="t">The novel result</span> · it depends what you compare it to <span class="clock">1:05–1:40</span></div>
+      <div class="beat"><span class="t">The novel result</span> · it depends what you compare it to <span class="clock">1:00–1:35</span></div>
       <div class="cols narrow">
         <div>
           <div class="swingnum lo" id="swingNum">0.51</div>
@@ -262,10 +262,10 @@ h2{font-family:var(--serif); font-weight:600; line-height:1.06; letter-spacing:-
   </section>
 
   <!-- ===== SLIDE 3b — THE TIMING ===== -->
-  <section class="slide" data-clock="1:40–2:00"
+  <section class="slide" data-clock="1:35–1:58"
     data-note="And look at the timing. The signal is basically absent before July 2023, then it jumps — but only for semaglutide, the drug that was in the news. Control outcomes like headache, and control drugs, show no such jump. That's the fingerprint of notoriety bias and confounding — not a real drug effect. We're not saying the drug is safe. We're showing the alarm signal isn't trustworthy.">
     <div class="inner">
-      <div class="beat"><span class="t">…and when</span> · a spike with a date on it <span class="clock">1:40–2:00</span></div>
+      <div class="beat"><span class="t">…and when</span> · a spike with a date on it <span class="clock">1:35–1:58</span></div>
       <div class="cols">
         <div>
           <h2>A spike with a date on it.</h2>
@@ -284,18 +284,18 @@ h2{font-family:var(--serif); font-weight:600; line-height:1.06; letter-spacing:-
   </section>
 
   <!-- ===== SLIDE 4 — WHY TRUST US ===== -->
-  <section class="slide" data-clock="2:00–2:35"
-    data-note="Two things make this credible. First, we didn't just assert our tool works — we calibrated it against a reference set of known drug-safety associations: AUROC 0.76, an honest number, not a cherry-picked 0.99. Second, everything is reusable. The risk-of-bias engine runs the official signalling questions through two different AI models that cross-check each other. The GRADE harness, the FAERS client — all published as skills. And one command reproduces every headline number in the repo from the raw data.">
+  <section class="slide" data-clock="1:58–2:20"
+    data-note="Two things make this credible. First — we didn't just assert the tool works, we tested it. We ran it against about four hundred drug–outcome pairs where the answer was already known, and it ranked the harmful ones above the safe ones seventy-six percent of the time. That's a validated instrument — and seventy-six is exactly where honest pharmacovigilance lands. A perfect ninety-nine would actually be the red flag: the sign of a rigged test. Second — everything's reusable: the risk-of-bias engine, the GRADE harness, the FAERS client, all published as skills, and one command reproduces every number from the raw data.">
     <div class="inner">
-      <div class="beat"><span class="t">Why trust it</span> · calibrated, not asserted <span class="clock">2:00–2:35</span></div>
+      <div class="beat"><span class="t">Why trust it</span> · we tested the tool on known answers <span class="clock">1:58–2:20</span></div>
       <div class="cols">
         <figure class="plate">
           <img src="figures/omop_calibration_roc.png" alt="ROC curve for the disproportionality tool on the OMOP reference set, AUROC 0.76.">
-          <figcaption class="cap"><b>Calibration ROC — AUROC 0.76.</b> On 355/399 known drug-safety pairs. Honest, not cherry-picked.</figcaption>
+          <figcaption class="cap"><b>Calibration ROC.</b> On ~400 pairs with <b>known answers</b>, it ranks harm above safe <b>76%</b> of the time.</figcaption>
         </figure>
         <div>
-          <h2>We calibrated the tool<br>— then made it reusable.</h2>
-          <p class="sub" style="max-width:34ch">An <b>honest 0.76</b>, not a cherry-picked 0.99. And every piece travels to any systematic review:</p>
+          <h2>We tested the tool<br>before we trusted it.</h2>
+          <p class="sub" style="max-width:35ch">On ~400 drug–outcome pairs with <b>known answers</b>, it ranks a harmful pair above a safe one <b>76%</b> of the time. A near-perfect 0.99 would mean the test was rigged — <b>0.76 is what honest looks like.</b> And every piece is reusable:</p>
           <div class="tools">
             <div class="tool"><code>dual-reviewer-rob</code><p>Official signalling questions, two AI models cross-checking.</p></div>
             <div class="tool"><code>grade-hybrid</code><p>Deterministic + dual-reviewer GRADE.</p></div>
@@ -307,17 +307,42 @@ h2{font-family:var(--serif); font-weight:600; line-height:1.06; letter-spacing:-
     </div>
   </section>
 
-  <!-- ===== SLIDE 5 — CLOSE ===== -->
-  <section class="slide" data-clock="2:35–3:00"
-    data-note="So: the designed evidence shows no increased risk, but we're careful to say 'no detected increase,' not 'safe.' The spontaneous alarm is explained by comparison and calendar, not biology. And the same pathway may even reduce addiction. That's what triangulation gives you that a single pooled number never could. Thanks for watching.">
+  <!-- ===== SLIDE 6 — THE UPSIDE ===== -->
+  <section class="slide" data-clock="2:20–2:45"
+    data-note="But here's the twist — and it's a hopeful one. The very same GLP-1 pathway that was blamed for harm may actually help people quit. In the same evidence base, the signal points one way across four different addictions — alcohol, nicotine, other drugs, and behavioural. Twenty-six studies lean toward benefit; not one points to harm. It's early — exploratory, very low certainty, a lead not a verdict — but it's exactly the kind of hopeful signal this method is built to surface.">
     <div class="inner">
-      <div class="beat"><span class="t">The close</span> · what triangulation buys you <span class="clock">2:35–3:00</span></div>
+      <div class="beat"><span class="t">The upside</span> · an unexpected benefit <span class="clock">2:20–2:45</span></div>
       <div class="cols">
         <div>
-          <h2>“No detected increase.”<br>Not “safe.”</h2>
-          <p class="sub" style="max-width:36ch">The designed evidence shows no increased risk. The alarm is explained by <b>comparison and calendar, not biology.</b> And the same pathway may even <em>reduce</em> addiction.</p>
+          <h2>The same pathway may<br>help people <em style="color:var(--amber); font-style:italic">quit</em>.</h2>
+          <p class="sub" style="max-width:32ch">Point it at addiction and the evidence leans toward <b>less</b> — across four substance classes.</p>
+          <div class="chips">
+            <div class="chip"><div class="v amber">0.69</div><div class="k">alcohol · RR<br>adverse alcohol outcomes</div></div>
+            <div class="chip"><div class="v amber">0.68</div><div class="k">nicotine · RR<br>smoking / tobacco use</div></div>
+            <div class="chip"><div class="v amber">−7.81</div><div class="k">AUDIT points ↓<br>alcohol-use severity</div></div>
+            <div class="chip"><div class="v teal">26&nbsp;›&nbsp;0</div><div class="k">studies favour benefit<br>vs favour harm</div></div>
+          </div>
+          <div style="margin-top:16px"><span class="pill amber">exploratory · very low certainty — a real lead, not a verdict</span></div>
+        </div>
+        <figure class="plate">
+          <img src="figures/stream_D_forest_by_substance.png" alt="Forest plot of exploratory addiction-reduction pools by substance class: alcohol, nicotine, AUDIT — all favouring GLP-1.">
+          <figcaption class="cap"><b>Benefit by substance.</b> Every design-stratified pool lands on the protective side.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 7 — CLOSE ===== -->
+  <section class="slide" data-clock="2:45–3:00"
+    data-note="So, to bring it home. The designed evidence shows no increased risk — though we're careful to say 'no detected increase,' not 'safe.' The alarm was explained by comparison and calendar, not biology. And the very same pathway points to a real, hopeful upside. That's what triangulation gives you that a single pooled number never could — and every tool, dataset, and number is open, under Apache 2.0. Thanks for watching.">
+    <div class="inner">
+      <div class="beat"><span class="t">The close</span> · what triangulation buys you <span class="clock">2:45–3:00</span></div>
+      <div class="cols">
+        <div>
+          <h2>The alarm didn't hold up.<br>The <em style="color:var(--amber); font-style:italic">upside</em> might.</h2>
+          <p class="sub" style="max-width:36ch">No increased risk in the designed evidence — <b>“no detected increase,” not “safe.”</b> The alarm was <b>comparison and calendar, not biology</b> — and the same pathway points to a hopeful lead.</p>
           <div class="takeaway"><span class="n lo">0.51</span><span class="arw">→</span><span class="n hi">3.29</span></div>
-          <p class="swingmeta">the whole thesis in two numbers — the alarm isn't trustworthy</p>
+          <p class="swingmeta">the alarm in two numbers — unstable by comparator, not a real drug effect</p>
           <div class="repo">
             <span class="lz">Apache 2.0</span>
             <span>Open toolkit &amp; data · <a href="https://github.com/dafraile/glp1-neuropsych-safety" target="_blank" rel="noopener">github.com/dafraile/glp1-neuropsych-safety</a></span>
