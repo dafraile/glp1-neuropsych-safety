@@ -1,0 +1,17 @@
+pmid,outcome,framework,D1,D2,D3,D4,D5,D6,D7,overall,source_table
+41592697,depression,ROBINS-I,Serious,Low,Low,Moderate,Moderate,Moderate,Moderate,Serious,full_run_rescore
+39424950,depression (TriNetX outlier),ROBINS-I,Serious,Serious,Moderate,Serious,Serious,Moderate,Moderate,Serious,full_run_rescore
+30297350,suicide attempt/self-harm,ROBINS-I,Moderate,Low,Moderate,Moderate,Moderate,Moderate,Low,Moderate,full_run_rescore
+42000905,suicide attempt/self-harm,ROBINS-I,Serious,Low,Low,Moderate,Low,Moderate,Moderate,Serious,full_run_rescore
+39103719,suicidal ideation,ROBINS-I,Serious,Low,Low,Moderate,Moderate,Moderate,Moderate,Serious,full_run_rescore
+42209408,suicidality (composite),ROBINS-I,Serious,Low,Low,Moderate,Moderate,Moderate,Moderate,Serious,full_run_rescore
+39226030,completed suicide,ROBINS-I,Moderate,Low,Low,Moderate,Low,Low,Moderate,Moderate,full_run_rescore
+39008852,suicidal ideation,ROBINS-I,Serious,Low,Low,Moderate,Moderate,Moderate,Moderate,Serious,full_run_rescore
+38852027,depression,ROBINS-I,Serious,No information,No information,No information,No information,Moderate,No information,Serious,full_run_rescore
+40010803,suicidality (composite),ROBINS-I,Moderate,Low,Moderate,Moderate,Low,Low,Moderate,Moderate,full_run_rescore
+35281896,anxiety,ROBINS-I,Serious,Serious,Moderate,Moderate,Moderate,Moderate,Moderate,Serious,full_run_rescore
+41334076,suicide attempt/self-harm,ROBINS-I,Serious,Low,Moderate,Moderate,Serious,Moderate,Moderate,Serious,full_run_rescore
+38182782,suicidal ideation,ROBINS-I,Serious,Low,Low,Moderate,Moderate,Serious,Moderate,Serious,full_run_rescore
+40760781,suicidal ideation,ROBINS-I,Moderate,Low,Low,Moderate,Low,Serious,Moderate,Serious,committed_stream_A_obs
+42380063,depression,ROBINS-I,Serious,Low,Low,Serious,Moderate,Serious,Moderate,Serious,committed_stream_A_obs
+42373755,anxiety,ROBINS-I,not assessable,not assessable,not assessable,not assessable,not assessable,not assessable,not assessable,"abstract-only, not assessable",abstract-only
