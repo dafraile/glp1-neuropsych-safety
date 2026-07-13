@@ -1,0 +1,3 @@
+test,statistic,value,t,p_value,k,total_events,interpretation
+Peters (primary),slope of lnOR on 1/N (WLS),-62.642,-0.686,0.5,23,71,No significant small-study effect
+Harbord (secondary),intercept of Z/sqrt(V) on sqrt(V),-0.395,-1.018,0.32,23,71,No significant small-study effect

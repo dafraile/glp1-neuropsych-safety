@@ -15,15 +15,15 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 echo "== [1/3] regenerating analysis_manifest.json from data files =="
-python build_manifest.py
+python3 build_manifest.py
 
 echo
 echo "== [2/3] verifying backing-file hashes =="
-python tests/verify_input_hashes.py
+python3 tests/verify_input_hashes.py
 
 echo
 echo "== [3/3] checking README / synthesis consistency with manifest =="
-python tests/check_readme_against_manifest.py
+python3 tests/check_readme_against_manifest.py
 
 echo
 echo "REPRODUCIBILITY CHECK PASSED"

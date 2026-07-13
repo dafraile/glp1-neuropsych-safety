@@ -54,15 +54,24 @@ This project's novel contributions:
    this is the argument no prior paper makes.
 2. **Validated, calibrated tooling as the reproducibility backbone.** Prior FAERS
    papers assert their disproportionality; this one **calibrates the instrument**
-   against 40 known positive/negative control pairs (sensitivity 1.00,
-   specificity 0.95, AUC 0.995) and **measures its own error rate** (screening
-   recall 1.00, precision 1.00; adjudication self-consistency κ≈0.4–0.5, reported
-   honestly as reproducibility not accuracy). Being the entry that quantifies its
-   own error rate is the separation from the pile.
-3. **A registry adverse-event arm** (483 trials, 59 with suicide AEs) that
-   independently reproduces the RCT null (RR 0.86) from safety-table data the
-   bibliographic search cannot reach — closing the rare-event gap prior
-   meta-analyses acknowledged but did not fill.
+   against the OMOP/Ryan reference set — **AUROC 0.76 on 355/399 estimable
+   drug–event pairs** (`docs/omop_calibration_report.md`) — and **measures its own
+   error rate** (screening precision 0.77 with ~10 estimated missed studies [95% CI
+   3–35]; extraction 0% sign errors; RoB quote-verification 86%; adjudication
+   self-consistency κ≈0.48, reported honestly as reproducibility not accuracy).
+   Being the entry that quantifies its own error rate is the separation from the
+   pile. (An earlier n=40 hand-built control set scored AUC 0.995 but was an easy,
+   label-warned-positive-vs-OMOP-negative smoke test; it is retained only as
+   `docs/faers_calibration_report.md`, marked superseded — the OMOP 0.76 is the
+   figure that stands.)
+3. **A registry adverse-event arm** (483 trials screened, 59 with suicide AEs)
+   whose crude across-trial aggregation gives RR 0.86, consistent in direction
+   with the RCT null, from safety-table data the bibliographic search cannot
+   reach. NB: this is currently a **crude summed 2×2**, not a trial-stratified
+   Mantel–Haenszel/Peto pool — so it corroborates *direction* only. A proper
+   stratified registry pool (with anchor de-duplication and molecule
+   stratification) is the highest-value remaining analysis; see the handover
+   note. Do not let the crude number carry more than "consistent direction."
 4. **The notoriety mechanism made quantitative and falsifiable:** within-
    comparator time-split + the tirzepatide pharmacological falsifier, not a
    hand-wave about media attention.

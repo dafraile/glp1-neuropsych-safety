@@ -117,10 +117,24 @@ The disproportionality tool scores **AUROC 0.76** on the OMOP/Ryan reference set
 pairs estimable) — a correctly implemented method, which is why its comparator-/time-
 dependent GLP-1 reading is informative. Two-model LLM-layer metrics (cross-model
 reproducibility ceilings, not accuracy): screening precision 0.77 (~10 estimated missed
-studies, 95% CI 3–35); extraction 0% sign errors; RoB quote-verification 86%; adjudication
-κ 0.48.
-Human validation is **single-reviewer**: blinded disagreement-adjudication packets are in
-`packets/`; accuracy cells stay `awaiting_adjudication` until resolved.
+studies, 95% CI 3–35); RoB quote-verification 86% (i.e. ~14% of RoB quotes could not be
+verified as verbatim substrings — named in the audit trail, not swept); adjudication κ 0.48.
+**Extraction, both metrics:** 0% sign errors (n=5 poolable estimates), but numeric
+exact-match against human ground truth was only **0.18 (sonnet-5) / 0.55 (gpt-5.5)** on
+clean single-value rows — partly an ill-posed-task artifact (6/17 rows carried multiple
+estimates), and mitigated by 100% re-extraction of poolable studies with two models plus
+human corroboration and 2 caught QC errors. The flattering "0% sign errors" and the
+unflattering "0.18 numeric fidelity" come from the *same* table (`validation_summary.csv`);
+both are reported.
+Human validation is **single-reviewer (by design — hackathon constraint, not an oversight):**
+blinded disagreement-adjudication packets are in `packets/`; accuracy cells stay
+`awaiting_adjudication` until resolved, and there is no inter-human agreement number.
+Two reviewer-expected sensitivity analyses were added in the hardening pass
+([`docs/sensitivity_analyses_addendum.md`](docs/sensitivity_analyses_addendum.md)):
+**E-values** on the significant observational estimates (self-harm and anxiety are fragile
+to a plausible unmeasured confounder of RR ≈ 1.6) and a **small-study test** on the k=23 RCT
+stratum (Peters p=0.50, Harbord p=0.32, symmetric contour funnel — no downgrade, now
+test-backed not asserted).
 
 ## Repository layout
 

@@ -222,6 +222,10 @@ analysis_status = {
     "faers_time_controlled_notoriety": "complete",
     "faers_dedup_drug_role_sensitivity": "complete",
     "disproportionality_calibration_omop": "complete",
+    "faers_calibration_handbuilt_n40": "superseded",     # smoke test (AUC 0.995) -> omop 0.76 is of record
+    "obs_evalues_confounding_sensitivity": "complete",   # E-values on significant observational estimates
+    "rct_small_study_test": "complete",                  # Peters + Harbord + contour funnel, k=23 RCT stratum
+    "registry_stratified_pool": "not_done",              # crude summed 2x2 only; proper MH/Peto pool is the open gap
     "stream_D_benefit_synthesis": "complete (exploratory)",
     "validation_layers_human_adjudication": "provisional",  # awaits single-reviewer disagreement adjudication
 }

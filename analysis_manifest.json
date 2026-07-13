@@ -1,7 +1,7 @@
 {
   "_schema": "glp1-neuropsych-safety analysis manifest v1",
-  "generated_utc": "2026-07-13T13:20:47.777453+00:00",
-  "git_commit": "e76d927e220a0dbde4b0b4e2456c134613064da9",
+  "generated_utc": "2026-07-13T13:39:40.215018+00:00",
+  "git_commit": "87845bc5704134f5349c2bb61fe74b795e21c807",
   "streams_are_never_pooled_together": true,
   "stream_A": {
     "search_and_screening": {
@@ -141,6 +141,10 @@
     "faers_time_controlled_notoriety": "complete",
     "faers_dedup_drug_role_sensitivity": "complete",
     "disproportionality_calibration_omop": "complete",
+    "faers_calibration_handbuilt_n40": "superseded",
+    "obs_evalues_confounding_sensitivity": "complete",
+    "rct_small_study_test": "complete",
+    "registry_stratified_pool": "not_done",
     "stream_D_benefit_synthesis": "complete (exploratory)",
     "validation_layers_human_adjudication": "provisional"
   },

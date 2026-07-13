@@ -1,0 +1,9 @@
+outcome,k,estimate,ci_low,ci_high,I2,significant,evalue_point,evalue_ci
+"Observational (IV, all outcomes)",17,0.91,0.673,1.232,98.9,False,1.43,1.0
+suicidal ideation,4,0.813,0.441,1.499,86.1,False,1.76,1.0
+suicidality (composite),2,0.944,0.817,1.091,22.7,False,1.31,1.0
+suicide attempt/self-harm,4,0.708,0.576,0.871,9.8,True,2.18,1.56
+completed suicide,1,1.25,0.83,1.88,,False,1.81,1.0
+depression,4,1.44,0.803,2.584,99.7,False,2.24,1.0
+depression (excl. outlier),3,1.129,1.005,1.269,88.3,True,1.51,1.08
+anxiety,2,0.537,0.333,0.867,74.4,True,3.13,1.57

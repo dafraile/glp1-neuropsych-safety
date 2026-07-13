@@ -19,10 +19,14 @@ plus per-layer gold-set CSVs committed to the repo.
   before recording their own. Label from the source (title/abstract, full text, or FAERS
   substrate), then join to the pipeline output. Un-blinded labeling silently inflates
   agreement and is the first thing a judge will discount.
-- **Two raters = the two team members**, labeling independently, then adjudicating
-  disagreements together to a consensus label. Report **inter-human agreement** as the
-  ceiling — it tells the judge how hard the task is and contextualizes the machine's score.
-  Where a clinician contact is available, use them for the RoB spot-check (§4).
+- **Human validation is single-reviewer (by design — hackathon constraint).** This
+  protocol was written for a two-rater design (two team members labeling independently,
+  then adjudicating to consensus, with inter-human agreement reported as the task-difficulty
+  ceiling), but that second human rater **was not executed**. What actually ships is one
+  human reviewer's blinded labels against the pipeline output; there is **no inter-human
+  agreement number**, and the accuracy story rests on cross-model reproducibility ceilings
+  plus that single reviewer. See `FROZEN_PROTOCOL.md`, which is the accurate record.
+  Treat the two-rater text below as the *intended* design, not what was run.
 - **Freeze inputs.** Pin the openFDA data snapshot date (FAERS accrues reports over time,
   so RORs drift), record exact model IDs/versions for every LLM layer, and commit the
   frozen gold-set label CSVs. A validation you can't re-run isn't one.
@@ -157,8 +161,14 @@ itself an important thing to report); cross-model κ from `adjudicate_consensus`
 **Interpretation:** a headline of "plausible-attribution 10–29% (cross-model κ = X); human
 raters agreed with the consensus tag at κ = Y over the same fields; inter-human κ = Z"
 is bulletproof *because* it refuses to claim more than the data supports. The load-bearing
-notoriety conclusion still rests on the **time trend** (87% of reports post-July-2023), not
-on the adjudication — keep it that way.
+notoriety conclusion does **not** rest on the raw "87% of reports post-July-2023" descriptive
+(a raw share is confounded by rising GLP-1 prescribing volume). It rests on the
+**time-controlled analysis** in `TRIANGULATION_SYNTHESIS.md`: within a fixed SGLT2i+DPP-4i
+comparator the signal is absent before July 2023 (0.85, 0.70–1.02) and present after
+(2.98, 2.61–3.39); a difference-in-differences vs other GLP-1 RAs gives a semaglutide-specific
+jump (p<0.001); and control outcomes (headache, injection-site) and control drugs show **no**
+July-2023 discontinuity (`results/faers_notoriety_its.csv`, `faers_notoriety_did.csv`). Keep
+the DiD + clean-control design as the load-bearing evidence, not the raw share.
 
 ---
 

@@ -1,5 +1,17 @@
 # FAERS tool calibration against known controls
 
+> ⚠️ **SUPERSEDED — smoke test only. Do not cite these numbers.**
+> This report uses a small (n=40), **hand-built** control set of label-warned
+> positives versus OMOP-style negatives. That is an *easy* discrimination task,
+> so the AUC 0.995 / sensitivity 1.00 / specificity 0.95 reported below **overstate**
+> real-world performance and must not be quoted as the tool's calibration.
+> The calibration figure of record is **AUROC 0.76 on the full OMOP/Ryan reference
+> set (355/399 estimable pairs)** — see [`omop_calibration_report.md`](omop_calibration_report.md).
+> This document is retained only to show the initial smoke test and the two
+> informative failure modes it surfaced (over-sensitive single-threshold rules;
+> confounding-by-indication false positive). Every headline number in the
+> README, synthesis, and manifest uses the OMOP 0.76, not the figures here.
+
 **Purpose.** The strongest objection to any disproportionality analysis is "the
 tool produces whatever ROR you point it at." This calibration answers it: run
 the *same* `faers_tool` used for the GLP-1 analysis across a reference set of
@@ -55,12 +67,13 @@ FAERS, a=0); the FAERS-populated PT is "Arrhythmia" (a=1016, Evans=True). This
 was a coding choice on our side, corrected before the final metrics — logged
 here rather than hidden.
 
-## Bottom line
-Against 40 pairs with known truth, the FAERS tool's primary signal rule scores
-**sensitivity 1.00, specificity 0.95, AUC 0.995**. It is a calibrated
-instrument, not a machine that emits arbitrary RORs. The GLP-1 suicide reading —
-null under the comparator design before July 2023 — is therefore a
-trustworthy measurement from a validated tool.
+## Bottom line (of this smoke test — superseded)
+Against 40 hand-built pairs, the FAERS tool's primary signal rule separated
+positives from negatives nearly perfectly. This confirmed the tool was not
+emitting arbitrary RORs, but the task was too easy to serve as the calibration
+of record. **The trustworthy calibration is AUROC 0.76 on the full OMOP/Ryan
+reference set** ([`omop_calibration_report.md`](omop_calibration_report.md)),
+which is what the GLP-1 reading actually rests on.
 
 *Files: `faers_reference_set.csv`, `faers_calibration_results.csv`,
 `faers_calibration_detail.csv`, `faers_calibration_roc.png`.*
