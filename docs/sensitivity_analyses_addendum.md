@@ -67,7 +67,9 @@ backed by a test. It now is.
   wedge in the non-significant region that would signal selective non-publication of null
   trials.
 - The **size-adjusted (Peters intercept) estimate is OR ≈ 0.93**, close to the pooled
-  M-H OR ≈ 0.84 — i.e. no evidence the small trials are pulling the estimate.
+  M-H estimate (RR 0.84 / OR ≈ 0.87 — the two coincide to 2 dp for this rare outcome) —
+  i.e. no evidence the small trials are pulling the estimate. (The headline pool is reported as
+  RR 0.84 elsewhere; the Peters intercept is on the OR scale, so it is compared to the MH-OR here.)
 
 **Caveat (stated explicitly).** With only 71 events, power to *detect* funnel asymmetry is
 low, so "no asymmetry detected" is not "publication bias excluded." The GRADE non-downgrade

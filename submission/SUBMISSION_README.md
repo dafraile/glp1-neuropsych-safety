@@ -45,8 +45,9 @@ GRADE certainty. The streams are compared at the end (triangulation), not merged
 **Stream A — designed studies do not show increased average risk.**
 RCT pool (k=23, Mantel–Haenszel): **RR 0.84 (0.54–1.32), I²=0%**. Observational pools sit at
 or below the null. But we state this as **"no detected increase," not "proof of safety"**: the
-RCT upper CI (1.37) does *not* exclude a prespecified harm margin of RR 1.20/1.25, and with 71
-events the stratum can only detect RR ≥ ~1.9 at 80% power.
+upper CI does *not* exclude a prespecified harm margin of RR 1.20/1.25 (1.32 primary; up to 1.37
+in the rare-event MH-RR sensitivity variant), and with 71 events the stratum can only detect
+RR ≥ ~1.9 at 80% power.
 
 **Stream B — the spontaneous signal is an artifact of *what you compare against and when*.**
 This is the novel result. For semaglutide × SMQ suicide/self-injury, the reporting odds ratio
