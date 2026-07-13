@@ -14,4 +14,5 @@ pmid,outcome,framework,D1,D2,D3,D4,D5,D6,D7,overall,source_table
 38182782,suicidal ideation,ROBINS-I,Serious,Low,Low,Moderate,Moderate,Serious,Moderate,Serious,full_run_rescore
 40760781,suicidal ideation,ROBINS-I,Moderate,Low,Low,Moderate,Low,Serious,Moderate,Serious,committed_stream_A_obs
 42380063,depression,ROBINS-I,Serious,Low,Low,Serious,Moderate,Serious,Moderate,Serious,committed_stream_A_obs
+41050856,suicide attempt/self-harm,ROBINS-I,Serious,Serious,Moderate,Serious,No information,Moderate,Moderate,Serious,full_run_rescore
 42373755,anxiety,ROBINS-I,not assessable,not assessable,not assessable,not assessable,not assessable,not assessable,not assessable,"abstract-only, not assessable",abstract-only
