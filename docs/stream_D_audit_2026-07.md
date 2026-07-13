@@ -11,8 +11,9 @@ folded in.
 ## Headline check: "0 harm" CONFIRMED (51/52 blind-classified)
 The blind pass returned a parseable classification for 51 of 52 abstracts and found ZERO
 studies reporting a pro-addiction / worsening direction among them. The 52nd (PMID 42355949,
-alcohol) has no abstract in PubMed (title only), so it could not be re-classified blind; it
-retains its prior "mixed" label and was NOT coded harm. No study in the corpus — pre- or
+alcohol) has no abstract in PubMed (title only). A retry parsed but was based solely on the
+110-char title (it returned "benefit"); judged unreliable on title alone, it was discarded
+and the record retains its prior "mixed" label. Either way it was NOT coded harm. No study in the corpus — pre- or
 post-audit — is classified harm, so the load-bearing "0 harm" cell holds, with the explicit
 caveat that one record was verified only against its pre-existing (non-harm) label rather than
 by independent blind read.
