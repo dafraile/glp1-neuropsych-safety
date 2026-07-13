@@ -19,8 +19,9 @@ faers,cross_model_kappa_mean_pairwise (CEILING),0.4778156302741798,,,912,0.47781
 faers,fleiss_kappa_all,0.4728763908737944,,,912,0.4778156302741798,model_computed
 faers,fleiss_kappa_pre_july2023,0.297,,,120,0.4778156302741798,model_computed
 faers,fleiss_kappa_post_july2023,0.488,,,792,0.4778156302741798,model_computed
-disproportionality,AUROC vs OMOP reference set (IC025),0.7609,,,355,,model_computed
-disproportionality,"AUROC (log ROR ranking, secondary)",0.7553,,,355,,model_computed
-disproportionality,coverage (estimable / 399 pairs),0.89,,,399,,model_computed
-disproportionality,sensitivity @ Evans default,0.581,,,355,,model_computed
-disproportionality,specificity @ Evans default,0.797,,,355,,model_computed
+faers,accuracy_vs_human (model_a claude-sonnet-5),0.35,0.22134528873176293,0.5049411916274231,40,0.477816,human_adjudicated
+faers,accuracy_vs_human (model_b gpt-5.5),0.425,0.28509392559950375,0.5780493145800893,40,0.477816,human_adjudicated
+faers,over_attribution_rate (claude-sonnet-5): human-uninterpretable given definite call,0.6521739130434783,0.44890335377263,0.8118872406120227,23,0.477816,human_adjudicated
+faers,over_attribution_rate (gpt-5.5): human-uninterpretable given definite call,0.5652173913043478,0.3681137508501646,0.743653646743258,23,0.477816,human_adjudicated
+faers,human_plausible_share (n=40 disagreement-enriched),0.125,0.054595002509454024,0.261121198388511,40,0.477816,human_adjudicated
+faers,human_uninterpretable_share (n=40 disagreement-enriched),0.575,0.42195068541991065,0.7149060744004962,40,0.477816,human_adjudicated
