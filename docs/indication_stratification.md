@@ -4,8 +4,8 @@ The project PICO tracks **obesity vs T2D as distinct indications**. This note re
 where that stratification was and was not achievable, and the FAERS result.
 
 ## Stream A (designed studies): NOT cleanly estimable
-The Stream A corpus is predominantly mixed-population: of 40 poolable studies,
-**25 are tagged "T2D/obesity", 10 pure T2D, 3 obesity+T2D, and only 2 pure obesity.**
+The Stream A corpus is predominantly mixed-population: of 42 poolable studies,
+**25 are tagged "T2D/obesity", 11 pure T2D, 3 obesity+T2D, and only 3 pure obesity.**
 A clean obesity-only pooled estimate is not supportable from this corpus. This is a
 data limitation of the trial/cohort literature (cardiovascular-outcome and diabetes
 registries dominate), not an analysis choice. Reported here as an explicit limitation.
