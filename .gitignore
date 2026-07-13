@@ -8,3 +8,7 @@ handoff/
 __pycache__/
 *.pyc
 .DS_Store
+
+# internal prep materials — not for the public repo
+submission/VIDEO_GUIDE_3min.md
+submission/HANDOVER.md
