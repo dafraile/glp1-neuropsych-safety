@@ -3,9 +3,9 @@ screening,precision (both-model confirm),0.7741935483870968,0.6793336026404615,0
 screening,miss_rate (both-model),0.0140845070422535,0.0038709351215819,0.049896988433837,142,0.8774814517746141,awaiting_adjudication
 screening,est_missed_studies (both-model),9.80281690140845,2.694170844621036,34.72830394995061,142,0.8774814517746141,awaiting_adjudication
 screening,inter_model_kappa (CEILING),0.8774814517746141,,,235,0.8774814517746141,model_computed
-extraction,material_discrepancy_rate (any),0.5142857142857142,0.3556853962671162,0.6700601960874726,35,,awaiting_adjudication
-extraction,material_discrepancy_rate (genuine),0.2857142857142857,0.1632636339829556,0.4505524806982108,35,,awaiting_adjudication
-extraction,sign_error_rate,0.0,0.0,0.0989042675893886,35,,awaiting_adjudication
+extraction,material_discrepancy_rate (any),0.5142857142857142,0.3556853962671162,0.6700601960874726,35,,human_adjudicated_corroborated
+extraction,material_discrepancy_rate (genuine),0.2857142857142857,0.1632636339829556,0.4505524806982108,35,,human_adjudicated_corroborated
+extraction,sign_error_rate,0.0,0.0,0.0989042675893886,35,,human_adjudicated_corroborated
 extraction,field_agreement (effect_est),0.7428571428571429,0.5793037572935127,0.8583713127344985,35,,model_computed
 extraction,qc_catches_confirmed (2/2),1.0,,,2,,model_computed
 rob,quote_verification_rate,0.861904761904762,0.8087072462838192,0.9020992572215794,210,0.5774647887323944,model_computed
@@ -19,11 +19,10 @@ faers,cross_model_kappa_mean_pairwise (CEILING),0.4778156302741798,,,912,0.47781
 faers,fleiss_kappa_all,0.4728763908737944,,,912,0.4778156302741798,model_computed
 faers,fleiss_kappa_pre_july2023,0.297,,,120,0.4778156302741798,model_computed
 faers,fleiss_kappa_post_july2023,0.488,,,792,0.4778156302741798,model_computed
-faers,"PRIMARY concurrent-validity: human-vs-model kappa, plausible-vs-not (claude-sonnet-5)",0.094,-0.172,0.423,40,0.478,human_concurrent_validity
-faers,"SECONDARY: human-vs-model kappa, 5-category (claude-sonnet-5)",0.156,0.0,0.311,40,0.478,human_concurrent_validity
-faers,raw % agreement 5-cat (claude-sonnet-5) [NOT accuracy - no ground truth],0.35,,,40,0.478,human_concurrent_validity
-faers,"PRIMARY concurrent-validity: human-vs-model kappa, plausible-vs-not (openai-gpt-5.5)",0.625,0.0,1.0,40,0.478,human_concurrent_validity
-faers,"SECONDARY: human-vs-model kappa, 5-category (openai-gpt-5.5)",0.26,0.104,0.421,40,0.478,human_concurrent_validity
-faers,raw % agreement 5-cat (openai-gpt-5.5) [NOT accuracy - no ground truth],0.425,,,40,0.478,human_concurrent_validity
-faers,descriptive: human plausible count / model plausible count (n=40 disagreement-enriched),human=5; sonnet5=11(overlap 2); gpt55=4(overlap 3),,,40,0.478,human_concurrent_validity
-faers,descriptive: models gave definite call where human=uninterpretable,0.609,,,23,0.478,human_concurrent_validity
+extraction,numeric exact-match vs human GROUND-TRUTH: sonnet-5 (clean single-value rows),0.182,0.051,0.477,11,,human_adjudicated
+extraction,numeric exact-match vs human GROUND-TRUTH: gpt-5.5 (clean single-value rows),0.545,0.28,0.787,11,,human_adjudicated
+extraction,direction agreement vs human: sonnet-5,1.0,0.566,1.0,5,,human_adjudicated
+extraction,direction agreement vs human: gpt-5.5,1.0,0.566,1.0,5,,human_adjudicated
+extraction,outcome_category concordance vs human (after vocab crosswalk): sonnet-5,0.75,0.468,0.911,12,,human_adjudicated
+extraction,outcome_category concordance vs human (after vocab crosswalk): gpt-5.5,0.667,0.391,0.862,12,,human_adjudicated
+extraction,multi-estimate rows where 'extract one number' is ill-posed (human-flagged),6.0,,,17,,task_design_limitation
