@@ -47,9 +47,13 @@ pipeline; the J Diabetes RCT set is used here because it is fully reproducible f
 | P (overall) | 0.46 | 0.45 | ✓ |
 | Total events | 35 vs 36 | 35 vs 36 | ✓ |
 
-**Verdict: PASS.** The pipeline recovers the anchor to the reported precision on every
-statistic — point estimate, interval, heterogeneity, and event totals all coincide. No
-divergence to flag. The Stream A pooling machinery is validated for the extended synthesis.
+**Verdict: PASS (source-verified 2026-07).** The pipeline recovers the anchor to the reported
+precision on every statistic — point estimate, interval, heterogeneity, and event totals all
+coincide. Verification was upgraded from self-consistent to source-verified: the Chen 2025
+full text was fetched from PMC and every published statistic and all 25 input trials were
+confirmed against it (see `docs/anchor_reproduction_VERIFIED.md` and
+`results/reproduction_check.csv` `verified_source` column). No divergence to flag. The Stream A
+pooling machinery is validated for the extended synthesis.
 
 ## Interpretation (for the triangulation, not a Stream-A conclusion yet)
 

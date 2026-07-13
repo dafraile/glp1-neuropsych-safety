@@ -95,8 +95,11 @@ fragility at k=2–4. (`obs_reml_hk_reruns.csv`, `obs_leave_one_out.csv`.)
 within any single pool, but shared-population dependence is a limitation.
 (`cohort_overlap_matrix.csv`.)
 
-**Anchor reproduction:** Chen et al., *J Diabetes* 2025 — published RR 0.84 (0.54–1.32),
-I²=0%; reproduced to 0.8436 (0.5406–1.3165), I²=0. Pipeline recovers the anchor within CI.
+**Anchor reproduction (source-verified):** Chen et al., *J Diabetes* 2025 — published RR 0.84
+(0.54–1.32), I²=0%; reproduced to 0.844 (0.541–1.317), I²=0. Every published statistic and all
+25 input trials were confirmed against the Chen 2025 full text (PMC), not just self-pooled —
+point estimate, CI, I², p, and event totals (35 vs 36) all coincide exactly. Pipeline recovers
+the anchor to reported precision (`docs/anchor_reproduction_VERIFIED.md`).
 
 **Verdict (calibrated): no increased average risk detected across two designs; the evidence
 does not have the precision to exclude a modest effect, and depression is too heterogeneous

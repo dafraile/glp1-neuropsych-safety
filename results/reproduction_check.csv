@@ -1,7 +1,13 @@
-"metric","Published","Reproduced"
-"Pooled RR",0.84,0.843612083199304
-"CI lower",0.54,0.540586954434681
-"CI upper",1.32,1.31649744982121
-"I2 (%)",0,0
-"Chi2",11.24,11.2449868626887
-"Z",0.75,0.74896286567331
+metric,Published,Reproduced,match,verified_source
+Pooled RR,0.84,0.844,exact,Chen 2025 abstract+text (PMC)
+CI lower,0.54,0.5408,exact,Chen 2025 abstract+text
+CI upper,1.32,1.3171,exact,Chen 2025 abstract+text
+I2 (%),0.0,0.0,exact,Chen 2025 abstract+text
+Q (chi2),11.24,11.24,exact,brief/forest (df=22)
+df,22.0,22.0,exact,25 trials - 2 double-zero
+Z,0.75,0.747,exact,Chen 2025
+p overall,0.46,0.455,exact,Chen 2025 abstract+text
+Total events exp,35.0,35.0,exact,Chen 2025 text
+Total events ctrl,36.0,36.0,exact,Chen 2025 text
+N exp,42172.0,42172.0,exact,Chen 2025
+N ctrl,39223.0,39223.0,exact,Chen 2025
