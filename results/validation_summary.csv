@@ -19,9 +19,11 @@ faers,cross_model_kappa_mean_pairwise (CEILING),0.4778156302741798,,,912,0.47781
 faers,fleiss_kappa_all,0.4728763908737944,,,912,0.4778156302741798,model_computed
 faers,fleiss_kappa_pre_july2023,0.297,,,120,0.4778156302741798,model_computed
 faers,fleiss_kappa_post_july2023,0.488,,,792,0.4778156302741798,model_computed
-faers,human_vs_model_concordance_cohens_kappa (claude-sonnet-5),0.156,0.003,0.314,40,0.477816,human_concurrent_validity
-faers,human_vs_model_raw_percent_agreement (claude-sonnet-5) [NOT accuracy - no ground truth],0.35,,,40,0.477816,human_concurrent_validity
-faers,human_vs_model_concordance_cohens_kappa (openai-gpt-5.5),0.26,0.114,0.428,40,0.477816,human_concurrent_validity
-faers,human_vs_model_raw_percent_agreement (openai-gpt-5.5) [NOT accuracy - no ground truth],0.425,,,40,0.477816,human_concurrent_validity
-faers,"human_uninterpretable_share (n=40 disagreement-enriched, descriptive)",0.575,,,40,0.477816,human_concurrent_validity
-faers,models_gave_definite_call_where_human_uninterpretable (descriptive share),0.609,,,23,0.477816,human_concurrent_validity
+faers,"PRIMARY concurrent-validity: human-vs-model kappa, plausible-vs-not (claude-sonnet-5)",0.094,-0.172,0.423,40,0.478,human_concurrent_validity
+faers,"SECONDARY: human-vs-model kappa, 5-category (claude-sonnet-5)",0.156,0.0,0.311,40,0.478,human_concurrent_validity
+faers,raw % agreement 5-cat (claude-sonnet-5) [NOT accuracy - no ground truth],0.35,,,40,0.478,human_concurrent_validity
+faers,"PRIMARY concurrent-validity: human-vs-model kappa, plausible-vs-not (openai-gpt-5.5)",0.625,0.0,1.0,40,0.478,human_concurrent_validity
+faers,"SECONDARY: human-vs-model kappa, 5-category (openai-gpt-5.5)",0.26,0.104,0.421,40,0.478,human_concurrent_validity
+faers,raw % agreement 5-cat (openai-gpt-5.5) [NOT accuracy - no ground truth],0.425,,,40,0.478,human_concurrent_validity
+faers,descriptive: human plausible count / model plausible count (n=40 disagreement-enriched),human=5; sonnet5=11(overlap 2); gpt55=4(overlap 3),,,40,0.478,human_concurrent_validity
+faers,descriptive: models gave definite call where human=uninterpretable,0.609,,,23,0.478,human_concurrent_validity
