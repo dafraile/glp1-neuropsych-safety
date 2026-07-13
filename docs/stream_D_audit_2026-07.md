@@ -8,9 +8,14 @@ Method: blind LLM re-classification of all 52 abstracts (direction + in-scope, n
 of the existing label), diffed against the current table with the 6-study reclassification
 folded in.
 
-## Headline check: "0 harm" CONFIRMED
-The blind pass found ZERO studies reporting a pro-addiction / worsening direction across all
-52. The load-bearing "0 harm" cell is corroborated independently.
+## Headline check: "0 harm" CONFIRMED (51/52 blind-classified)
+The blind pass returned a parseable classification for 51 of 52 abstracts and found ZERO
+studies reporting a pro-addiction / worsening direction among them. The 52nd (PMID 42355949,
+alcohol) has no abstract in PubMed (title only), so it could not be re-classified blind; it
+retains its prior "mixed" label and was NOT coded harm. No study in the corpus — pre- or
+post-audit — is classified harm, so the load-bearing "0 harm" cell holds, with the explicit
+caveat that one record was verified only against its pre-existing (non-harm) label rather than
+by independent blind read.
 
 ## Corrections applied (benefit over-count guarded)
 | PMID | Was | Now | Why |
