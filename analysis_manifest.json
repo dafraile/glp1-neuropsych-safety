@@ -1,7 +1,7 @@
 {
   "_schema": "glp1-neuropsych-safety analysis manifest v1",
-  "generated_utc": "2026-07-13T04:39:25.123322+00:00",
-  "git_commit": "9cf4a68e0fe9d7bb77163f09f858fbf60e6979e1",
+  "generated_utc": "2026-07-13T04:57:57.826818+00:00",
+  "git_commit": "dfd1f40f44f0c20bc386b7a736d890dc353131ba",
   "streams_are_never_pooled_together": true,
   "stream_A": {
     "search_and_screening": {
@@ -78,15 +78,15 @@
       "40037282": "no-effect",
       "39246719": "EXCLUDE"
     },
-    "excluded_after_reclass": 5,
-    "direction_eligible_N": 47,
+    "excluded_after_reclass": 7,
+    "direction_eligible_N": 45,
     "corrected_direction_breakdown": {
-      "benefit": 28,
+      "benefit": 26,
       "mixed": 13,
       "no-effect": 6,
       "harm": 0
     },
-    "direction_reconciliation": "extracted N=52 -> 47 direction-eligible (28 benefit / 13 mixed / 6 no-effect / 0 harm) + 5 excluded = 52. '0 harm' = no study reported a pro-addiction direction, NOT evidence of safety. Stream D is exploratory."
+    "direction_reconciliation": "extracted N=52 -> 45 direction-eligible (26 benefit / 13 mixed / 6 no-effect / 0 harm) + 7 excluded = 52. '0 harm' = no study reported a pro-addiction direction, NOT evidence of safety. Stream D is exploratory."
   },
   "llm_steps": {
     "screening": {
@@ -174,7 +174,7 @@
     "results/grade_certainty_hybrid.csv": "54380d3294df917b9f07573748400275ed9a8f809cc125ae34e1789f7de2a27f",
     "results/stream_B_signal_matrix.csv": "75b964a6f40d4d5cba1229605d181a8da38841197d4da8b59a3df5c32e288103",
     "results/streamB_timesplit_reframe.csv": "5d740e9556f83c94428e19cad91f287c22f75fcc2f718ba0fdd8b5fcec3e0c3c",
-    "data/stream_D_study_table.csv": "aa303ee7ecc9ed0cf4fa1b3d07999490d3cfb23559fcdeb807381b2e25287588",
+    "data/stream_D_study_table.csv": "0f6c2c7287887d4fae3e5560f1ff8b044ee7695fc4d0167058195c84078d4a9e",
     "results/stream_D_pooled_estimates.csv": "4441210785028678394e440f218fb38d46c69cfaed54951f8590467bc96316db",
     "results/reproduction_check.csv": "a7bd9abff1d5f707eb47709d2e8ba5494ff79fe9d188edf864e698eb0334f85d",
     "results/stream_D_reproduction_check.csv": "1f6d9af33b27610dc7064121f2219f3e9fbafc6b94ace352424c6319dc2e01ad",
@@ -200,7 +200,7 @@
     "results/faers_drug_role_sensitivity.csv": "a967b83cfb40a045a3390d0276ec729ef22729d794baee94401c8b930e65c2f4",
     "results/stream_C_evidence_map.csv": "1a8d7a5bb9b6573a68e33ca5fac09b30db3bf41e28a6a3076a334facc1b92dbe",
     "results/stream_D_reclassification.csv": "b7410810fdd6afec4b8c186e383a385ab3666f6b50c8872a3b2771cf789f68f2",
-    "results/stream_D_corrected_counts.csv": "9b7d1f38190e35305cf347012874f4e617e098ebd1ad077794a8e2d38b495c60",
+    "results/stream_D_corrected_counts.csv": "744d523da3bb8a5de6834e1019e32d6683a4a4acd42bdd1beda24ffb712da9a8",
     "data/study_table.csv": "c1ba0bcf70ab0af8e58ac96ce81d004171f62c525a1bbdee2b2dd475bb8950d9",
     "data/screening_ledger.csv": "478319430345ef9abd75b84663390181d36ea521723bca07b1a3f3cdc89cad62",
     "data/dedup_pool.csv": "9bd2ddb2425b28cfabe12beca5789eccb6d6f0dd72a3880d24f437da27269f82",

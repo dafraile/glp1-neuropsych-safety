@@ -1,2 +1,2 @@
-extracted_table_N,excluded,direction_eligible_N,dir_benefit,dir_mixed,dir_no-effect,dir_harm
-52,5,47,28,13,6,0
+extracted_N,direction_eligible_N,excluded,dir_benefit,dir_mixed,dir_no-effect,dir_harm,audit
+52,45,7,26,13,6,0,"direction+inclusion audit 2026-07: -2 benefit (40577093 review, 38264360 weight-outcome), +2 excluded; 0 harm confirmed blind across 52"

@@ -56,8 +56,9 @@ protective); calibrated tool.
 
 ## Conclusion 3 — "Cross-addiction benefit direction (Stream D, EXPLORATORY)"
 
-**What supports it (hypothesis-generating only):** of 47 direction-eligible studies
-(52 extracted − 5 excluded), 28 benefit / 13 mixed / 6 no-effect / 0 harm — a
+**What supports it (hypothesis-generating only):** of 45 direction-eligible studies
+(52 extracted − 7 excluded, after the 2026-07 direction+inclusion audit), 26 benefit /
+13 mixed / 6 no-effect / 0 harm — a
 vote-count, which is vulnerable to study size, selective reporting, and publication
 bias and is **not** an inferential argument; exploratory pooled estimates nicotine
 RCT+TTE 0.68, alcohol 0.69; and an inverse FAERS footprint (inverse disproportionality,

@@ -82,10 +82,13 @@ evidence, not evidence of safety.**
 
 ## Stream D — addiction/reward benefit (EXPLORATORY)
 
-Separate from the primary safety question. Of **52** extracted studies, the 6 previously
-unclassified resolve to 5 excluded + 1 no-effect → **47 direction-eligible: 28 benefit /
-13 mixed / 6 no-effect / 0 harm** (`results/stream_D_reclassification.csv`). "0 harm" means
-no study reported a pro-addiction direction, **not** evidence of safety. Vote-counting and
+Separate from the primary safety question. Of **52** extracted studies, a blind
+direction + inclusion audit (`docs/stream_D_audit_2026-07.md`) resolves the 6 previously
+unclassified (5 excluded + 1 no-effect) and corrects 2 further benefit calls (a systematic
+review and a weight-outcome record), giving **45 direction-eligible: 26 benefit / 13 mixed /
+6 no-effect / 0 harm**, with 7 excluded (`results/stream_D_corrected_counts.csv`). "0 harm"
+was confirmed blind across all 52 and means no study reported a pro-addiction direction,
+**not** evidence of safety. Vote-counting and
 "benefit–harm symmetry" are **hypothesis-generating framing only**. Exploratory pooled
 estimates (Very low certainty): alcohol RR 0.69 (0.50–0.96), nicotine RR 0.68 (0.63–0.74),
 AUDIT MD −7.81 (−9.02 to −6.60, anchor-reproduced). The FAERS "footprint" is relabelled

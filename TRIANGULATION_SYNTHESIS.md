@@ -173,10 +173,13 @@ for harm" is absence of explanatory evidence, not evidence that harm is absent.*
 
 ### Stream D — addiction/reward benefit (designed studies, EXPLORATORY)
 Separate from the primary safety question and treated as exploratory. Of 52 extracted
-studies, the 6 previously unclassified resolve to 5 excluded (wrong outcome / review /
-biomarker) + 1 no-effect, giving **47 direction-eligible: 28 benefit / 13 mixed / 6
-no-effect / 0 harm** (`stream_D_reclassification.csv`, `stream_D_corrected_counts.csv`).
-"0 harm" means **no study reported a pro-addiction direction**, not evidence of safety.
+studies, a blind direction + inclusion audit (`docs/stream_D_audit_2026-07.md`) resolves the
+6 previously unclassified (5 excluded — wrong outcome / review / biomarker — + 1 no-effect)
+and corrects 2 further benefit calls (40577093 a systematic review; 38264360 a weight-outcome
+record), giving **45 direction-eligible: 26 benefit / 13 mixed / 6 no-effect / 0 harm**, with
+7 excluded (`stream_D_corrected_counts.csv`). "0 harm" was confirmed by an independent blind
+pass across all 52 and means **no study reported a pro-addiction direction**, not evidence of
+safety.
 
 Design-stratified pooled estimates (harmonised so <1 favours GLP-1 RA), all Very low
 certainty and labelled exploratory: alcohol RR 0.69 (0.50–0.96); nicotine RR 0.68
