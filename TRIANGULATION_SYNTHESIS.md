@@ -39,7 +39,7 @@ never pooled together.
 | RCT (k=23, M-H) | suicidal behaviour (composite) | 0.84 (0.54–1.32) | 0% | Low |
 | Observational (k=4, IV) | suicide attempt / self-harm | 0.71 (0.58–0.87) | 10% | Very low |
 | Observational (k=2, IV) | suicidality (composite) | 0.94 (0.82–1.09) | 23% | Very low |
-| Observational (k=3, IV) | suicidal ideation | 0.74 (0.37–1.48) | 90% | Very low |
+| Observational (k=4, IV) | suicidal ideation | 0.81 (0.44–1.50) | 86% | Very low |
 | Observational (k=1) | completed suicide | 1.25 (0.83–1.88) | – | Very low |
 | Observational (k=2, IV) | anxiety | 0.54 (0.33–0.87) | 74% | Very low |
 | Observational | depression | **not summarised by one effect** (see below) | ≥92% | Very low |
@@ -65,11 +65,14 @@ correction is not driving the result. Peto assumptions are questionable in 8 arm
 trials (reported, minimal impact given event scarcity). (`rct_rare_event_sensitivity.csv`,
 `rct_arm_imbalance_and_zeros.csv`.)
 
-**Depression — not headlined as null-to-protective.** The all-study estimate is 1.53
-(0.74–3.16) with I²≈100%; excluding the large TriNetX outlier (PMID 39424950, HR 2.95)
-gives 1.10 (0.95–1.28) but heterogeneity **remains ~92%**, and the exclusion was not
-prespecified. The correct conclusion is **"highly inconsistent and not meaningfully
-summarised by a single pooled effect."** HR/OR/RR were treated as interchangeable
+**Depression — not headlined as null-to-protective.** The all-study estimate is 1.44
+(0.80–2.58, k=4) with I²≈100%; excluding the large TriNetX outlier (PMID 39424950, HR 2.95)
+gives 1.13 (1.005–1.27, k=3) but heterogeneity **remains ~88%**, and the exclusion was not
+prespecified. Although that excl-outlier interval now sits marginally above 1, it is
+fragile — the Hartung-Knapp CI (0.67–3.11) and the prediction interval (spanning <0.1 to
+>25) both cross 1 freely — so it is **not** evidence of a depression signal. The correct
+conclusion is **"highly inconsistent and not meaningfully summarised by a single pooled
+effect."** HR/OR/RR were treated as interchangeable
 log-ratios; defensible for very rare suicidality, more questionable for depression/anxiety —
 flagged. (`obs_reml_hk_reruns.csv`, `depression_reframe.md`.)
 

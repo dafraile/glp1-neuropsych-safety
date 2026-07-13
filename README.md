@@ -31,11 +31,11 @@ pooled effect. This is "no detected increase," not proof of safety or equivalenc
 | Stratum | Outcome | Pooled estimate | I² | GRADE |
 |---|---|---|---|---|
 | RCT (k=23, M-H) | suicidal behaviour (composite) | 0.84 (0.54–1.32) | 0% | Low |
-| Observational (k=3, IV) | suicidal ideation | 0.74 (0.37–1.48) | 90% | Very low |
+| Observational (k=4, IV) | suicidal ideation | 0.81 (0.44–1.50) | 86% | Very low |
 | Observational (k=2, IV) | suicidality (composite) | 0.94 (0.82–1.09) | 23% | Very low |
 | Observational (k=4, IV) | suicide attempt/self-harm | 0.71 (0.58–0.87) | 10% | Very low |
 | Observational (k=1) | completed suicide | 1.25 (0.83–1.88) | – | Very low |
-| Observational | depression | not summarisable (I² ≥ 92%) | ≥92% | Very low |
+| Observational (k=4) | depression | not summarisable (I² ≈ 100%) | ≈100% | Very low |
 | Observational (k=2, IV) | anxiety | 0.54 (0.33–0.87) | 74% | Very low |
 
 **A null test is not proof of safety.** The RCT upper CI (1.37) does **not** exclude a

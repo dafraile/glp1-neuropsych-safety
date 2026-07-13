@@ -1,7 +1,7 @@
 {
   "_schema": "glp1-neuropsych-safety analysis manifest v1",
-  "generated_utc": "2026-07-13T04:23:49.960488+00:00",
-  "git_commit": "9668c653c0f84d3aa5a1a2ca152578daad54ac25",
+  "generated_utc": "2026-07-13T04:39:00.177925+00:00",
+  "git_commit": "a92b2d202e82dd1a80489bf31710141ffe711002",
   "streams_are_never_pooled_together": true,
   "stream_A": {
     "search_and_screening": {
@@ -22,8 +22,8 @@
       "rct_rows": 25,
       "observational_rows": 36,
       "poolable": {
-        "yes": 40,
-        "no": 21
+        "yes": 42,
+        "no": 19
       }
     },
     "pooling": {
@@ -35,20 +35,19 @@
       ],
       "rct_pooled_k_MH": 23,
       "rct_reconciliation": "25 RCTs with 2x2 data; Mantel-Haenszel drops 2 double-zero trial(s) (Ishii 2020, Tamborlane 2022) which cannot inform a relative effect but whose safety exposure is reported; pooled k=23",
-      "obs_poolable": 15,
-      "obs_nonpoolable": 21,
-      "total_poolable": 40,
+      "obs_poolable": 17,
+      "obs_nonpoolable": 19,
+      "total_poolable": 42,
       "pooled_k_all_strata": {
         "RCT (M-H counts)": 23,
-        "Observational (IV, all outcomes)": 15,
-        "Obs: suicidal ideation": 3,
+        "Observational (IV, all outcomes)": 17,
+        "Obs: suicidal ideation": 4,
         "Obs: suicidality (composite)": 2,
         "Obs: suicide attempt/self-harm": 4,
         "Obs: completed suicide": 1,
-        "Obs: depression": 3,
-        "Obs: depression (excl. outlier)": 2,
-        "Obs: anxiety": 2,
-        "Obs sensitivity (excl. Serious RoB)": 10
+        "Obs: depression": 4,
+        "Obs: depression (excl. outlier)": 3,
+        "Obs: anxiety": 2
       }
     }
   },
@@ -171,7 +170,7 @@
     "stream_D_corrected_counts": "results/stream_D_corrected_counts.csv"
   },
   "input_file_sha256": {
-    "results/pooled_estimates.csv": "8a111adce3f513539980a7da6087bef856433a72b5992df78cdee109f0683f1b",
+    "results/pooled_estimates.csv": "422559ad3649845c8e77b0fd8d6cdec55b279d652628030211d8fc60a09542e8",
     "results/grade_certainty_hybrid.csv": "54380d3294df917b9f07573748400275ed9a8f809cc125ae34e1789f7de2a27f",
     "results/stream_B_signal_matrix.csv": "75b964a6f40d4d5cba1229605d181a8da38841197d4da8b59a3df5c32e288103",
     "results/streamB_timesplit_reframe.csv": "5d740e9556f83c94428e19cad91f287c22f75fcc2f718ba0fdd8b5fcec3e0c3c",
@@ -202,7 +201,7 @@
     "results/stream_C_evidence_map.csv": "1a8d7a5bb9b6573a68e33ca5fac09b30db3bf41e28a6a3076a334facc1b92dbe",
     "results/stream_D_reclassification.csv": "b7410810fdd6afec4b8c186e383a385ab3666f6b50c8872a3b2771cf789f68f2",
     "results/stream_D_corrected_counts.csv": "9b7d1f38190e35305cf347012874f4e617e098ebd1ad077794a8e2d38b495c60",
-    "data/study_table.csv": "2fc17bfce0828047ca75bd03e220da58ba011700174f1f2b879f0a519e2196d2",
+    "data/study_table.csv": "c1ba0bcf70ab0af8e58ac96ce81d004171f62c525a1bbdee2b2dd475bb8950d9",
     "data/screening_ledger.csv": "478319430345ef9abd75b84663390181d36ea521723bca07b1a3f3cdc89cad62",
     "data/dedup_pool.csv": "9bd2ddb2425b28cfabe12beca5789eccb6d6f0dd72a3880d24f437da27269f82",
     "tools/faers/faers_tool.py": "2eb90a94ef496679f7543705030533915865e499ddcd8f80fa2a25c533802ae6"
