@@ -1,0 +1,285 @@
+{
+ "source": "riskofbias.info official guidance (RoB2 22 Aug 2019; ROBINS-I detailed guidance 20 Oct 2016)",
+ "corrected_counts": {
+  "RoB2": {
+   "domains": 5,
+   "signalling_questions": 22
+  },
+  "ROBINS-I_2016": {
+   "domains": 7,
+   "signalling_questions": 34
+  }
+ },
+ "rating_scales": {
+  "RoB2": [
+   "Low",
+   "Some concerns",
+   "High"
+  ],
+  "ROBINS-I": [
+   "Low",
+   "Moderate",
+   "Serious",
+   "Critical",
+   "No information"
+  ]
+ },
+ "response_options": [
+  "Y",
+  "PY",
+  "PN",
+  "N",
+  "NI",
+  "NA"
+ ],
+ "response_legend": {
+  "Y": "Yes",
+  "PY": "Probably yes",
+  "PN": "Probably no",
+  "N": "No",
+  "NI": "No information",
+  "NA": "Not applicable"
+ },
+ "RoB2": {
+  "signalling_questions": {
+   "D1": {
+    "name": "Bias arising from the randomization process",
+    "sq": {
+     "1.1": "Was the allocation sequence random?",
+     "1.2": "Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+     "1.3": "Did baseline differences between intervention groups suggest a problem with the randomization process?"
+    }
+   },
+   "D2": {
+    "name": "Bias due to deviations from intended interventions (effect of assignment to intervention)",
+    "sq": {
+     "2.1": "Were participants aware of their assigned intervention during the trial?",
+     "2.2": "Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+     "2.3": "If Y/PY/NI to 2.1 or 2.2: Were there deviations from the intended intervention that arose because of the trial context?",
+     "2.4": "If Y/PY to 2.3: Were these deviations likely to have affected the outcome?",
+     "2.5": "If Y/PY to 2.4: Were these deviations from intended intervention balanced between groups?",
+     "2.6": "Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+     "2.7": "If N/PN/NI to 2.6: Was there potential for a substantial impact (on the result) of the failure to analyse participants in the group to which they were randomized?"
+    }
+   },
+   "D3": {
+    "name": "Bias due to missing outcome data",
+    "sq": {
+     "3.1": "Were data for this outcome available for all, or nearly all, participants randomized?",
+     "3.2": "If N/PN/NI to 3.1: Is there evidence that the result was not biased by missing outcome data?",
+     "3.3": "If N/PN to 3.2: Could missingness in the outcome depend on its true value?",
+     "3.4": "If Y/PY/NI to 3.3: Is it likely that missingness in the outcome depended on its true value?"
+    }
+   },
+   "D4": {
+    "name": "Bias in measurement of the outcome",
+    "sq": {
+     "4.1": "Was the method of measuring the outcome inappropriate?",
+     "4.2": "Could measurement or ascertainment of the outcome have differed between intervention groups?",
+     "4.3": "If N/PN/NI to 4.1 and 4.2: Were outcome assessors aware of the intervention received by study participants?",
+     "4.4": "If Y/PY/NI to 4.3: Could assessment of the outcome have been influenced by knowledge of intervention received?",
+     "4.5": "If Y/PY/NI to 4.4: Is it likely that assessment of the outcome was influenced by knowledge of intervention received?"
+    }
+   },
+   "D5": {
+    "name": "Bias in selection of the reported result",
+    "sq": {
+     "5.1": "Were the data that produced this result analysed in accordance with a pre-specified analysis plan that was finalized before unblinded outcome data were available for analysis?",
+     "5.2": "Is the numerical result being assessed likely to have been selected, on the basis of the results, from multiple eligible outcome measurements within the outcome domain?",
+     "5.3": "Is the numerical result being assessed likely to have been selected, on the basis of the results, from multiple eligible analyses of the data?"
+    }
+   }
+  },
+  "domain_criteria": {
+   "D1": "See Table 4 decision tree (encoded in ROB2_ALGO['D1']).",
+   "D2": "Low: (blinded) OR (aware AND no trial-context deviations) AND appropriate ITT-type analysis. Some concerns: aware AND (no info on deviations OR deviations not likely to affect outcome / balanced) OR analysis inappropriate but limited impact. High: deviations likely affected outcome and unbalanced, OR inappropriate analysis with substantial impact.",
+   "D3": "See Table 10 decision tree (encoded in ROB2_ALGO['D3']).",
+   "D4": "Low: measurement not inappropriate AND did not differ between groups AND (assessors blinded OR could not be influenced). Some concerns: not inappropriate, no differential, but assessors aware though influence unlikely; OR no info on differential with blinding. High: method inappropriate OR ascertainment could differ; OR assessors aware and assessment likely influenced.",
+   "D5": "Low: analysed per pre-specified plan AND result not selected from multiple eligible measurements AND not from multiple eligible analyses. Some concerns: no pre-specified plan but no evidence of selection, OR no information. High: result likely selected from multiple measurements or analyses on the basis of results."
+  },
+  "algorithm_tables": {
+   "D1": [
+    [
+     {
+      "1.1": "Y/PY/NI",
+      "1.2": "Y/PY",
+      "1.3": "NI/N/PN"
+     },
+     "Low"
+    ],
+    [
+     {
+      "1.1": "Y/PY",
+      "1.2": "Y/PY",
+      "1.3": "Y/PY"
+     },
+     "Some concerns"
+    ],
+    [
+     {
+      "1.1": "N/PN/NI",
+      "1.2": "Y/PY",
+      "1.3": "Y/PY"
+     },
+     "Some concerns"
+    ],
+    [
+     {
+      "1.1": "Any",
+      "1.2": "NI",
+      "1.3": "N/PN/NI"
+     },
+     "Some concerns"
+    ],
+    [
+     {
+      "1.1": "Any",
+      "1.2": "NI",
+      "1.3": "Y/PY"
+     },
+     "High"
+    ],
+    [
+     {
+      "1.1": "Any",
+      "1.2": "N/PN",
+      "1.3": "Any"
+     },
+     "High"
+    ]
+   ],
+   "D3": [
+    [
+     {
+      "3.1": "Y/PY",
+      "3.2": "NA",
+      "3.3": "NA",
+      "3.4": "NA"
+     },
+     "Low"
+    ],
+    [
+     {
+      "3.1": "N/PN/NI",
+      "3.2": "Y/PY",
+      "3.3": "NA",
+      "3.4": "NA"
+     },
+     "Low"
+    ],
+    [
+     {
+      "3.1": "N/PN/NI",
+      "3.2": "N/PN",
+      "3.3": "N/PN",
+      "3.4": "NA"
+     },
+     "Low"
+    ],
+    [
+     {
+      "3.1": "N/PN/NI",
+      "3.2": "N/PN",
+      "3.3": "Y/PY/NI",
+      "3.4": "N/PN"
+     },
+     "Some concerns"
+    ],
+    [
+     {
+      "3.1": "N/PN/NI",
+      "3.2": "N/PN",
+      "3.3": "Y/PY/NI",
+      "3.4": "Y/PY/NI"
+     },
+     "High"
+    ]
+   ]
+  }
+ },
+ "ROBINS_I_2016": {
+  "signalling_questions": {
+   "D1": {
+    "name": "Bias due to confounding",
+    "sq": {
+     "1.1": "Is there potential for confounding of the effect of intervention in this study?",
+     "1.2": "Was the analysis based on splitting participants' follow-up time according to intervention received?",
+     "1.3": "Were intervention discontinuations or switches likely to be related to factors that are prognostic for the outcome?",
+     "1.4": "Did the authors use an appropriate analysis method that controlled for all the important confounding domains?",
+     "1.5": "If Y/PY to 1.4: Were confounding domains that were controlled for measured validly and reliably by the variables available in this study?",
+     "1.6": "Did the authors control for any post-intervention variables that could have been affected by the intervention?",
+     "1.7": "Did the authors use an appropriate analysis method that controlled for all the important confounding domains and for time-varying confounding?",
+     "1.8": "If Y/PY to 1.7: Were confounding domains that were controlled for measured validly and reliably by the variables available in this study?"
+    }
+   },
+   "D2": {
+    "name": "Bias in selection of participants into the study",
+    "sq": {
+     "2.1": "Was selection of participants into the study (or into the analysis) based on participant characteristics observed after the start of intervention?",
+     "2.2": "If Y/PY to 2.1: Were the post-intervention variables that influenced selection likely to be associated with intervention?",
+     "2.3": "If Y/PY to 2.2: Were the post-intervention variables that influenced selection likely to be influenced by the outcome or a cause of the outcome?",
+     "2.4": "Do start of follow-up and start of intervention coincide for most participants?",
+     "2.5": "If Y/PY to 2.2 and 2.3, or N/PN to 2.4: Were adjustment techniques used that are likely to correct for the presence of selection biases?"
+    }
+   },
+   "D3": {
+    "name": "Bias in classification of interventions",
+    "sq": {
+     "3.1": "Were intervention groups clearly defined?",
+     "3.2": "Was the information used to define intervention groups recorded at the start of the intervention?",
+     "3.3": "Could classification of intervention status have been affected by knowledge of the outcome or risk of the outcome?"
+    }
+   },
+   "D4": {
+    "name": "Bias due to deviations from intended interventions",
+    "sq": {
+     "4.1": "Were there deviations from the intended intervention beyond what would be expected in usual practice?",
+     "4.2": "If Y/PY to 4.1: Were these deviations from intended intervention unbalanced between groups and likely to have affected the outcome?",
+     "4.3": "Were important co-interventions balanced across intervention groups?",
+     "4.4": "Was the intervention implemented successfully for most participants?",
+     "4.5": "Did study participants adhere to the assigned intervention regimen?",
+     "4.6": "If N/PN to 4.3, 4.4 or 4.5: Was an appropriate analysis used to estimate the effect of starting and adhering to the intervention?"
+    }
+   },
+   "D5": {
+    "name": "Bias due to missing data",
+    "sq": {
+     "5.1": "Were outcome data available for all, or nearly all, participants?",
+     "5.2": "Were participants excluded due to missing data on intervention status?",
+     "5.3": "Were participants excluded due to missing data on other variables needed for the analysis?",
+     "5.4": "If PN/N to 5.1, or Y/PY to 5.2 or 5.3: Are the proportion of participants and reasons for missing data similar across interventions?",
+     "5.5": "If PN/N to 5.1, or Y/PY to 5.2 or 5.3: Is there evidence that results were robust to the presence of missing data?"
+    }
+   },
+   "D6": {
+    "name": "Bias in measurement of outcomes",
+    "sq": {
+     "6.1": "Could the outcome measure have been influenced by knowledge of the intervention received?",
+     "6.2": "Were outcome assessors aware of the intervention received by study participants?",
+     "6.3": "Were the methods of outcome assessment comparable across intervention groups?",
+     "6.4": "Were any systematic errors in measurement of the outcome related to intervention received, or associated with a factor related to intervention?"
+    }
+   },
+   "D7": {
+    "name": "Bias in selection of the reported result",
+    "sq": {
+     "7.1": "Is the reported effect estimate likely to be selected, on the basis of the results, from multiple outcome measurements within the outcome domain?",
+     "7.2": "Is the reported effect estimate likely to be selected, on the basis of the results, from multiple analyses of the intervention-outcome relationship?",
+     "7.3": "Is the reported effect estimate likely to be selected, on the basis of the results, from different subgroups?"
+    }
+   }
+  },
+  "domain_criteria": {
+   "D1 Confounding": "Low risk of bias (the study is \ncomparable to a well-performed \nrandomized trial with regard to this \ndomain) \nNo confounding expected. \nModerate risk of bias (the study is \nsound for a non-randomized study \nwith regard to this domain but cannot \nbe considered comparable to a well-\nperformed randomized trial) \n \n(i) Confounding expected, all known important confounding \ndomains appropriately measured and controlled for; \nand \n(ii) Reliability and validity of measurement of important domains \nwere sufficient, such that we do not expect serious residual \nconfounding. \nSerious risk of bias (the study has some \nimportant problems) \n \n(i) At least one known important domain was not appropriately \nmeasured, or not controlled for; \nor \n(ii) Reliability or validity of measurement of an important domain \nwas low enough that we expect serious residual confounding. \nCritical risk of bias (the study is too \nproblematic to provide any useful \nevidence on the effects of intervention) \n(i) Confounding inherently not controllable \nor \n(ii) The use of negative controls strongly suggests unmeasured \nconfounding. \nNo information on which to base a \njudgement about risk of bias for this \ndomain \nNo information on whether confounding might be present. \n \n  \n \n28 \n\u00a9 2016 by the authors. This work is licensed under a Creative Commons Attribution -NonCommercial-\nNoDerivatives 4.0 International License. \n4.2",
+   "D2 Selection": "Low risk of bias (the study is \ncomparable to a well-performed \nrandomized trial with regard to this \ndomain) \n(i) All participants who would have been eligible for the target trial \nwere included in the study; \nand \n(ii) For each participant, start of follow up and start of intervention \ncoincided. \nModerate risk of bias (the study is \nsound for a non-randomized study \nwith regard to this domain but cannot \nbe considered comparable to a well-\nperformed randomized trial) \n(i) Selection into the study may have been related to intervention \nand outcome; \nand \nThe authors used appropriate methods to adjust for the selection \nbias; \nor \n(ii) Start of follow up and start of intervention do not coincide for all \nparticipants;  \nand  \n(a) the proportion of participants for which this was the case \nwas too low to induce important bias; \nor \n(b) the authors used appropriate methods to adjust for the \nselection bias;  \nor \n(c) the review authors are confident that the rate (hazard) \nratio for the effect of intervention remains constant over time. \nSerious risk of bias (the study has some \nimportant problems) \n(i) Selection into the study was related (but not very strongly) to \nintervention and outcome; \nand \nThis could not be adjusted for in analyses; \nor \n(ii) Start of follow up and start of intervention do not coincide; \nand \nA potentially important amount of follow-up time is missing from \nanalyses; \nand \nThe rate ratio is not constant over time. \nCritical risk of bias (the study is too \nproblematic to provide any useful \nevidence on the effects of intervention) \n(i) Selection into the study was very strongly related to intervention \nand outcome; \nand  \nThis could not be adjusted for in analyses; \nor \n(ii) A substantial amount of follow-up time is likely to be missing \nfrom analyses; \nand \nThe rate ratio is not constant over time. \nNo information on which to base a \njudgement about risk of bias for this \ndomain \nNo information is reported about selection of participants into the \nstudy or whether start of follow up and start of intervention coincide. \n \n \n32 \n\u00a9 2016 by the authors. This work is licensed under a Creative Commons Attribution -NonCommercial-\nNoDerivatives 4.0 International License. \n4.3",
+   "D3 Classification": "Low risk of bias (the study is \ncomparable to a well-performed \nrandomized trial with regard to this \ndomain) \n(i) Intervention status is well defined; \nand  \n(ii) Intervention definition is based solely on information collected at \nthe time of intervention. \nModerate risk of bias (the study is \nsound for a non-randomized study \nwith regard to this domain but cannot \nbe considered comparable to a well-\nperformed randomized trial) \n(i) Intervention status is well defined; \nand \n(ii) Some aspects of the assignments of intervention status were \ndetermined retrospectively. \nSerious risk of bias (the study has some \nimportant problems) \n(i) Intervention status is not well defined;  \nor \n(ii) Major aspects of the assignments of intervention status were \ndetermined in a way that could have been affected by knowledge of \nthe outcome. \nCritical risk of bias (the study is too \nproblematic to provide any useful \nevidence on the effects of intervention) \n(Unusual) An extremely high amount of misclassification of \nintervention status, e.g. because of unusually strong recall biases. \nNo information on which to base a \njudgement about risk of bias for this \ndomain \nNo definition of intervention or no explanation of the source of \ninformation about intervention status is reported. \n \n4.4",
+   "D4 Deviations": "Low risk of bias (the study is \ncomparable to a well-performed \nrandomized trial with regard to this \ndomain) \nEffect of assignment to intervention: \n(i) Any deviations from intended intervention reflected usual \npractice; \nor \n(ii) Any deviations from usual practice were unlikely to impact on \nthe outcome. \n \nEffect of starting and adhering to intervention: \nThe important co-interventions were balanced across intervention \ngroups, and there were no deviations from the intended \ninterventions (in terms of implementation or adherence) that \nwere likely to impact on the outcome. \nModerate risk of bias (the study is \nsound for a non-randomized study \nwith regard to this domain but cannot \nbe considered comparable to a well-\nperformed randomized trial) \nEffect of assignment to intervention: \nThere were deviations from usual practice, but their impact on the \noutcome is expected to be slight. \n \nEffect of starting and adhering to intervention: \n(i) There were deviations from intended intervention, but their \nimpact on the outcome is expected to be slight.  \nor \n(ii) The important co-interventions were not balanced across \nintervention groups, or there were deviations from the intended \ninterventions (in terms of implementation and/or adherence) that \nwere likely to impact on the outcome; \nand \nThe analysis was appropriate to estimate the effect of starting \nand adhering to intervention, allowing for deviations (in terms \nof implementation, adherence and co-intervention) that were \nlikely to impact on the outcome. \nSerious risk of bias (the study has some \nimportant problems) \nEffect of assignment to intervention: \nThere were deviations from usual practice that were unbalanced \nbetween the intervention groups and likely to have affected the \noutcome. \n \nEffect of starting and adhering to intervention: \n(i) The important co-interventions were not balanced across \nintervention groups, or there were deviations from the intended \ninterventions (in terms of implementation and/or adherence) that \nwere likely to impact on the outcome; \nand \n(ii) The analysis was not appropriate to estimate the effect of starting \nand adhering to intervention, allowing for deviations (in terms of \nimplementation, adherence and co-intervention) that were likely to \nimpact on the outcome. \n \n \n42 \n\u00a9 2016 by the authors. This work is licensed under a Creative Commons Attribution -NonCommercial-\nNoDerivatives 4.0 International License. \nCritical risk of bias (the study is too \nproblematic to provide any useful \nevidence on the effects of intervention) \nEffect of assignment to intervention: \nThere were substantial deviations from usual practice that were \nunbalanced between the intervention groups and likely to have \naffected the outcome. \n \nEffect of starting and adhering to intervention: \n(i) There were substantial imbalances in important co-interventions \nacross intervention groups, or there were substantial deviations from \nthe intended interventions (in terms of implementation and/or \nadherence) that were likely to impact on the outcome; \nand \n(ii) The analysis was not appropriate to estimate the effect of starting \nand adhering to intervention, allowing for deviations (in terms of \nimplementation, adherence and co-intervention) that were likely to \nimpact on the outcome. \nNo information on which to base a \njudgement about risk of bias for this \ndomain \nNo information is reported on whether there is deviation from the \nintended intervention. \n \n  \n \n43 \n\u00a9 2016 by the authors. This work is licensed under a Creative Commons Attribution -NonCommercial-\nNoDerivatives 4.0 International License. \n4.5",
+   "D5 Missing data": "Low risk of bias (the study is \ncomparable to a well-performed \nrandomized trial with regard to this \ndomain) \n(i) Data were reasonably complete; \nor \n(ii) Proportions of and reasons for missing participants were similar \nacross intervention groups; \nor  \n(iii) The analysis addressed missing data and is likely to have \nremoved any risk of bias. \nModerate risk of bias (the study is \nsound for a non-randomized study \nwith regard to this domain but cannot \nbe considered comparable to a well-\nperformed randomized trial) \n(i) Proportions of and reasons for missing participants differ slightly \nacross intervention groups; \nand  \n(ii) The analysis is unlikely to have removed the risk of bias arising \nfrom the missing data. \nSerious risk of bias (the study has some \nimportant problems) \n(i) Proportions of missing participants differ substantially across \ninterventions; \nor \nReasons for missingness differ substantially across interventions; \nand  \n(ii) The analysis is unlikely to have removed the risk of bias arising \nfrom the missing data; \nor \nMissing data were addressed inappropriately in the analysis; \nor \nThe nature of the missing data means that the risk of bias cannot \nbe removed through appropriate analysis. \nCritical risk of bias (the study is too \nproblematic to provide any useful \nevidence on the effects of intervention) \n(i) (Unusual) There were critical differences between interventions in \nparticipants with missing data;  \nand \n(ii) Missing data were not, or could not, be addressed through \nappropriate analysis. \nNo information on which to base a \njudgement about risk of bias for this \ndomain \nNo information is reported about missing data or the potential for \ndata to be missing. \n \n  \n \n46 \n\u00a9 2016 by the authors. This work is licensed under a Creative Commons Attribution -NonCommercial-\nNoDerivatives 4.0 International License. \n4.6",
+   "D6 Measurement": "Low risk of bias (the study is \ncomparable to a well-performed \nrandomized trial with regard to this \ndomain) \n(i) The methods of outcome assessment were comparable across \nintervention groups; \nand \n(ii) The outcome measure was unlikely to be influenced by \nknowledge of the intervention received by study participants (i.e. is \nobjective) or the outcome assessors were unaware of the intervention \nreceived by study participants; \nand \n(iii) Any error in measuring the outcome is unrelated to interventi on \nstatus. \nModerate risk of bias (the study is \nsound for a non-randomized study \nwith regard to this domain but cannot \nbe considered comparable to a well-\nperformed randomized trial) \n(i) The methods of outcome assessment were comparable across \nintervention groups; \nand \n(ii) The outcome measure is only minimally influenced by knowledge \nof the intervention received by study participants; \nand \n(iii) Any error in measuring the outcome is only minimally related to \nintervention status. \nSerious risk of bias (the study has some \nimportant problems) \n(i) The methods of outcome assessment were not comparable across \nintervention groups; \nor \n(ii) The outcome measure was subjective (i.e. vulnerable to influence \nby knowledge of the intervention received by study participants); \nand  \nThe outcome was assessed by assessors aware of the intervention \nreceived by study participants; \nor \n(iii) Error in measuring the outcome was related to intervention \nstatus. \nCritical risk of bias (the study is too \nproblematic to provide any useful \nevidence on the effects of intervention) \nThe methods of outcome assessment were so different that they \ncannot reasonably be compared across intervention groups. \nNo information on which to base a \njudgement about risk of bias for this \ndomain \nNo information is reported about the methods of outcome \nassessment. \n \n  \n \n49 \n\u00a9 2016 by the authors. This work is licensed under a Creative Commons Attribution -NonCommercial-\nNoDerivatives 4.0 International License. \n4.7",
+   "D7 Reported result": "Low risk of bias (the study is \ncomparable to a well-performed \nrandomized trial with regard to this \ndomain) \nThere is clear evidence (usually through examination of a pre-\nregistered protocol or statistical analysis plan) that all reported \nresults correspond to all intended outcomes, analyses and sub-\ncohorts. \nModerate risk of bias (the study is \nsound for a non-randomized study \nwith regard to this domain but cannot \nbe considered comparable to a well-\nperformed randomized trial) \n(i) The outcome measurements and analyses are consistent with an a \npriori plan; or are clearly defined and both internally and externally \nconsistent;  \nand \n(ii) There is no indication of selection of the reported analysis from \namong multiple analyses;  \nand \n(iii) There is no indication of selection of the cohort or subgroups for \nanalysis and reporting on the basis of the results. \nSerious risk of bias (the study has some \nimportant problems) \n(i) Outcomes are defined in different ways in the methods and \nresults sections, or in different publications of the study;  \nor \n(ii) There is a high risk of selective reporting from among multiple \nanalyses; \nor \n(iii) The cohort or subgroup is selected from a larger study for \nanalysis and appears to be reported on the basis of the results. \nCritical risk of bias (the study is too \nproblematic to provide any useful \nevidence on the effects of intervention) \n(i) There is evidence or strong suspicion of selective reporting of \nresults; \nand \n(ii) The unreported results are likely to be substantially different \nfrom the reported results. \nNo information on which to base a \njudgement about risk of bias for this \ndomain. \nThere is too little information to make a judgement (for example if \nonly an abstract is available for the study). \n \n  \n \n53 \n\u00a9 2016 by the authors. This work is licensed under a Creative Commons Attribution -NonCommercial-\nNoDerivatives 4.0 International License. \n5 References \nCook DA, Beckman TJ. Current concepts in validity and reliability for psychometric instruments: theory and \napplication. The American Journal of Medicine 2006; 119:  166.e7-166.e16. \nCook TD, Campbell DT, Peracchio L. Quasi experimentation. In: Dunnette MD, Hough LM (Eds.), Handbook of \nIndustrial and Organizational Psychology (pp. 491-567). Palo Alto, CA, US: Consulting Psychologists Press, 1990.  \nDavey Smith G, Phillips AN, Neaton JD. Smoking as \u201cindependent\u201d risk factor for suicide: illustration of an \nartifact from observational epidemiology? Lancet 1992; 340: 709-12. \nFeinstein AR. An additional basic science for clinical medicine:"
+  }
+ },
+ "overall_rob2": "Overall = worst domain (High if any High; Some concerns if any Some concerns and none High; Low if all Low).",
+ "overall_robins": "Overall = worst domain (Low if all Low; Moderate if worst is Moderate; Serious if any Serious and none Critical; Critical if any Critical; No information if a No-information domain drives the result and no domain is Serious/Critical).",
+ "verification": "All 22 RoB2 and 34 ROBINS-I signalling-question stems confirmed present in the downloaded official guidance/cribsheet source text (substring check, 2026 re-verification)."
+}

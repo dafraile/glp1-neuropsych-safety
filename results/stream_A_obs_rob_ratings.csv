@@ -1,0 +1,20 @@
+study_id,framework,D1,D2,D3,D4,D5,D6,D7,overall
+30728788,ROBINS-I,Critical,Moderate,Low,Serious,Serious,Serious,Moderate,Critical
+39125320,ROBINS-I,Serious,Serious,Moderate,Serious,No information,Moderate,Moderate,Serious
+39764175,ROBINS-I,Moderate,Low,Low,Moderate,Moderate,Moderate,Moderate,Moderate
+40124098,ROBINS-I,Serious,Serious,Moderate,No information,Serious,Moderate,Moderate,Serious
+40439835,ROBINS-I,Serious,Serious,Low,Serious,Moderate,Low,Moderate,Serious
+40760781,ROBINS-I,Moderate,Low,Low,Moderate,Low,Serious,Moderate,Serious
+41386528,ROBINS-I,Serious,Low,Moderate,No information,Serious,Moderate,Moderate,Serious
+41491619,ROBINS-I,Critical,Serious,Low,Moderate,Serious,Serious,Moderate,Critical
+41988822,ROBINS-I,Serious,Moderate,Moderate,Serious,Moderate,Moderate,Moderate,Serious
+42072949,ROBINS-I,Critical,Serious,Moderate,No information,Moderate,Moderate,Moderate,Critical
+42265341,ROBINS-I,Serious,Serious,Moderate,Moderate,Moderate,Serious,Moderate,Serious
+34016830,ROBINS-I,Serious,Serious,Moderate,Moderate,Moderate,Moderate,Moderate,Serious
+38650544,ROBINS-I,Serious,Serious,Moderate,Moderate,Low,Serious,Moderate,Serious
+40897378,ROBINS-I,Serious,Serious,Moderate,Serious,Moderate,Moderate,Low,Serious
+41389474,ROBINS-I,Serious,Serious,Moderate,Moderate,Moderate,Moderate,Moderate,Serious
+41479367,ROBINS-I,Moderate,Moderate,Low,Moderate,Moderate,Moderate,Low,Moderate
+41616750,ROBINS-I,Serious,Serious,Moderate,ESCALATE_TO_HUMAN,Serious,Serious,Moderate,Serious (provisional; escalations pending)
+41862258,ROBINS-I,Serious,Moderate,ESCALATE_TO_HUMAN,Moderate,Low,ESCALATE_TO_HUMAN,Low,Serious (provisional; escalations pending)
+42380063,ROBINS-I,Serious,Low,ESCALATE_TO_HUMAN,Serious,Moderate,Serious,Moderate,Serious (provisional; escalations pending)
